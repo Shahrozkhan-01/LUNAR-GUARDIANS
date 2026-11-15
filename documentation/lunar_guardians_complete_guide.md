@@ -3,7 +3,8 @@
 **Project:** Junior Astronaut Mission Trainer
 **NASA Space Apps Hackathon team:** VOID DOMINATORS
 
-**Team members:** Shahroz Khan, Abdul Rafay, Maira, Urwa, Ayesha, and Fatima
+**Team members:** Muhammad Shahroz Khan, Abdul Rafay, Maira, Urwa Asif
+Qureshi, Fatima Bukhari, and Ayesha Ashraf
 **Audience:** children aged approximately 7–12, families, and educators
 **Last verified:** 2026-11-15
 **Operation:** local React/Vite frontend and FastAPI backend; no hosted service is required
@@ -24,9 +25,9 @@ medical, or landing-safety tool.
 ### Team and project ownership
 
 LUNAR GUARDIANS was prepared by **VOID DOMINATORS** for the NASA Space Apps
-Hackathon. The team members are **Shahroz Khan, Abdul Rafay, Maira, Urwa,
-Ayesha, and Fatima**. The team confirms ownership of the project's original
-artwork, including the visual assets listed below. NASA data products and
+Hackathon. The team members are **Muhammad Shahroz Khan, Abdul Rafay, Maira,
+Urwa Asif Qureshi, Fatima Bukhari, and Ayesha Ashraf**. The team confirms
+ownership of the project's original artwork, including the visual assets listed below. NASA data products and
 third-party dependencies remain subject to their own attribution and use
 terms; the team does not claim ownership of those materials. No project-level
 reuse license is supplied by this ownership statement.

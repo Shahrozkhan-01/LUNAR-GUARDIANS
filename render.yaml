@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: lunar-guardians-api
+    runtime: python
+    plan: free
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.14.10
+      - key: NASA_API_KEY
+        value: DEMO_KEY
+      - key: NASA_CACHE_SECONDS
+        value: "900"
+      - key: FRONTEND_URL
+        sync: false

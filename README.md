@@ -4,7 +4,8 @@
 
 **NASA Space Apps Hackathon team:** VOID DOMINATORS
 
-**Team members:** Shahroz Khan, Abdul Rafay, Maira, Urwa, Ayesha, and Fatima
+**Team members:** Muhammad Shahroz Khan, Abdul Rafay, Maira, Urwa Asif
+Qureshi, Fatima Bukhari, and Ayesha Ashraf
 
 LUNAR GUARDIANS is an educational lunar survival simulation for children
 approximately 7–12 years old. Players configure a lunar outpost, manage
@@ -14,6 +15,9 @@ training consequences.
 
 This repository contains the complete student project implementation. It does
 not publish secrets or API keys.
+
+Deployment is optional. For a free Vercel frontend and Render backend setup,
+see the [deployment guide](documentation/deployment_vercel_render.md).
 
 ## Problem and objectives
 
@@ -262,6 +266,8 @@ For the complete document set, see [documentation/README.md](documentation/READM
 ## Documentation
 
 - [Complete project and hackathon guide](documentation/lunar_guardians_complete_guide.md)
+- [Hackathon submission report (Word, text-only cover)](documentation/lunar_guardians_hackathon_report_text_only.docx)
+- [Editable hackathon report source](documentation/lunar_guardians_hackathon_report.md)
 - [User manual](documentation/user_manual.md)
 - [Software requirements specification](documentation/software_requirements_specification.md)
 - [System architecture](documentation/system_architecture.md)

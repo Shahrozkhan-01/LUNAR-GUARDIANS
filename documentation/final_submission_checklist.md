@@ -2,9 +2,12 @@
 
 ## Project and demo
 
+- [x] Complete nontechnical project report is available in Word, with a
+      contents page, text-only cover, editable Markdown source, team roster,
+      NASA data and software citations, setup instructions, and limitations.
 - [x] Team is credited as **VOID DOMINATORS** for the NASA Space Apps
-      Hackathon; members: Shahroz Khan, Abdul Rafay, Maira, Urwa, Ayesha, and
-      Fatima.
+      Hackathon; members: Muhammad Shahroz Khan, Abdul Rafay, Maira, Urwa Asif
+      Qureshi, Fatima Bukhari, and Ayesha Ashraf.
 - [x] The team confirms ownership of the original bundled project artwork;
       NASA data and third-party dependencies remain separately attributed.
 - [x] Local React/Vite game and FastAPI backend run together with the Windows

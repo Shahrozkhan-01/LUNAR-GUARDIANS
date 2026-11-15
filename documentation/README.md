@@ -2,14 +2,21 @@
 
 ## Start here
 
-1. [Complete Project and Hackathon Guide](lunar_guardians_complete_guide.md) —
+1. [NASA Space Apps Hackathon Report (Word)](lunar_guardians_hackathon_report_text_only.docx) —
+   nontechnical project explanation, team, gameplay, data sources, software,
+   local setup, scientific limits, and validation; includes a contents page
+   and a text-only cover.
+2. [Editable report source (Markdown)](lunar_guardians_hackathon_report.md).
+3. [Complete Project and Hackathon Guide](lunar_guardians_complete_guide.md) —
    setup, gameplay, architecture, API, all active NASA data, libraries, asset
    inventory, credits, tests, and remaining submission checks.
-2. [Project README](../README.md) — quick overview and normal local startup.
-3. [User Manual](user_manual.md) — player instructions.
-4. [Demonstration Script](project_demonstration_script.md) — short live demo.
-5. [Final Submission Checklist](final_submission_checklist.md) — preflight
+4. [Project README](../README.md) — quick overview and normal local startup.
+5. [User Manual](user_manual.md) — player instructions.
+6. [Demonstration Script](project_demonstration_script.md) — short live demo.
+7. [Final Submission Checklist](final_submission_checklist.md) — preflight
    items and known caveats.
+8. [Optional Vercel + Render deployment guide](deployment_vercel_render.md) —
+   free-plan configuration and public deployment steps.
 
 ## Engineering reference
 
