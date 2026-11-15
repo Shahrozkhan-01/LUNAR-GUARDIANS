@@ -1,53 +1,46 @@
-# Final Testing and Validation Report
+# Local Testing and Validation Report
 
-## Automated tests
+**Verification date:** 2026-11-15
 
-- Backend command:
-  `.\venv\Scripts\python.exe -m unittest discover -s tests -v`
-  — **49 tests passed, 0 failures**.
-- Frontend `npm run lint` — **passed**.
-- Frontend `npm run build` — **passed**.
-- Build limitation: Vite emits a non-blocking advisory for minified chunks
-  larger than 500 kB.
+## Automated checks
 
-## Browser validation
-
-Verified with the local frontend and backend:
-
-- Landing page navigation to Mission Setup.
-- All three NASA briefing presets.
-- Mission initialization and Mission Control loading.
-- NASA Space Weather panel and NASA Training Events.
-- Five-day mission completion with healthy crew and final debrief.
-- Final report fields: outcome, final day, resources, Science Points,
-  decisions, events, strengths, improvements, and lessons.
-- Relaunch Day 1 resets resources/day/history and removes the old debrief.
-- Sound control toggles and persists its localStorage preference.
-
-## Responsive validation
-
-| Viewport | Result |
+| Check | Result |
 |---|---|
-| 1366×768 | No horizontal overflow |
-| 1024×768 | No horizontal overflow |
-| 390×844 | No horizontal overflow |
+| `.\venv\Scripts\python.exe -m unittest discover -s tests -v` from `backend/` | **49 passed, 0 failures** |
+| `npm run lint` from `frontend/` | **Passed** |
+| `npm run build` from `frontend/` | **Passed** |
 
-Measured Mission Control document widths were 1358, 1021, and 383 pixels
-respectively, all within their viewport widths.
+The production frontend build emits a non-blocking advisory because one
+minified JavaScript chunk exceeds 500 kB.
 
-## NASA and dataset validation
+## Local service smoke checks
 
-Backend tests cover DONKI normalization, empty feeds, malformed payloads,
-timeouts, HTTP/rate errors, caching, duplicate prevention, dataset listing,
-metadata, summaries, pagination, invalid IDs, missing files, empty datasets,
-large-grid protection, units, and scientific limitations. The processed
-dataset reports document source preservation and validation warnings.
+- `http://127.0.0.1:5173/` — frontend returned HTTP 200.
+- `http://127.0.0.1:8000/health` — backend returned `{"status":"ok"}`.
+- `GET /api/datasets` — returned 9 registered static datasets.
+- `GET /api/datasets/lro_spice/metadata` and `/summary` — returned successfully.
+- `GET /api/nasa/status` — DONKI reported active during this check; this
+  depends on external network/API availability and can change.
+- A game mission was created and its state endpoint responded.
 
-## Known limitations
+## Browser checks
 
-- DONKI availability and rate limits depend on external services.
-- Static dataset files must remain present under `datasets/processed/`.
-- The local mission store is in memory; it is not a production account/save
-  database.
-- NASA data is educational context, not operational flight or medical advice.
-- Vite's bundle-size advisory remains non-blocking.
+- Landing page loaded.
+- Mission Setup displayed its configuration and briefing controls.
+- Initializing a mission navigated to Mission Control.
+- NASA Data Explorer route rendered.
+
+This report records those executed checks. It does not claim that every
+viewport, audio device, or external NASA response will behave identically on
+another computer.
+
+## Scientific and operational limitations
+
+- NASA DONKI availability and request limits are controlled by NASA.
+- The game remains playable when DONKI is unavailable; real observations are
+  not fabricated.
+- Historical remote-sensing and spacecraft datasets are not current lunar
+  surface readings.
+- NASA observations and computed geometry are not direct astronaut dose,
+  habitat conditions, medical assessments, or operational navigation.
+- The mission store is in memory and resets when the backend restarts.

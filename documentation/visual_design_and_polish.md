@@ -9,10 +9,13 @@ behavior, and consistent cyan/orange status accents.
 
 The landing page keeps its lunar artwork and animated starfield while adding a
 lightweight orbital ring motion and a restrained glow on the primary launch
-action. Mission Setup cards now provide stronger selected-state feedback and
-panel hover hierarchy. Mission Control panels and resource cards gain small
-lift/border transitions, while the final outcome report arrives with a short
-success/failure-neutral reveal animation.
+action. The shared background now includes softly animated, CSS-rendered Moon,
+Saturn-like, and Mars-like decorative objects and brighter atmospheric color
+gradients. The objects are illustrative, not to scale, and are not live solar
+system positions. Mission Setup cards now provide stronger selected-state
+feedback and panel hover hierarchy. Mission Control panels and resource cards
+gain small lift/border transitions, while the final outcome report arrives
+with a short success/failure-neutral reveal animation.
 
 No mission configuration, NASA data, resource calculation, event consequence,
 or scoring logic was changed.

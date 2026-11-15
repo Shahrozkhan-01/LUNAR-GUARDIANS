@@ -16,6 +16,11 @@ const STAR_DATA = Array.from({ length: 110 }, (_, i) => {
 export default function Stars() {
   return (
     <div className="stars-container" aria-hidden="true">
+      <div className="celestial-moon" />
+      <div className="celestial-saturn">
+        <span />
+      </div>
+      <div className="celestial-mars" />
       {STAR_DATA.map((star) => (
         <div
           key={star.id}

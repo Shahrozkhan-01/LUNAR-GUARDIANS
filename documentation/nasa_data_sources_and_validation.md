@@ -110,12 +110,10 @@ Each section records the product-specific retrieval and validation method.
   Result: `PASS_WITH_WARNINGS`; source-defined negative corrected values are
   preserved.
 - **Limitations/use:** LEND is an orbital lunar neutron detector. Counts are
-  not lunar-surface flux or astronaut radiation dose and are not sufficient
-  alone to confirm water ice at a specific location. It supplies historical
-
- It supplies historical
-  space-weather preparedness context only and does not change gameplay
-  resources, shelter effects, or simulated exposure.
+ not lunar-surface flux or astronaut radiation dose and are not sufficient
+ alone to confirm water ice at a specific location. It supplies historical
+ lunar neutron-observation context only and does not change gameplay
+ resources, shelter effects, or simulated exposure.
 
 ## NASA DONKI
 

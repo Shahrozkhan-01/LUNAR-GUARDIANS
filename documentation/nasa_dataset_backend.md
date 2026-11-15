@@ -156,20 +156,21 @@ these endpoints.
 
 `backend/tests/test_dataset_api.py` covers:
 
-- The five supported dataset IDs and route registration.
+- The nine active static dataset IDs and route registration.
 - Catalog source, units, validation status, processing metadata, and scientific
   limitations.
-- Saved summaries for all five products.
-- Paginated STEREO and Horizons CSV records and ACE validity-mask behavior.
+- Saved summaries for all active products.
+- Paginated CSV/CDF-derived records and ACE validity-mask behavior.
 - Maximum page-size enforcement, invalid IDs, and disabled Diviner/LOLA records.
 - Missing files and an empty CSV dataset.
 
-**Results:** all 38 backend tests passed, including the 9 dataset API tests and
-the existing DONKI and simulation suites. `npm run lint` passed. `npm run
-build` passed; Vite emitted its existing advisory that the minified JavaScript
-bundle exceeds 500 kB. A live local HTTP smoke check confirmed dataset listing,
-LOLA metadata, Horizons summary, ACE pagination, `409` for Diviner record
-access, and `404` for an unknown ID.
+**Latest local verification (2026-11-15):** the complete backend suite passed
+49 tests. Frontend lint and production build passed; Vite emitted its
+non-blocking advisory that a minified JavaScript chunk exceeds 500 kB. Live
+local HTTP smoke checks confirmed the health route, nine-dataset listing,
+metadata and summary routes, mission creation/state retrieval, and the browser
+Data Explorer route.
 
-The frontend is not connected to these endpoints, and no frontend, simulation,
-resource, event, or gameplay code was changed.
+The React NASA Data Explorer uses these endpoints. Full Diviner/LOLA grids are
+not sent as paginated rows; their metadata and saved summaries are exposed
+separately.

@@ -2,6 +2,10 @@
 
 **Junior Astronaut Mission Trainer**
 
+**NASA Space Apps Hackathon team:** VOID DOMINATORS
+
+**Team members:** Shahroz Khan, Abdul Rafay, Maira, Urwa, Ayesha, and Fatima
+
 LUNAR GUARDIANS is an educational lunar survival simulation for children
 approximately 7–12 years old. Players configure a lunar outpost, manage
 simulated life-support resources, respond to mission events, explore NASA
@@ -73,7 +77,7 @@ and [NASA integration architecture](documentation/nasa_dataset_integration_archi
 - Windows PowerShell.
 - Python 3.10+ recommended; the project environment was validated with the
   repository virtual environment.
-- Node.js 18+ and npm.
+- Node.js 20.19+ (or 22.12+) and npm. Vite 8 does not support Node.js 18.
 - A NASA API key is optional for local startup because `DEMO_KEY` is supported,
   but a personal key is recommended for higher rate limits.
 
@@ -184,39 +188,22 @@ advisory.
 
 See [NASA data sources and validation](documentation/nasa_data_sources_and_validation.md).
 
-### Dataset publication note
+### Local dataset files
 
-The local source and processed products are preserved for reproducibility. The
-large products listed in
+Dataset source files, processed products, scripts, and validation reports are
+preserved in this project. The two large products listed in
 [dataset_download_manifest.json](datasets/dataset_download_manifest.json) are
-distributed as assets of the `datasets-v1` GitHub Release because GitHub
-rejects individual files of 100 MB or more. Verify the recorded SHA-256 values
-after uploading those assets. Smaller products may be explicitly force-added
-when their source terms permit publication.
-
-Two local files also exceed GitHub's 100 MB individual-file limit:
+local files and are excluded from Git because of GitHub's 100 MB individual
+file limit:
 
 - `datasets/raw/lunar_environment/diviner/global_cumul_avg_cyl_80s70s_002.tab`
   (about 149 MB)
 - `datasets/processed/lunar_environment/lola/ldem_16_processed.npz`
   (about 101 MB)
 
-They are preserved in the project workspace and excluded from normal Git
-staging. See [deployment.md](documentation/deployment.md) for Render setup and
-the required backend environment variables.
-
-## Free public deployment
-
-The GitHub Pages frontend URL is
-<https://shahrozkhan-01.github.io/LUNAR-GUARDIANS/>. The
-[Pages workflow](.github/workflows/pages.yml) deploys automatically when
-frontend files are pushed to `main`. Enable **Settings → Pages → Build and
-deployment → Source → GitHub Actions** once in the repository.
-
-The backend blueprint in [render.yaml](render.yaml) explicitly selects Render's
-free plan. After creating the service, set the GitHub Actions repository
-variable `VITE_API_BASE_URL` to its actual `onrender.com` URL if it differs
-from the default. Keep `NASA_API_KEY` only in Render's backend environment.
+They remain preserved in the project workspace; the manifest records their
+SHA-256 checksums. No hosting or release download is needed when running the
+project from this complete local workspace.
 
 ## Screenshots
 
@@ -274,6 +261,7 @@ For the complete document set, see [documentation/README.md](documentation/READM
 
 ## Documentation
 
+- [Complete project and hackathon guide](documentation/lunar_guardians_complete_guide.md)
 - [User manual](documentation/user_manual.md)
 - [Software requirements specification](documentation/software_requirements_specification.md)
 - [System architecture](documentation/system_architecture.md)
@@ -281,23 +269,22 @@ For the complete document set, see [documentation/README.md](documentation/READM
 - [Full gameplay testing](documentation/full_gameplay_testing.md)
 - [Final testing report](documentation/final_testing_report.md)
 - [Demonstration script](documentation/project_demonstration_script.md)
-- [Public repository guide](documentation/github_repository_guide.md)
-- [Publication checklist](documentation/github_publication_checklist.md)
 
 ## Future improvements
 
 - Add a durable account or save-game store instead of the current in-memory
   mission store.
 - Use code splitting to reduce the production bundle-size advisory.
-- Add a controlled dataset-download or Git LFS workflow for the two oversized
-  products.
 - Expand automated browser coverage while preserving the scientific data
   boundaries.
 
-## License and publication status
+## License and asset notes
 
-No project license file is currently present. This means the owner retains
-copyright and public viewers should not assume permission to reuse, modify, or
-redistribute the project. Choose and add an appropriate license before
-publication if reuse is intended; review NASA and third-party dataset terms
-separately. See the [public repository guide](documentation/github_repository_guide.md).
+The VOID DOMINATORS team confirms that the project's original artwork,
+including the bundled illustrations, is team-owned. NASA datasets and software
+libraries retain their respective sources, attribution requirements, and
+applicable terms; they are not claimed as team-created material. No
+project-level `LICENSE` file is present, so this ownership statement does not
+grant the public permission to reuse the project. See the
+[complete project guide](documentation/lunar_guardians_complete_guide.md) for
+the asset inventory and attribution notes.

@@ -2,67 +2,73 @@
 
 ## 1. Introduction — 45 seconds
 
-Open the landing page and explain that LUNAR GUARDIANS teaches lunar mission
-planning to children through simulated resources and real NASA context. Point
-out that NASA observations and game consequences are deliberately labeled
-separately.
+Introduce LUNAR GUARDIANS as a lunar survival learning game for ages 7–12.
+Explain the central rule: **NASA observations are real, while resource
+balances and game consequences are simulations.**
 
 ## 2. Landing page — 45 seconds
 
-Show the lunar background, starfield, mission status, introduction, and
-**Start Your Mission** button. Mention the optional sound control and that
-sound is off by default.
+Show the lunar art, star field, decorative celestial bodies, and launch button.
+Explain that the background bodies are illustrative, not scaled or live
+astronomical positions. Sound is optional and off by default.
 
 ## 3. Mission Setup — 90 seconds
 
-Click **Start Mission**. Select Lunar Outpost, Explorer, two astronauts, and
-five days for a short demonstration. Briefly show the Commander and Expert
-cards without starting them.
+Choose Lunar Outpost, Explorer, a two-person crew, and a five-day mission.
+Briefly show the other available difficulty, crew-size, and duration choices.
 
-## 4. NASA Mission Briefing — 60 seconds
+## 4. NASA briefing — 60 seconds
 
-Select each briefing preset:
+Show the three presets:
 
-1. South Polar Exploration: historical Diviner and broad LOLA context.
-2. Space Weather Preparedness: ACE and STEREO-A spacecraft observations.
-3. Communication and Navigation: Horizons range and light time.
+1. South Polar Exploration — historical Diviner and broad LOLA context.
+2. Space Weather Preparedness — historical ACE/STEREO context.
+3. Communication and Navigation — Horizons ephemerides and derived light-time
+   explanation.
 
-Explain that records from different dates are not one simultaneous event.
+Explain that observations from different dates and spacecraft are not one
+simultaneous lunar environment.
 
 ## 5. Mission Control — 90 seconds
 
-Initialize the mission. Show the mission day/progress header, simulated
-resource cards, crew status, subsystem cards, activity log, and power
-allocation. Emphasize that resource values are game units.
+Initialize the mission. Show resource meters, crew indicators, system status,
+power allocation, and event/activity panels. Emphasize that the game meters
+are simulated units.
 
-## 6. NASA Space Weather — 60 seconds
+## 6. Space weather and decisions — 90 seconds
 
-Scroll to NASA Space Weather. Point out connection status, retrieval time,
-event counts, source links, dates, and `REAL NASA DATA`. Explain that DONKI
-metadata does not measure lunar-surface dose.
+Show NASA Space Weather status, retrieval time, event dates and NASA source
+links. If records are available, identify them as `REAL NASA DATA`; if not,
+explain that no fake observations are substituted. Show a training-event
+decision and its `SIMULATED GAME CONSEQUENCE`.
 
-## 7. NASA Training Events — 90 seconds
+## 7. NASA Data Explorer — 75 seconds
 
-Open the three optional training cards. Read one scientific limitation and
-resolve one choice from each category. Point out the
-`SIMULATED TRAINING EVENT` and `SIMULATED GAME CONSEQUENCE` labels.
+Open the Explorer and point out that it lists nine static dataset IDs plus
+separate DONKI API information. Open a product's metadata, source/coverage,
+units, validation state, and scientific limitations. Note that full Diviner
+and LOLA grids are not returned as ordinary table rows.
 
 ## 8. Daily mission — 60 seconds
 
-Resolve a normal event if present, then click **NEXT DAY**. Show the feedback
-banner, updated resources, and mission progress. Explain that NASA context
-does not directly change resource formulas.
+Resolve a normal event if present, advance a day, and show updated resources
+and mission progress. Explain that historical dataset values do not directly
+change game-resource formulas.
 
-## 9. NASA Data Explorer — 60 seconds
+## 9. Completion and debrief — 90 seconds
 
-Use the navigation button to open Data Explorer. Show the five datasets,
-metadata, validation status, summaries, and a paginated supported-record view.
-Mention that Diviner and LOLA full grids are intentionally not returned.
+For a complete demonstration, use the backend's deterministic test scenario or
+advance a prepared short mission to its end. Show outcome, final resources,
+Science Points, decisions, events, lessons, and improvement suggestions.
+Relaunch Day 1 and show that the new mission starts cleanly.
 
-## 10. Completion and debrief — 60–90 seconds
+## Presenter notes
 
-Return to Mission Control and advance through the short mission. Show the
-success/failure outcome, final resources, Science Points, important decisions,
-major events, strengths, improvement suggestions, and lessons. Click
-**Relaunch Day 1** and show that the new mission starts cleanly with reset
-resources and no old history.
+- Start both local services before the presentation using
+  `.\start-lunar-guardians.ps1`.
+- Use `documentation/screenshots/` if NASA or network access is temporarily
+  unavailable.
+- Never describe particle flux, neutron counts, a flare class, or spacecraft
+  geometry as a lunar astronaut dose or habitat measurement.
+- See the [complete guide](lunar_guardians_complete_guide.md) for all nine
+  dataset citations and project limitations.

@@ -102,11 +102,11 @@ backend endpoints and does not change the dataset service or DONKI routes.
 
 ## Verification
 
-- Backend unittest suite: **38 tests passed** using `backend/venv`.
-- Frontend lint: **passed with no lint warnings**.
+- Backend unittest suite: **49 tests passed** using `backend/venv`.
+- Frontend lint: **passed**.
 - Frontend production build: **passed**. Vite reports the existing main-bundle
   size advisory; the NASA Data Explorer remains separately bundled.
-- Browser/API checks using all five actual local dataset responses confirmed
+- Browser/API checks using the current local dataset responses confirmed
   the preset mappings, source date coverage, displayed units, scientific
   limitations, ACE/STEREO sample values, and Horizons range/light-time labels.
 - With the dataset catalog request intentionally failed, the briefing displayed
