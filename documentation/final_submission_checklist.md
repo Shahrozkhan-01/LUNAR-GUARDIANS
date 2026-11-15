@@ -68,6 +68,8 @@
   and DEMO_KEY rate limits.
 - The mission store is in memory; active missions do not persist across backend
   restarts.
-- A fresh checkout does not contain the ignored 106 MB LOLA processed grid;
+- A fresh checkout does not contain the ignored 106 MB full LOLA processed
+  grid; the tracked 64,800-point preview is sampled source data, not a
+  substitute for the full raster;
   its records are unavailable unless the local file is restored.
 - The player model is educational and not an operational or medical simulator.

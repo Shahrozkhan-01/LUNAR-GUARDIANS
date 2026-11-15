@@ -206,8 +206,10 @@ file limit:
   (about 101 MB)
 
 They remain preserved in the project workspace; the manifest records their
-SHA-256 checksums. No hosting or release download is needed when running the
-project from this complete local workspace.
+SHA-256 checksums. The hosted Data Explorer uses a separate compact, tracked
+LOLA preview sampled from the full grid; it is not the full-resolution raster.
+No hosting or release download is needed when running the project from this
+complete local workspace.
 
 ## Screenshots
 

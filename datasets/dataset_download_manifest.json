@@ -15,5 +15,19 @@
       "sha256": "e0682e4c5168b028bf17999c8ab59eec8df887f315145c8f3e5c8a3ae9e50562"
     }
   ],
-  "instructions": "Upload each listed file to the datasets-v1 GitHub Release, then publish the release before deploying the backend. The remaining small processed products are committed with the source tree."
+  "tracked_products": [
+    {
+      "path": "datasets/processed/lunar_environment/lola/ldem_16_preview.csv",
+      "purpose": "64,800-point systematic sample of original NASA PDS LOLA grid cells for hosted Data Explorer pages; not a replacement for the full grid",
+      "size_bytes": 3101325,
+      "sha256": "a86ba86d9d27f1566cabbc0fe583df1c74b84b1c35371bc329602801e55dc0c2"
+    },
+    {
+      "path": "datasets/processed/lunar_environment/lola/ldem_16_preview_metadata.json",
+      "purpose": "Provenance, source hash, sampling method, and scientific limitations for the tracked LOLA preview",
+      "size_bytes": 1302,
+      "sha256": "84a0f67de7c4018d24ed9007a925deffb61aeda9861b50d8eff63fb4703b7812"
+    }
+  ],
+  "instructions": "Upload only the files listed under assets to the datasets-v1 GitHub Release, then publish the release before deploying the backend. Tracked products are committed with the source tree."
 }

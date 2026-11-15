@@ -87,7 +87,6 @@ function SummaryStatistics({ datasetId, summary }) {
       </section>
     )
   }
-
   if (datasetId === 'lola') {
     const globalStats = summary.height_m_relative_to_reference_radius_statistics || {}
     const bands = Object.entries(summary.latitude_band_height_statistics || {})
@@ -238,15 +237,13 @@ function SummaryChart({ dataset, summary, records, aceVariable, setAceVariable, 
       .filter(([name, value]) => /^t(?:\d|bol)/.test(name) && Number.isFinite(value?.mean))
       .map(([name, value]) => ({ date: name.toUpperCase(), value: value.mean }))
   } else if (dataset.dataset_id === 'lola') {
-    chartTitle = 'Mean elevation by latitude band'
+    chartTitle = 'Sampled LOLA elevation by record (loaded page)'
     unit = 'm relative to reference radius'
-    const bands = summary?.latitude_band_height_statistics || {}
-    chartData = Object.entries(bands)
-      .filter(([, value]) => Number.isFinite(value?.height_m_mean))
-      .map(([name, value]) => ({
-        date: `${name.replace('_to_', '° to ')}°`,
-        value: value.height_m_mean,
-      }))
+    chartType = 'records'
+    chartData = (records || []).map((record, index) => ({
+      date: String(index + 1),
+      value: numericValue(record.height_m),
+    }))
   } else if (dataset.dataset_id === 'jpl_horizons') {
     chartTitle = 'Computed Earth–Moon range by epoch'
     unit = 'km'
@@ -345,7 +342,9 @@ function SummaryChart({ dataset, summary, records, aceVariable, setAceVariable, 
       </div>
       {chartType === 'records' && (
         <p className="nasa-explorer-chart-range">
-          Showing loaded record page only. Missing channel values are left blank; no interpolation is applied.
+          {dataset.dataset_id === 'lola'
+            ? 'Preview records only; each point is an original grid sample with no interpolation. See the table for coordinates.'
+            : 'Showing loaded record page only. Missing channel values are left blank; no interpolation is applied.'}
         </p>
       )}
       {hasData ? (
@@ -455,13 +454,17 @@ function RecordsTable({ dataset, records, pagination, loading, error, onPageChan
                 {dataset.dataset_id === 'lro_spice' && (
                   <tr><th>UTC timestamp</th><th>X (km, J2000)</th><th>Y (km, J2000)</th><th>Z (km, J2000)</th><th>Distance from Moon center (km)</th></tr>
                 )}
+                {dataset.dataset_id === 'lola' && (
+                  <tr><th>Latitude (°)</th><th>East longitude (°)</th><th>Elevation DN</th><th>Height (m)</th><th>Planetary radius (m)</th></tr>
+                )}
                 {dataset.dataset_id === 'osd53' && (
                   <tr><th>Sample ID</th><th>Organism</th><th>Material</th><th>Flight phase</th><th>Time</th></tr>
                 )}
               </thead>
               <tbody>
                 {records.length === 0 && (
-                  <tr><td colSpan={dataset.dataset_id === 'jpl_horizons' ? 5 : dataset.dataset_id === 'stereo_impact' ? 4 : dataset.dataset_id === 'omni_hourly' || dataset.dataset_id === 'lend' || dataset.dataset_id === 'lro_spice' || dataset.dataset_id === 'osd53' ? 5 : 3}>
+                  <tr>
+                    <td colSpan={dataset.dataset_id === 'jpl_horizons' || dataset.dataset_id === 'lola' ? 5 : dataset.dataset_id === 'stereo_impact' ? 4 : dataset.dataset_id === 'omni_hourly' || dataset.dataset_id === 'lend' || dataset.dataset_id === 'lro_spice' || dataset.dataset_id === 'osd53' ? 5 : 3}>
                     {pagination.total_records === 0 ? 'This dataset contains no records.' : 'No records on this page.'}
                   </td></tr>
                 )}
@@ -507,6 +510,17 @@ function RecordsTable({ dataset, records, pagination, loading, error, onPageChan
                         <td>{displayNumber(record.y_km, 2)}</td>
                         <td>{displayNumber(record.z_km, 2)}</td>
                         <td>{displayNumber(record.distance_from_moon_center_km, 2)}</td>
+                      </tr>
+                    )
+                  }
+                  if (dataset.dataset_id === 'lola') {
+                    return (
+                      <tr key={`${record.latitude_center_degrees}-${record.longitude_center_degrees}-${index}`}>
+                        <td>{displayNumber(record.latitude_center_degrees, 5)}</td>
+                        <td>{displayNumber(record.longitude_center_degrees, 5)}</td>
+                        <td>{record.elevation_dn}</td>
+                        <td>{displayNumber(record.height_m, 1)}</td>
+                        <td>{displayNumber(record.planetary_radius_m, 1)}</td>
                       </tr>
                     )
                   }
@@ -779,8 +793,12 @@ export default function NasaDataExplorer() {
                   <article className={`nasa-dataset-card${selectedId === dataset.dataset_id ? ' selected' : ''}`} key={dataset.dataset_id}>
                     <div className="nasa-dataset-card-top">
                       <span className="nasa-dataset-icon"><Database size={19} /></span>
-                      <span className={`nasa-availability ${dataset.availability?.status === 'available' ? 'available' : 'unavailable'}`}>
-                        <i /> {dataset.availability?.status === 'available' ? 'Available' : 'Unavailable'}
+                      <span className={`nasa-availability ${dataset.availability?.status === 'available' ? 'available' : dataset.availability?.status === 'preview_available' ? 'preview' : 'unavailable'}`}>
+                        <i /> {dataset.availability?.status === 'available'
+                          ? 'Available'
+                          : dataset.availability?.status === 'preview_available'
+                            ? 'Preview available'
+                            : 'Unavailable'}
                       </span>
                     </div>
                     <span className="nasa-dataset-category">{dataset.category || 'NASA dataset'}</span>
@@ -824,6 +842,22 @@ export default function NasaDataExplorer() {
                 <div className="nasa-explorer-alert" role="status">
                   <AlertTriangle size={18} />
                   Processed dataset files are unavailable. Showing catalog information where possible.
+                </div>
+              )}
+              {metadata?.record_access?.preview_only && (
+                <div className="nasa-explorer-preview-notice" role="status">
+                  <strong>
+                    {selectedDataset.availability?.status === 'preview_available'
+                      ? 'Sample preview available; the full-resolution LOLA grid is not deployed.'
+                      : 'The LOLA records table uses a sampled preview, not the full-resolution grid.'}
+                  </strong>
+                  <p>
+                    The table contains every 16th source row and column
+                    ({metadata?.preview_metadata?.record_count?.toLocaleString() || 'sampled'} points;
+                    about 30.3 km apart at the equator). No interpolation is applied.
+                    Summary statistics below describe the complete source raster, not only this preview.
+                    This coarse sample cannot assess local landing hazards or site safety.
+                  </p>
                 </div>
               )}
               {(detailErrors.metadata || detailErrors.summary) && (
@@ -898,7 +932,9 @@ export default function NasaDataExplorer() {
                   <summary>Processing information and field definitions</summary>
                   <div className="nasa-explorer-processing-content">
                     <p>
-                      Processed file: {(metadata.processed_files || [])[0] || 'Not listed'}.
+                    Processed file: {metadata.preview_metadata?.preview_file
+                      || (metadata.processed_files || [])[0]
+                      || 'Not listed'}.
                       {' '}The backend sidecar preserves processing, source, and validation details.
                     </p>
                     {metadata.processing_metadata.columns && (

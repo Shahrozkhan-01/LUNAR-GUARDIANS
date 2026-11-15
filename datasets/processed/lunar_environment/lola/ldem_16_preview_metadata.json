@@ -1,0 +1,25 @@
+{
+  "source_file": "ldem_16_processed.npz",
+  "source_sha256": "e0682e4c5168b028bf17999c8ab59eec8df887f315145c8f3e5c8a3ae9e50562",
+  "preview_file": "ldem_16_preview.csv",
+  "preview_sha256": "a86ba86d9d27f1566cabbc0fe583df1c74b84b1c35371bc329602801e55dc0c2",
+  "record_count": 64800,
+  "grid_shape": [
+    180,
+    360
+  ],
+  "sampling_method": "Select every 16th original row and column; no interpolation or aggregation is applied.",
+  "source_pixels_per_degree": 16,
+  "sample_stride_pixels": 16,
+  "nominal_spacing_at_equator_km": 30.32336,
+  "coordinate_reference": "PDS MEAN EARTH/POLAR AXIS OF DE421; planetocentric latitude; east-positive longitude; pixel centers.",
+  "elevation_dn_definition": "Original signed integer sample from LDEM_16.",
+  "height_m_definition": "elevation_dn * 0.5; derived relative to the product reference radius.",
+  "planetary_radius_m_definition": "height_m + 1,737,400 m; derived.",
+  "limitations": [
+    "This is a regular sample of the global source grid, not the full-resolution grid.",
+    "The sample spacing is about 30.3 km at the equator and varies with latitude.",
+    "It is not suitable for local landing hazards, slope analysis, or site-safety conclusions.",
+    "Full-grid summary statistics describe the source raster, not just this preview."
+  ]
+}

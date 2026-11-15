@@ -119,8 +119,11 @@ The simulation runs locally and does not require NASA to be online. If DONKI
 cannot be reached, the status is reported and no replacement NASA observations
 are fabricated. Static dataset views use the local files under
 `datasets/processed/`. A fresh clone will not include the ignored 106 MB LOLA
-processed grid; metadata and scientific caveats remain available, but its
-full-grid record view requires that local file.
+full-resolution grid. The repository includes a compact 64,800-point LOLA
+preview, sampled from every 16th row and column of that real source grid, so
+the hosted Data Explorer can display paginated coordinates and elevations.
+The preview is not the full grid and cannot support local landing-site or
+hazard assessment.
 
 ## 3. How to play
 
@@ -227,7 +230,8 @@ DONKI; the API key is not returned to the frontend.
 
 Dataset IDs are allowlisted in `backend/app/services/dataset_service.py`.
 Page sizes are limited by the service; the full Diviner/LOLA grids are not
-transferred as ordinary paginated rows.
+transferred as ordinary paginated rows. LOLA record pages use only the
+documented coarse preview; its full-resolution raster is not deployed.
 
 ## 6. NASA datasets and sources
 
@@ -241,7 +245,7 @@ reports are the machine-readable inventory.
 | API ID | Data and selected coverage | Source / detail | Validation and important limit |
 |---|---|---|---|
 | `diviner` | LRO Diviner cumulative south-polar brightness-temperature grid; 2009–2015, 70°S–80°S; 1,382,400 rows. Coordinates in degrees, local time in hours, temperature in K. | [Official PDS product](https://pds-geosciences.wustl.edu/lro/urn-nasa-pds-lro_diviner_derived1/data_derived_gcp/global_cumul_avg_cyl_80s70s_002.tab); [product guide](diviner_dataset.md), [processing](diviner_processing.md). | PASS; missing-value policy and readback are documented. Historical remote sensing, not live outpost temperature. |
-| `lola` | LRO LOLA LDEM_16 global topography; 16,588,800 samples. DN and derived elevation in meters; coordinates in degrees. | [Official PDS raster](https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/data/lola_gdr/cylindrical/img/ldem_16.img); [product guide](lola_dataset.md), [processing](lola_processing.md). | PASS_WITH_WARNINGS; documented extrema mismatch retained. Approx. 1.9 km/pixel context, not landing-hazard certification. |
+| `lola` | LRO LOLA LDEM_16 global topography; 16,588,800 source samples. The hosted record preview contains 64,800 original cells (every 16th row and column), with DN and derived elevation in meters and coordinates in degrees. | [Official PDS raster](https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/data/lola_gdr/cylindrical/img/ldem_16.img); [product guide](lola_dataset.md), [processing](lola_processing.md). | PASS_WITH_WARNINGS; documented extrema mismatch retained. The ~30 km equatorial preview spacing and ~1.9 km/pixel source context are not landing-hazard certification. Full raster is not deployed. |
 | `ace_epam` | ACE EPAM Level-2 CDF, 2020-01-01 to 2020-01-02 UTC; 277 records and 88 measurement/uncertainty channels. Source channel units are preserved in metadata. | [NASA SPDF archive](https://spdf.gsfc.nasa.gov/pub/data/ace/epam/); [CDAWeb dataset](https://cdaweb.gsfc.nasa.gov/WS/cdasr/1/dataviews/sp_phys/datasets/AC_H1_EPM/); [guide](ace_epam_dataset.md), [processing](ace_epam_processing.md). | PASS_WITH_WARNINGS; fill values and cadence warnings retained. ACE is near L1, not the Moon or a crew dosimeter. |
 | `stereo_impact` | STEREO-A IMPACT HET, March 2012; 31 daily intervals with 3 electron and 11 proton channels. Intensity units: particles/(cm²·sr·s·MeV), with energy ranges in MeV. | [Official SPDF product](https://spdf.gsfc.nasa.gov/pub/data/stereo/ahead/l2/impact_ascii/het/1day/AeH12Mar.1d); [guide](stereo_impact_dataset.md), [processing](stereo_impact_processing.md). | PASS; source tokens retained. Historical spacecraft observations, not lunar conditions or astronaut dose. |
 | `jpl_horizons` | Earth–Moon ephemeris, eight daily epochs, 2026-11-14 through 2026-11-21 UTC. Range km, range rate km/s, light time minutes; derived two-way vacuum time in seconds. | [Horizons API documentation](https://ssd-api.jpl.nasa.gov/doc/horizons.html); [guide](jpl_horizons_dataset.md), [processing](jpl_horizons_processing.md). | PASS_WITH_WARNINGS; saved source values checked. Computed ephemeris; derived two-way value is not a direct measurement and excludes network delay. |

@@ -115,9 +115,12 @@ artifacts at 45-degree latitude-band boundaries. The height values are
 relative to the stated reference sphere, not automatically local elevation
 above a geoid or a specific landing-site datum.
 
-The data is cataloged and validated only. **It is not connected to gameplay**
-and does not change mission events, resources, maps, or environmental state.
-No Diviner data was processed as part of this acquisition.
+The data is cataloged and validated for the NASA Data Explorer. It is not
+connected to gameplay and does not change mission events, resources, maps, or
+environmental state. The hosted Explorer can show a compact 64,800-point
+preview, generated from every 16th source row and column; it is not the full
+grid and cannot assess local hazards. No Diviner data was processed as part
+of this acquisition.
 
 ## References
 

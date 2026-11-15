@@ -4,6 +4,7 @@ import csv
 import gzip
 from dataclasses import replace
 from pathlib import Path
+import shutil
 import tempfile
 import unittest
 from unittest.mock import patch
@@ -37,7 +38,7 @@ class TestDatasetAPI(unittest.TestCase):
         self.assertTrue(all(item["category"] for item in result["datasets"]))
         self.assertTrue(all(item["scientific_purpose"] for item in result["datasets"]))
         self.assertTrue(all(item["important_variables"] for item in result["datasets"]))
-        self.assertFalse(
+        self.assertTrue(
             next(item for item in result["datasets"] if item["dataset_id"] == "lola")[
                 "record_access"
             ]["available"]
@@ -66,6 +67,8 @@ class TestDatasetAPI(unittest.TestCase):
             lola["processing_metadata"]["elevation_conversion"]["scaling_factor"],
             0.5,
         )
+        self.assertEqual(lola["preview_metadata"]["record_count"], 64_800)
+        self.assertEqual(lola["preview_metadata"]["sample_stride_pixels"], 16)
 
         ace = dataset_routes.dataset_metadata("ace_epam")
         self.assertTrue(
@@ -203,12 +206,71 @@ class TestDatasetAPI(unittest.TestCase):
         self.assertFalse(record["measurements"]["P1"]["valid"])
         self.assertIn("not astronaut radiation dose", response["scientific_limitations"][1])
 
-    def test_large_grid_record_endpoints_are_disabled(self):
-        for dataset_id in ("diviner", "lola"):
-            with self.subTest(dataset_id=dataset_id):
-                with self.assertRaises(HTTPException) as raised:
-                    dataset_routes.dataset_records(dataset_id, page=1, page_size=50)
-                self.assertEqual(raised.exception.status_code, 409)
+    def test_large_grid_record_endpoint_remains_disabled(self):
+        with self.assertRaises(HTTPException) as raised:
+            dataset_routes.dataset_records("diviner", page=1, page_size=50)
+        self.assertEqual(raised.exception.status_code, 409)
+
+    def test_lola_preview_records_are_sampled_and_paginated(self):
+        response = dataset_routes.dataset_records("lola", page=2, page_size=20)
+        self.assertEqual(response["pagination"]["total_records"], 64_800)
+        self.assertEqual(response["pagination"]["total_pages"], 3_240)
+        self.assertEqual(len(response["records"]), 20)
+        first = response["records"][0]
+        self.assertEqual(
+            set(first),
+            {
+                "latitude_center_degrees",
+                "longitude_center_degrees",
+                "elevation_dn",
+                "height_m",
+                "planetary_radius_m",
+            },
+        )
+        self.assertEqual(
+            float(first["height_m"]),
+            int(first["elevation_dn"]) * 0.5,
+        )
+        self.assertEqual(
+            float(first["planetary_radius_m"]),
+            float(first["height_m"]) + 1_737_400,
+        )
+
+    def test_lola_preview_is_reported_when_full_grid_is_not_deployed(self):
+        source_root = (
+            dataset_service.DATASETS_ROOT
+            / "processed"
+            / dataset_service.DATASET_SPECS["lola"].processed_directory
+        )
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            temporary_root = Path(temporary_directory)
+            preview_root = (
+                temporary_root
+                / "processed"
+                / dataset_service.DATASET_SPECS["lola"].processed_directory
+            )
+            preview_root.mkdir(parents=True)
+            for file_name in (
+                "ldem_16_preview.csv",
+                "ldem_16_preview_metadata.json",
+            ):
+                shutil.copyfile(source_root / file_name, preview_root / file_name)
+
+            with patch.object(dataset_service, "DATASETS_ROOT", temporary_root):
+                listed = next(
+                    item
+                    for item in dataset_routes.datasets_list()["datasets"]
+                    if item["dataset_id"] == "lola"
+                )
+                metadata = dataset_routes.dataset_metadata("lola")
+                records = dataset_routes.dataset_records("lola", page=1, page_size=1)
+
+        self.assertEqual(listed["availability"]["status"], "preview_available")
+        self.assertFalse(listed["availability"]["processed_data"])
+        self.assertTrue(listed["availability"]["preview_data"])
+        self.assertTrue(listed["record_access"]["available"])
+        self.assertTrue(metadata["record_access"]["preview_only"])
+        self.assertEqual(records["pagination"]["total_records"], 64_800)
 
     def test_invalid_ids_and_excessive_page_sizes_are_rejected(self):
         with self.assertRaises(HTTPException) as raised:

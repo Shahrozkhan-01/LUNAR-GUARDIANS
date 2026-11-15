@@ -53,6 +53,8 @@ class DatasetSpec:
     scientific_limitations: tuple[str, ...]
     record_format: Optional[str] = None
     metadata_fields: tuple[str, ...] = ()
+    preview_file: Optional[str] = None
+    preview_metadata_file: Optional[str] = None
 
 
 DATASET_SPECS: Dict[str, DatasetSpec] = {
@@ -91,8 +93,10 @@ DATASET_SPECS: Dict[str, DatasetSpec] = {
         data_type="derived_topographic_product",
         scientific_limitations=(
             "LDEM_16 is broad terrain context at approximately 1.9 km/pixel, not detailed landing-hazard information.",
+            "The hosted record preview samples every 16th source row and column; it is not the full grid or suitable for local site assessment.",
             "The observed raster extrema differ from the PDS label extrema; the documented warning is retained.",
         ),
+        record_format="lola_preview_csv",
         metadata_fields=(
             "array_members",
             "data_set_id",
@@ -105,6 +109,8 @@ DATASET_SPECS: Dict[str, DatasetSpec] = {
             "spatial_reference",
             "warnings",
         ),
+        preview_file="ldem_16_preview.csv",
+        preview_metadata_file="ldem_16_preview_metadata.json",
     ),
     "ace_epam": DatasetSpec(
         dataset_name="ACE EPAM energetic-particle observations",
@@ -360,24 +366,80 @@ def _read_json(path: Path, dataset_id: str, label: str) -> Dict[str, Any]:
 
 def _available_files(spec: DatasetSpec) -> Dict[str, bool]:
     root = _dataset_root(spec)
-    return {
+    files = {
         "processed_data": (root / spec.data_file).is_file(),
         "processing_metadata": (root / spec.metadata_file).is_file(),
         "summary": (root / spec.summary_file).is_file(),
     }
+    if spec.preview_file is not None:
+        files["preview_data"] = (root / spec.preview_file).is_file()
+    if spec.preview_metadata_file is not None:
+        files["preview_metadata"] = (
+            root / spec.preview_metadata_file
+        ).is_file()
+    return files
 
 
-def _record_access(spec: DatasetSpec) -> Dict[str, Any]:
+def _availability_status(files: Dict[str, bool]) -> str:
+    if files["processed_data"]:
+        return "available"
+    if files.get("preview_data", False):
+        return "preview_available"
+    return "unavailable"
+
+
+def _record_access(
+    spec: DatasetSpec, files: Dict[str, bool]
+) -> Dict[str, Any]:
     if spec.record_format is None:
         return {
             "available": False,
             "reason": "Record access is disabled for this large dataset.",
         }
-    return {
+    if spec.preview_file is not None and not files.get("preview_data", False):
+        return {
+            "available": False,
+            "reason": "The sampled record preview is not present on this server.",
+        }
+    access = {
         "available": True,
         "default_page_size": DEFAULT_PAGE_SIZE,
         "maximum_page_size": MAX_PAGE_SIZE,
     }
+    if spec.preview_file is not None:
+        access["preview_only"] = True
+        access["description"] = (
+            "Records are a regular spatial sample from the full-resolution source grid."
+        )
+    return access
+
+
+def _preview_metadata(
+    spec: DatasetSpec, files: Dict[str, bool], dataset_id: str
+) -> Optional[Dict[str, Any]]:
+    if spec.preview_metadata_file is None or not files.get("preview_metadata", False):
+        return None
+    return _read_json(
+        _dataset_root(spec) / spec.preview_metadata_file,
+        dataset_id,
+        "Preview metadata",
+    )
+
+
+def _processed_file_paths(spec: DatasetSpec) -> list[str]:
+    paths = [
+        f"datasets/processed/{spec.processed_directory}/{spec.data_file}",
+        f"datasets/processed/{spec.processed_directory}/{spec.metadata_file}",
+        f"datasets/processed/{spec.processed_directory}/{spec.summary_file}",
+    ]
+    if spec.preview_file is not None:
+        paths.extend(
+            (
+                f"datasets/processed/{spec.processed_directory}/{spec.preview_file}",
+                f"datasets/processed/{spec.processed_directory}/{spec.preview_metadata_file}",
+            )
+        )
+    return paths
 
 
 def _science_record(spec: DatasetSpec, row: Dict[str, str]) -> Dict[str, Any]:
@@ -459,15 +521,11 @@ def list_datasets() -> Dict[str, Any]:
             "dataset_id": dataset_id,
             **_science_record(spec, row),
             "availability": {
-                "status": "available" if files["processed_data"] else "unavailable",
+                "status": _availability_status(files),
                 **files,
             },
-            "record_access": _record_access(spec),
-            "processed_files": [
-                f"datasets/processed/{spec.processed_directory}/{spec.data_file}",
-                f"datasets/processed/{spec.processed_directory}/{spec.metadata_file}",
-                f"datasets/processed/{spec.processed_directory}/{spec.summary_file}",
-            ],
+            "record_access": _record_access(spec, files),
+            "processed_files": _processed_file_paths(spec),
         }
         datasets.append(item)
     return {"dataset_count": len(datasets), "datasets": datasets}
@@ -486,16 +544,13 @@ def get_dataset_metadata(dataset_id: str) -> Dict[str, Any]:
         "dataset_id": dataset_id,
         **_science_record(spec, row),
         "availability": {
-            "status": "available" if files["processed_data"] else "unavailable",
+            "status": _availability_status(files),
             **files,
         },
-        "record_access": _record_access(spec),
-        "processed_files": [
-            f"datasets/processed/{spec.processed_directory}/{spec.data_file}",
-            f"datasets/processed/{spec.processed_directory}/{spec.metadata_file}",
-            f"datasets/processed/{spec.processed_directory}/{spec.summary_file}",
-        ],
+        "record_access": _record_access(spec, files),
+        "processed_files": _processed_file_paths(spec),
         "processing_metadata": processing_metadata,
+        "preview_metadata": _preview_metadata(spec, files, dataset_id),
     }
 
 
@@ -509,7 +564,7 @@ def get_dataset_summary(dataset_id: str) -> Dict[str, Any]:
         "dataset_id": dataset_id,
         **_science_record(spec, row),
         "availability": {
-            "status": "available" if files["processed_data"] else "unavailable",
+            "status": _availability_status(files),
             **files,
         },
         "summary": summary,
@@ -599,12 +654,16 @@ def get_dataset_records(
         raise ValueError(f"page_size must be between 1 and {MAX_PAGE_SIZE}")
 
     spec, row = _catalog_row(dataset_id)
-    if spec.record_format is None:
+    files = _available_files(spec)
+    if spec.record_format is None or (
+        spec.preview_file is not None and not files.get("preview_data", False)
+    ):
         raise DatasetRecordsNotAvailableError(
-            "Record-level access is disabled for this large dataset; use its metadata and summary."
+            "Record-level access is unavailable for this dataset; use its metadata and summary."
         )
 
-    path = _dataset_root(spec) / spec.data_file
+    file_name = spec.preview_file if spec.preview_file is not None else spec.data_file
+    path = _dataset_root(spec) / file_name
     if spec.record_format == "ace_npz":
         records, total = _ace_records(path, page, page_size)
     else:

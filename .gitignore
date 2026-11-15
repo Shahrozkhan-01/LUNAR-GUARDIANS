@@ -107,6 +107,16 @@ datasets/raw/
 datasets/processed/
 datasets/github_compressed/
 
+# This small source-derived sample and its provenance are shipped with the API.
+!datasets/processed/
+datasets/processed/*
+!datasets/processed/lunar_environment/
+datasets/processed/lunar_environment/*
+!datasets/processed/lunar_environment/lola/
+datasets/processed/lunar_environment/lola/*
+!datasets/processed/lunar_environment/lola/ldem_16_preview.csv
+!datasets/processed/lunar_environment/lola/ldem_16_preview_metadata.json
+
 # These two products also exceed GitHub's 100 MB individual-file limit.
 datasets/raw/lunar_environment/diviner/global_cumul_avg_cyl_80s70s_002.tab
 datasets/processed/lunar_environment/lola/ldem_16_processed.npz
