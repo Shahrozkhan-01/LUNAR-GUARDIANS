@@ -1,0 +1,96 @@
+{
+  "dataset": "NASA LRO LEND RDR DLD/DLX",
+  "product_identifiers": [
+    "urn:nasa:pds:lro_lend:data_science_derived:lend_rdr_dld_20200101",
+    "urn:nasa:pds:lro_lend:data_science_derived:lend_rdr_dlx_20200101"
+  ],
+  "status": "PASS_WITH_WARNINGS",
+  "retrieved_at_utc": "2026-11-14T22:08:53.559760+00:00",
+  "checks": [
+    {
+      "check": "lend_rdr_dld_20200101.dat exists",
+      "status": "PASS"
+    },
+    {
+      "check": "lend_rdr_dld_20200101.dat byte length",
+      "status": "PASS",
+      "observed": 20388612,
+      "expected": 20388612
+    },
+    {
+      "check": "lend_rdr_dlx_20200101.dat exists",
+      "status": "PASS"
+    },
+    {
+      "check": "lend_rdr_dlx_20200101.dat byte length",
+      "status": "PASS",
+      "observed": 6056868,
+      "expected": 6056868
+    },
+    {
+      "check": "record count",
+      "status": "PASS",
+      "observed": 85308,
+      "expected": 85308
+    },
+    {
+      "check": "timestamps parse as UTC",
+      "status": "PASS"
+    },
+    {
+      "check": "timestamps are nondecreasing",
+      "status": "PASS"
+    },
+    {
+      "check": "duplicate timestamps",
+      "status": "PASS",
+      "duplicates": 0
+    },
+    {
+      "check": "latitude range",
+      "status": "PASS",
+      "minimum": -85.47647094726562,
+      "maximum": 85.46226501464844
+    },
+    {
+      "check": "east longitude range",
+      "status": "PASS",
+      "minimum": 0.05436175316572189,
+      "maximum": 359.92193603515625
+    },
+    {
+      "check": "DLD/DLX timestamps aligned",
+      "status": "PASS"
+    },
+    {
+      "check": "non-finite numeric values",
+      "status": "PASS",
+      "count": 0
+    }
+  ],
+  "warnings": [
+    "The DLD label contains overlapping SHEN field definitions at byte 1; those undocumented fields are not decoded.",
+    "The DLD label reports km/s for STN2_COUNTS although its description and sibling detector fields identify detector counts; the source unit text is preserved as a documented label inconsistency.",
+    "Negative corrected counts/sigma values are source-defined unusable values and are preserved, not silently discarded."
+  ],
+  "time_coverage": {
+    "start": "2020-01-01T00:00:00Z",
+    "end": "2020-01-01T23:59:59Z"
+  },
+  "spatial_coverage": {
+    "latitude_min_deg": -85.47647094726562,
+    "latitude_max_deg": 85.46226501464844,
+    "east_longitude_min_deg": 0.05436175316572189,
+    "east_longitude_max_deg": 359.92193603515625
+  },
+  "source_sha256": {
+    "lend_rdr_dld_20200101.dat": "78f4a761d0a0e0fb742d316f3300d48a38b1ff5de958655dda7babc2076f0457",
+    "lend_rdr_dld_20200101.lbl": "4e8857713f38e42e93a43ab3fe5803747acc0c6d375ae0835f46d71e05e239ca",
+    "lend_rdr_dld_20200101.xml": "ca16a998348019fbf96e3539299910320e45987f792ba1199d6d3f8ffcd4a961",
+    "lend_rdr_dlx_20200101.dat": "1044963f92ff967f9c0e2919f0939c389cd34cdd3e6626871b8f5e1238d063c1",
+    "lend_rdr_dlx_20200101.lbl": "fdc652daedc13d685808bf1198e8fd03a3ac23051f92976ff82d698f3915c075",
+    "lend_rdr_dlx_20200101.xml": "350246bfdc1b0e543d7241c68c6f51a69812d6f706b9116d24bc173859db59af",
+    "lend_rdr_sis.htm": "7849e6acbea0d4f2d1b1e90883e9ab98520f691670d8516ec8bd576720d7d599",
+    "lend_rdr_sis.pdf": "6169e441addf3e003caaeb0a3413c878f04142d9dfa5ee1e5e09b6fbff563f27"
+  }
+}

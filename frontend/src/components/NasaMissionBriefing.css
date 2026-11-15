@@ -1,0 +1,395 @@
+.nasa-mission-briefing .setup-block-header {
+  margin-bottom: 18px;
+}
+
+.nasa-briefing-intro,
+.nasa-briefing-purpose,
+.nasa-briefing-scenario p,
+.nasa-briefing-date-note {
+  color: var(--text-secondary);
+  font-size: 0.84rem;
+  line-height: 1.65;
+}
+
+.nasa-briefing-intro {
+  max-width: 760px;
+  margin-top: 5px;
+}
+
+.nasa-briefing-presets {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.nasa-briefing-preset {
+  display: grid;
+  align-content: start;
+  gap: 8px;
+  min-width: 0;
+  padding: 15px;
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  background: rgba(8, 13, 32, 0.56);
+  color: var(--text-primary);
+  text-align: left;
+  cursor: pointer;
+  transition: border-color var(--transition-fast), background var(--transition-fast);
+}
+
+.nasa-briefing-preset:hover,
+.nasa-briefing-preset.selected {
+  border-color: var(--cyan);
+  background: rgba(0, 229, 255, 0.075);
+}
+
+.nasa-briefing-preset span {
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.nasa-briefing-preset small {
+  color: var(--text-muted);
+  font-size: 0.73rem;
+  line-height: 1.5;
+}
+
+.nasa-briefing-scenario {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(230px, 0.9fr);
+  gap: 18px;
+  margin-top: 16px;
+  padding: 18px;
+  border: 1px solid rgba(69, 217, 243, 0.22);
+  border-radius: 14px;
+  background: linear-gradient(145deg, rgba(0, 229, 255, 0.055), rgba(8, 13, 32, 0.48));
+}
+
+.nasa-briefing-kicker {
+  color: var(--cyan);
+  font-family: var(--font-display);
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.nasa-briefing-scenario h3 {
+  margin: 6px 0 10px;
+  color: var(--text-primary);
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  text-transform: uppercase;
+}
+
+.nasa-briefing-scenario p {
+  margin: 7px 0;
+}
+
+.nasa-briefing-scenario p strong {
+  color: var(--text-primary);
+}
+
+.nasa-briefing-scenario-facts {
+  display: grid;
+  align-content: start;
+  gap: 12px;
+}
+
+.nasa-briefing-scenario-facts > div {
+  display: grid;
+  gap: 5px;
+}
+
+.nasa-briefing-scenario-facts strong {
+  color: var(--text-primary);
+  font-size: 0.76rem;
+}
+
+.nasa-briefing-scenario-facts span,
+.nasa-briefing-scenario-facts li {
+  color: var(--text-secondary);
+  font-size: 0.74rem;
+  line-height: 1.55;
+}
+
+.nasa-briefing-scenario-facts ul,
+.nasa-briefing-limitations {
+  display: grid;
+  gap: 6px;
+  margin: 0;
+  padding-left: 17px;
+}
+
+.nasa-briefing-labels {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin: 15px 0;
+}
+
+.nasa-briefing-status {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  padding: 4px 7px;
+  border: 1px solid rgba(94, 234, 212, 0.24);
+  border-radius: 999px;
+  background: rgba(94, 234, 212, 0.07);
+  color: #8df1df;
+  font-family: var(--font-display);
+  font-size: 0.52rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.nasa-briefing-status.computed {
+  border-color: rgba(165, 180, 252, 0.3);
+  background: rgba(165, 180, 252, 0.08);
+  color: #c7d2fe;
+}
+
+.nasa-briefing-status.derived {
+  border-color: rgba(255, 180, 84, 0.3);
+  background: rgba(255, 180, 84, 0.08);
+  color: #ffd08b;
+}
+
+.nasa-briefing-status.simulated {
+  border-color: rgba(192, 132, 252, 0.3);
+  background: rgba(192, 132, 252, 0.08);
+  color: #d8b4fe;
+}
+
+.nasa-briefing-status.offline {
+  border-color: rgba(255, 130, 130, 0.32);
+  background: rgba(255, 130, 130, 0.08);
+  color: #ffb6b6;
+}
+
+.nasa-briefing-datasets {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.nasa-briefing-dataset {
+  min-width: 0;
+  padding: 15px;
+  border: 1px solid var(--border-subtle);
+  border-radius: 13px;
+  background: rgba(6, 10, 27, 0.52);
+}
+
+.nasa-briefing-dataset.unavailable {
+  border-color: rgba(255, 130, 130, 0.2);
+}
+
+.nasa-briefing-dataset-heading {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  color: var(--cyan);
+}
+
+.nasa-briefing-dataset-heading > div {
+  flex: 1;
+  min-width: 0;
+}
+
+.nasa-briefing-dataset-heading h3 {
+  margin: 0;
+  color: var(--text-primary);
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  line-height: 1.45;
+}
+
+.nasa-briefing-dataset-heading > div > span {
+  display: block;
+  margin-top: 4px;
+  color: var(--text-muted);
+  font-size: 0.66rem;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+.nasa-briefing-purpose {
+  margin: 12px 0;
+  font-size: 0.76rem;
+}
+
+.nasa-briefing-facts {
+  display: grid;
+  gap: 7px;
+  margin: 0;
+}
+
+.nasa-briefing-facts dt {
+  color: var(--text-muted);
+  font-size: 0.62rem;
+  text-transform: uppercase;
+}
+
+.nasa-briefing-facts dd {
+  margin: 2px 0 0;
+  color: var(--text-secondary);
+  font-size: 0.69rem;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.nasa-briefing-metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(135px, 1fr));
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.nasa-briefing-metric {
+  display: grid;
+  align-content: start;
+  gap: 5px;
+  min-width: 0;
+  padding: 9px;
+  border: 1px solid rgba(148, 185, 255, 0.1);
+  border-radius: 9px;
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.nasa-briefing-metric > span {
+  color: var(--text-muted);
+  font-size: 0.64rem;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
+.nasa-briefing-metric strong {
+  color: var(--text-primary);
+  font-size: 0.78rem;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+.nasa-briefing-metric small {
+  color: var(--text-muted);
+  font-size: 0.64rem;
+  font-weight: 500;
+}
+
+.nasa-briefing-metric em {
+  color: #ffd08b;
+  font-family: var(--font-display);
+  font-size: 0.49rem;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+}
+
+.nasa-briefing-limitations {
+  margin-top: 12px;
+}
+
+.nasa-briefing-limitations li,
+.nasa-briefing-record-note,
+.nasa-briefing-unavailable {
+  color: var(--text-muted);
+  font-size: 0.68rem;
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+}
+
+.nasa-briefing-record-note {
+  margin: 10px 0 0;
+}
+
+.nasa-briefing-unavailable {
+  margin: 12px 0 0;
+  color: #ffb6b6;
+}
+
+.nasa-briefing-alert {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 12px 0;
+  padding: 12px;
+  border: 1px solid rgba(255, 130, 130, 0.25);
+  border-radius: 10px;
+  color: #ffb6b6;
+}
+
+.nasa-briefing-alert > div {
+  flex: 1;
+  min-width: 0;
+}
+
+.nasa-briefing-alert strong {
+  font-size: 0.77rem;
+}
+
+.nasa-briefing-alert p {
+  margin: 3px 0 0;
+  font-size: 0.7rem;
+  line-height: 1.5;
+}
+
+.nasa-briefing-alert button {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 7px 9px;
+  border: 1px solid rgba(255, 130, 130, 0.3);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--text-primary);
+  cursor: pointer;
+  font-size: 0.7rem;
+}
+
+.nasa-briefing-loading {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 10px 0;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+}
+
+.nasa-briefing-spin {
+  color: var(--cyan);
+  animation: nasa-briefing-spin 1.2s linear infinite;
+}
+
+@keyframes nasa-briefing-spin {
+  to { transform: rotate(360deg); }
+}
+
+.nasa-briefing-date-note {
+  margin-top: 14px;
+  font-size: 0.72rem;
+}
+
+@media (max-width: 760px) {
+  .nasa-briefing-presets,
+  .nasa-briefing-datasets {
+    grid-template-columns: 1fr;
+  }
+
+  .nasa-briefing-scenario {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 460px) {
+  .nasa-briefing-dataset-heading {
+    flex-wrap: wrap;
+  }
+
+  .nasa-briefing-dataset-heading .nasa-briefing-status {
+    margin-left: 29px;
+  }
+}

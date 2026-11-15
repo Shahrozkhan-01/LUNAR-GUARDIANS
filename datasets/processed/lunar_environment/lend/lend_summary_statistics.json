@@ -1,0 +1,203 @@
+{
+  "dataset_id": "lro_lend_rdr_dld_dlx_20200101",
+  "record_count": 85308,
+  "time_coverage": {
+    "start": "2020-01-01T00:00:00Z",
+    "end": "2020-01-01T23:59:59Z"
+  },
+  "spatial_coverage": {
+    "latitude_min_deg": -85.47647094726562,
+    "latitude_max_deg": 85.46226501464844,
+    "east_longitude_min_deg": 0.05436175316572189,
+    "east_longitude_max_deg": 359.92193603515625
+  },
+  "measurement_statistics": {
+    "stn1_background_counts": {
+      "valid_count": 85308,
+      "negative_source_value_count": 0,
+      "minimum": 0.8874670267105103,
+      "mean": 0.8874670267105103,
+      "maximum": 0.8874670267105103
+    },
+    "stn1_counts": {
+      "valid_count": 0,
+      "negative_source_value_count": 85308,
+      "minimum": null,
+      "mean": null,
+      "maximum": null
+    },
+    "setn_background_counts": {
+      "valid_count": 85308,
+      "negative_source_value_count": 0,
+      "minimum": 0.7076150178909302,
+      "mean": 0.7076150178909302,
+      "maximum": 0.7076150178909302
+    },
+    "setn_counts": {
+      "valid_count": 0,
+      "negative_source_value_count": 85308,
+      "minimum": null,
+      "mean": null,
+      "maximum": null
+    },
+    "stn2_background_counts": {
+      "valid_count": 85308,
+      "negative_source_value_count": 0,
+      "minimum": 0.892408013343811,
+      "mean": 0.892408013343811,
+      "maximum": 0.892408013343811
+    },
+    "stn2_counts": {
+      "valid_count": 0,
+      "negative_source_value_count": 85308,
+      "minimum": null,
+      "mean": null,
+      "maximum": null
+    },
+    "stn3_background_counts": {
+      "valid_count": 85308,
+      "negative_source_value_count": 0,
+      "minimum": 1.0280300378799438,
+      "mean": 1.0280300378799438,
+      "maximum": 1.0280300378799438
+    },
+    "stn3_counts": {
+      "valid_count": 0,
+      "negative_source_value_count": 85308,
+      "minimum": null,
+      "mean": null,
+      "maximum": null
+    },
+    "csetn1_background_counts": {
+      "valid_count": 85308,
+      "negative_source_value_count": 0,
+      "minimum": 0.7749999761581421,
+      "mean": 0.7749999761581421,
+      "maximum": 0.7749999761581421
+    },
+    "csetn1_counts": {
+      "valid_count": 0,
+      "negative_source_value_count": 85308,
+      "minimum": null,
+      "mean": null,
+      "maximum": null
+    },
+    "csetn2_background_counts": {
+      "valid_count": 85308,
+      "negative_source_value_count": 0,
+      "minimum": 0.7749999761581421,
+      "mean": 0.7749999761581421,
+      "maximum": 0.7749999761581421
+    },
+    "csetn2_counts": {
+      "valid_count": 0,
+      "negative_source_value_count": 85308,
+      "minimum": null,
+      "mean": null,
+      "maximum": null
+    },
+    "csetn3_background_counts": {
+      "valid_count": 85308,
+      "negative_source_value_count": 0,
+      "minimum": 0.7749999761581421,
+      "mean": 0.7749999761581421,
+      "maximum": 0.7749999761581421
+    },
+    "csetn3_counts": {
+      "valid_count": 85303,
+      "negative_source_value_count": 5,
+      "minimum": 0.0,
+      "mean": 1.2426549505645497,
+      "maximum": 10.71792984008789
+    },
+    "csetn4_background_counts": {
+      "valid_count": 85308,
+      "negative_source_value_count": 0,
+      "minimum": 0.7749999761581421,
+      "mean": 0.7749999761581421,
+      "maximum": 0.7749999761581421
+    },
+    "csetn4_counts": {
+      "valid_count": 85308,
+      "negative_source_value_count": 0,
+      "minimum": 0.0,
+      "mean": 1.327525337096949,
+      "maximum": 8.632266998291016
+    },
+    "csetn_sum_counts": {
+      "valid_count": 85308,
+      "negative_source_value_count": 0,
+      "minimum": 0.0,
+      "mean": 4.964112536380209,
+      "maximum": 26.73348045349121
+    },
+    "csetn_sum_sigma_counts": {
+      "valid_count": 85308,
+      "negative_source_value_count": 0,
+      "minimum": 3.1707260608673096,
+      "mean": 3.2224157569936858,
+      "maximum": 4.585285663604736
+    },
+    "csetn1_sigma_counts": {
+      "valid_count": 0,
+      "negative_source_value_count": 85308,
+      "minimum": null,
+      "mean": null,
+      "maximum": null
+    },
+    "csetn2_sigma_counts": {
+      "valid_count": 0,
+      "negative_source_value_count": 85308,
+      "minimum": null,
+      "mean": null,
+      "maximum": null
+    },
+    "csetn3_sigma_counts": {
+      "valid_count": 85303,
+      "negative_source_value_count": 5,
+      "minimum": 1.135314702987671,
+      "mean": 1.1531365418696031,
+      "maximum": 1.174277663230896
+    },
+    "csetn4_sigma_counts": {
+      "valid_count": 85308,
+      "negative_source_value_count": 0,
+      "minimum": 1.1858439445495605,
+      "mean": 1.205778022903416,
+      "maximum": 1.230167031288147
+    },
+    "setn_sigma_counts": {
+      "valid_count": 0,
+      "negative_source_value_count": 85308,
+      "minimum": null,
+      "mean": null,
+      "maximum": null
+    },
+    "stn1_sigma_counts": {
+      "valid_count": 0,
+      "negative_source_value_count": 85308,
+      "minimum": null,
+      "mean": null,
+      "maximum": null
+    },
+    "stn2_sigma_counts": {
+      "valid_count": 0,
+      "negative_source_value_count": 85308,
+      "minimum": null,
+      "mean": null,
+      "maximum": null
+    },
+    "stn3_sigma_counts": {
+      "valid_count": 0,
+      "negative_source_value_count": 85308,
+      "minimum": null,
+      "mean": null,
+      "maximum": null
+    }
+  },
+  "scientific_limitations": [
+    "LEND is an orbital lunar neutron detector, not a surface detector.",
+    "Counts and count uncertainties are not astronaut radiation dose.",
+    "Neutron observations alone do not confirm water ice at a specific location."
+  ]
+}

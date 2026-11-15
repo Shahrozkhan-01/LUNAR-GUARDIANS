@@ -13,6 +13,8 @@ frontend/.vite/
 
 # --- Python / Backend ---
 backend/venv/
+venv/
+.venv/
 backend/__pycache__/
 backend/**/__pycache__/
 **/__pycache__/
@@ -74,6 +76,10 @@ lerna-debug.log*
 coverage/
 .nyc_output/
 *.lcov
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.coverage
 
 # --- Temporary Files ---
 *.tmp
@@ -92,3 +98,15 @@ pnpm-lock.yaml
 .eslintcache
 .stylelintcache
 .parcel-cache/
+
+# --- NASA data products ---
+# Preserve local source/processed products, but do not stage them accidentally.
+# Publish an explicitly approved subset only after terms and hosting are
+# reviewed; keep metadata, scripts, summaries, and validation reports in Git.
+datasets/raw/
+datasets/processed/
+datasets/github_compressed/
+
+# These two products also exceed GitHub's 100 MB individual-file limit.
+datasets/raw/lunar_environment/diviner/global_cumul_avg_cyl_80s70s_002.tab
+datasets/processed/lunar_environment/lola/ldem_16_processed.npz

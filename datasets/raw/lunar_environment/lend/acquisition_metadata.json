@@ -1,0 +1,47 @@
+{
+  "dataset": "NASA LRO LEND RDR derived products",
+  "retrieved_at_utc": "2026-11-14T22:10:17.758178+00:00",
+  "source_urls": [
+    "https://pds-geosciences.wustl.edu/missions/lro/lend.htm",
+    "https://pds-geosciences.wustl.edu/lro/lro-l-lend-2-edr-v1/lrolen_0xxx/document/lend_rdr_sis.htm"
+  ],
+  "product_identifiers": [
+    "urn:nasa:pds:lro_lend:data_science_derived:lend_rdr_dld_20200101",
+    "urn:nasa:pds:lro_lend:data_science_derived:lend_rdr_dlx_20200101"
+  ],
+  "selection": "2020-01-01 UTC; one DLD and one DLX daily product",
+  "files": {
+    "lend_rdr_dld_20200101.dat": {
+      "bytes": 20388612,
+      "sha256": "78f4a761d0a0e0fb742d316f3300d48a38b1ff5de958655dda7babc2076f0457"
+    },
+    "lend_rdr_dld_20200101.lbl": {
+      "bytes": 2034,
+      "sha256": "4e8857713f38e42e93a43ab3fe5803747acc0c6d375ae0835f46d71e05e239ca"
+    },
+    "lend_rdr_dld_20200101.xml": {
+      "bytes": 19862,
+      "sha256": "ca16a998348019fbf96e3539299910320e45987f792ba1199d6d3f8ffcd4a961"
+    },
+    "lend_rdr_dlx_20200101.dat": {
+      "bytes": 6056868,
+      "sha256": "1044963f92ff967f9c0e2919f0939c389cd34cdd3e6626871b8f5e1238d063c1"
+    },
+    "lend_rdr_dlx_20200101.lbl": {
+      "bytes": 2086,
+      "sha256": "fdc652daedc13d685808bf1198e8fd03a3ac23051f92976ff82d698f3915c075"
+    },
+    "lend_rdr_dlx_20200101.xml": {
+      "bytes": 11674,
+      "sha256": "350246bfdc1b0e543d7241c68c6f51a69812d6f706b9116d24bc173859db59af"
+    },
+    "lend_rdr_sis.htm": {
+      "bytes": 610569,
+      "sha256": "7849e6acbea0d4f2d1b1e90883e9ab98520f691670d8516ec8bd576720d7d599"
+    },
+    "lend_rdr_sis.pdf": {
+      "bytes": 1409110,
+      "sha256": "6169e441addf3e003caaeb0a3413c878f04142d9dfa5ee1e5e09b6fbff563f27"
+    }
+  }
+}

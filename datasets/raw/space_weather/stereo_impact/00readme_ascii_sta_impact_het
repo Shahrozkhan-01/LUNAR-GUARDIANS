@@ -1,0 +1,32 @@
+/data/stereo/ahead/l2/impact_ascii/het/00readme_ascii_impact_het file
+
+STEREO IMPACT HET fluxes of different resolutions ( 1day, 1hour, 1minute)
+
+The Self-descibed data sets were copied from CALTECH site:  
+http://www.srl.caltech.edu/STEREO/DATA/HET/ahead/
+
+Detal data description is at http://www.srl.caltech.edu/STEREO/Level1/HET_public.html
+
+------------------
+For browse and retrieve hourly data set see  https://omniweb.gsfc.nasa.gov/ftpbrowser/sta_het_flux_hr.html
+For flux comparison see: 
+        https://omniweb.gsfc.nasa.gov/ftpbrowser/flux_spectr_m.html
+   
+------------------------------------------------------------
+
+Related data and directories:
+
+SPDF Data and Orbits Services <http://spdf.gsfc.nasa.gov/>
+-------------------------------------------------------------------
+SPDF Contact: 
+John.F.Cooper <John.F.Cooper@nasa.gov>
+Natalia Papitashvili <Natalia.E.Papitashvili@nasa.gov>
+-------------------------------------------------------------
+Please acknowledge NASA's Space Physics Data Facility and 
+and relevant scientists identified above for data usage. 
+--------------------------------------------------------
+Authorizing NASA Official: Dr. R.E. McGuire, Head, SPDF, NASA Goddard Space Flight Center
+                        301-286-7794, e-mail:  Robert.E.McGuire@nasa.gov
+-------------------------------------------------------------------------
+-----------------------------------------------------------------------
+

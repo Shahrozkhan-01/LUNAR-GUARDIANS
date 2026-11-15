@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1H00.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="https://pds.nasa.gov/pds4/mission/lro/v1/PDS4_LRO_1H00_1020.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="https://pds.nasa.gov/pds4/geom/v1/PDS4_GEOM_1H00_1950.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+
+<Product_Observational xmlns="http://pds.nasa.gov/pds4/pds/v1"
+    xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"
+    xmlns:lro="http://pds.nasa.gov/pds4/mission/lro/v1"
+    xmlns:geom="http://pds.nasa.gov/pds4/geom/v1"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1         https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1H00.xsd
+    http://pds.nasa.gov/pds4/mission/lro/v1 https://pds.nasa.gov/pds4/mission/lro/v1/PDS4_LRO_1H00_1020.xsd
+    http://pds.nasa.gov/pds4/geom/v1        https://pds.nasa.gov/pds4/geom/v1/PDS4_GEOM_1H00_1950.xsd">
+    
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:lro_diviner_derived1:data_derived_gcp:global_cumul_avg_cyl_80s70s_002</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>LRO Diviner Global Cumulative Average Product: global_cumul_avg_cyl_80s70s_002</title>
+        <information_model_version>1.17.0.0</information_model_version>
+        <product_class>Product_Observational</product_class>
+    </Identification_Area>
+    <Observation_Area>
+        <Time_Coordinates>
+            <start_date_time>2009-07-05T16:50:26.195Z</start_date_time>
+            <stop_date_time>2015-04-01T00:00:00.000Z</stop_date_time>
+        </Time_Coordinates>
+        <Investigation_Area>
+            <name>Lunar Reconnaissance Orbiter</name>
+            <type>Mission</type>
+            <Internal_Reference>
+                <lid_reference>urn:nasa:pds:context:investigation:mission.lunar_reconnaissance_orbiter</lid_reference>
+                <reference_type>data_to_investigation</reference_type>
+            </Internal_Reference>
+        </Investigation_Area>
+        <Observing_System>
+            <Observing_System_Component>
+                <name>Lunar Reconnaissance Orbiter</name>
+                <type>Host</type>
+                <Internal_Reference>
+                    <lid_reference>urn:nasa:pds:context:instrument_host:spacecraft.lro</lid_reference>
+                    <reference_type>is_instrument_host</reference_type>
+                </Internal_Reference>
+            </Observing_System_Component>
+            <Observing_System_Component>
+                <name>Diviner Lunar Radiometer Experiment</name>
+                <type>Instrument</type>
+                <Internal_Reference>
+                    <lid_reference>urn:nasa:pds:context:instrument:lro.dlre</lid_reference>
+                    <reference_type>is_instrument</reference_type>
+                </Internal_Reference>
+            </Observing_System_Component>
+        </Observing_System>
+        <Target_Identification>
+            <name>Moon</name>
+            <type>Planet</type>
+            <Internal_Reference>
+                <lid_reference>urn:nasa:pds:context:target:satellite.earth.moon</lid_reference>
+                <reference_type>data_to_target</reference_type>
+            </Internal_Reference>
+        </Target_Identification>
+        <Mission_Area>
+            <lro:LRO_Parameters>
+                <lro:product_type>GCP</lro:product_type>
+                <lro:product_version_id>1</lro:product_version_id>
+                <lro:spacecraft_clock_start_count>0268505426.15400</lro:spacecraft_clock_start_count>
+                <lro:spacecraft_clock_stop_count>0449539200.05636</lro:spacecraft_clock_stop_count>
+                <lro:producer_institution_name>UNIVERSITY OF CALIFORNIA, LOS ANGELES</lro:producer_institution_name>
+                <lro:Diviner_Parameters>
+                    <lro:calibration_software_ver_id>4.0</lro:calibration_software_ver_id>
+                </lro:Diviner_Parameters>
+                <lro:Geodetic_Model>
+                    <lro:latitude_type>Planetocentric</lro:latitude_type>
+                    <lro:a_axis_radius unit="km">1737.4</lro:a_axis_radius>
+                    <lro:b_axis_radius unit="km">1737.4</lro:b_axis_radius>
+                    <lro:c_axis_radius unit="km">1737.4</lro:c_axis_radius>
+                    <lro:longitude_direction>Positive East</lro:longitude_direction>
+                </lro:Geodetic_Model>
+            </lro:LRO_Parameters>
+        </Mission_Area>
+        <Discipline_Area>
+            <geom:Geometry>
+                <geom:Geometry_Orbiter>
+                    <geom:geometry_start_time_utc>2009-07-05T16:50:26.195Z</geom:geometry_start_time_utc>
+                    <geom:geometry_stop_time_utc>2015-04-01T00:00:00.000Z</geom:geometry_stop_time_utc> <geom:Surface_Geometry>
+                        <geom:Surface_Geometry_Min_Max>
+                            <geom:minimum_latitude unit="deg">-80.00</geom:minimum_latitude>
+                            <geom:maximum_latitude unit="deg">-70.00</geom:maximum_latitude>
+                            <geom:minimum_longitude unit="deg">0.0</geom:minimum_longitude>
+                            <geom:maximum_longitude unit="deg">360.0</geom:maximum_longitude>
+                        </geom:Surface_Geometry_Min_Max>
+                    </geom:Surface_Geometry>
+                </geom:Geometry_Orbiter>
+            </geom:Geometry>  
+        </Discipline_Area>
+    </Observation_Area>
+    <Reference_List>
+        <External_Reference>
+            <doi>10.1026/j.icarus.2016.08.012</doi>
+            <reference_text>Williams, J.-P., D.A. Paige, B.T. Greenhagen, E. Sefton-Nash,
+                The global surface temperatures of the Moon as measured by the Diviner
+                Lunar Radiometer Experiment, Icarus, 283, 300-325,
+                doi:10.1026/j.icarus.2016.08.012, 2017.</reference_text>
+        </External_Reference>
+    </Reference_List>
+    <File_Area_Observational>
+        <File>
+            <file_name>global_cumul_avg_cyl_80s70s_002.tab</file_name>
+            <creation_date_time>2016-05-27T12:00:00</creation_date_time>
+        </File>
+        <Header>
+            <offset unit="byte">0</offset>
+            <object_length unit="byte">113</object_length>
+            <parsing_standard_id>7-Bit ASCII Text</parsing_standard_id>
+        </Header>
+        <Table_Character>
+            <offset unit="byte">113</offset>
+            <records>1382400</records>
+            <description>This table contains brightness temperatures and bolometric
+                brightness temperatures from the Diviner Lunar Radiometer Experiment
+                binned at 0.5 degree latitude and longitude and 0.25 hours of local
+                time derived from a compilation of all nadir observations acquired
+                from 5-July-2009 to 1-April-2015. Negative brightness temperatures
+                result from negative radiance values obtained by a sensor when
+                temperatures are below the sensitivity of a Diviner channel.
+                Constant -9999 corresponds to bins that contained no observations.
+                For more information, see: Williams et al. (2017)
+                </description>
+            <record_delimiter>Carriage-Return Line-Feed</record_delimiter>
+            <Record_Character>
+                <fields>11</fields>
+                <groups>0</groups>
+                <record_length unit="byte">113</record_length>
+                <Field_Character>
+                    <name>Center_Longitude</name>
+                    <field_number>1</field_number>
+                    <field_location unit="byte">1</field_location>
+                    <data_type>ASCII_Real</data_type>
+                    <field_length unit="byte">7</field_length>
+                    <unit>degree</unit>
+                    <description>Center longitude of tile (degrees)</description>
+                    <Special_Constants>
+                        <invalid_constant>-9998</invalid_constant>
+                        <unknown_constant>-9999</unknown_constant>
+                    </Special_Constants>
+                </Field_Character>
+                <Field_Character>
+                    <name>Center_Latitude</name>
+                    <field_number>2</field_number>
+                    <field_location unit="byte">10</field_location>
+                    <data_type>ASCII_Real</data_type>
+                    <field_length unit="byte">6</field_length>
+                    <unit>degree</unit>
+                    <description>Center latitude of tile (degrees)</description>
+                    <Special_Constants>
+                        <invalid_constant>-9998</invalid_constant>
+                        <unknown_constant>-9999</unknown_constant>
+                    </Special_Constants>
+                </Field_Character>
+                <Field_Character>
+                    <name>Local_Time</name>
+                    <field_number>3</field_number>
+                    <field_location unit="byte">18</field_location>
+                    <data_type>ASCII_Real</data_type>
+                    <field_length unit="byte">6</field_length>
+                    <unit>hr</unit>
+                    <description>Local time (hours)</description>
+                    <Special_Constants>
+                        <invalid_constant>-9998</invalid_constant>
+                        <unknown_constant>-9999</unknown_constant>
+                    </Special_Constants>
+                </Field_Character>
+                <Field_Character>
+                    <name>t3</name>
+                    <field_number>4</field_number>
+                    <field_location unit="byte">26</field_location>
+                    <data_type>ASCII_Real</data_type>
+                    <field_length unit="byte">9</field_length>
+                    <unit>K</unit>
+                    <description>T3 average calibrated brightness temperature (K)</description>
+                    <Special_Constants>
+                        <invalid_constant>-9998</invalid_constant>
+                        <unknown_constant>-9999</unknown_constant>
+                    </Special_Constants>
+                </Field_Character>
+                <Field_Character>
+                    <name>t4</name>
+                    <field_number>5</field_number>
+                    <field_location unit="byte">37</field_location>
+                    <data_type>ASCII_Real</data_type>
+                    <field_length unit="byte">9</field_length>
+                    <unit>K</unit>
+                    <description>T4 average calibrated brightness temperature (K)</description>
+                    <Special_Constants>
+                        <invalid_constant>-9998</invalid_constant>
+                        <unknown_constant>-9999</unknown_constant>
+                    </Special_Constants>
+                </Field_Character>
+                <Field_Character>
+                    <name>t5</name>
+                    <field_number>6</field_number>
+                    <field_location unit="byte">48</field_location>
+                    <data_type>ASCII_Real</data_type>
+                    <field_length unit="byte">9</field_length>
+                    <unit>K</unit>
+                    <description>T5 average calibrated brightness temperature (K)</description>
+                    <Special_Constants>
+                        <invalid_constant>-9998</invalid_constant>
+                        <unknown_constant>-9999</unknown_constant>
+                    </Special_Constants>
+                </Field_Character>
+                <Field_Character>
+                    <name>t6</name>
+                    <field_number>7</field_number>
+                    <field_location unit="byte">59</field_location>
+                    <data_type>ASCII_Real</data_type>
+                    <field_length unit="byte">9</field_length>
+                    <unit>K</unit>
+                    <description>T6 average calibrated brightness temperature (K)</description>
+                    <Special_Constants>
+                        <invalid_constant>-9998</invalid_constant>
+                        <unknown_constant>-9999</unknown_constant>
+                    </Special_Constants>
+                </Field_Character>
+                <Field_Character>
+                    <name>t7</name>
+                    <field_number>8</field_number>
+                    <field_location unit="byte">70</field_location>
+                    <data_type>ASCII_Real</data_type>
+                    <field_length unit="byte">9</field_length>
+                    <unit>K</unit>
+                    <description>T7 average calibrated brightness temperature (K)</description>
+                    <Special_Constants>
+                        <invalid_constant>-9998</invalid_constant>
+                        <unknown_constant>-9999</unknown_constant>
+                    </Special_Constants>
+                </Field_Character>
+                <Field_Character>
+                    <name>t8</name>
+                    <field_number>9</field_number>
+                    <field_location unit="byte">81</field_location>
+                    <data_type>ASCII_Real</data_type>
+                    <field_length unit="byte">9</field_length>
+                    <unit>K</unit>
+                    <description>T8 average calibrated brightness temperature (K)</description>
+                    <Special_Constants>
+                        <invalid_constant>-9998</invalid_constant>
+                        <unknown_constant>-9999</unknown_constant>
+                    </Special_Constants>
+                </Field_Character>
+                <Field_Character>
+                    <name>t9</name>
+                    <field_number>10</field_number>
+                    <field_location unit="byte">92</field_location>
+                    <data_type>ASCII_Real</data_type>
+                    <field_length unit="byte">9</field_length>
+                    <unit>K</unit>
+                    <description>T9 average calibrated brightness temperature (K)</description>
+                    <Special_Constants>
+                        <invalid_constant>-9998</invalid_constant>
+                        <unknown_constant>-9999</unknown_constant>
+                    </Special_Constants>
+                </Field_Character>
+                <Field_Character>
+                    <name>tbol</name>
+                    <field_number>11</field_number>
+                    <field_location unit="byte">103</field_location>
+                    <data_type>ASCII_Real</data_type>
+                    <field_length unit="byte">9</field_length>
+                    <unit>K</unit>
+                    <description>Bolometric average calibrated brightness
+                        temperature (K)</description>
+                    <Special_Constants>
+                        <invalid_constant>-9998</invalid_constant>
+                        <unknown_constant>-9999</unknown_constant>
+                    </Special_Constants>
+                </Field_Character>
+            </Record_Character>
+        </Table_Character>
+    </File_Area_Observational>
+    <File_Area_Observational_Supplemental>
+        <File>
+            <file_name>global_cumul_avg_cyl_80s70s_002.lbl</file_name>
+        </File>
+        <Stream_Text>
+            <offset unit="byte">0</offset>
+            <parsing_standard_id>PDS3</parsing_standard_id>
+            <description>PDS3 label</description>
+            <record_delimiter>Carriage-Return Line-Feed</record_delimiter>
+        </Stream_Text>
+    </File_Area_Observational_Supplemental>
+</Product_Observational>

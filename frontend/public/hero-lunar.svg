@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <radialGradient id="sky" cx="50%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#0d1029"/>
+      <stop offset="100%" stop-color="#050510"/>
+    </radialGradient>
+    <radialGradient id="earthGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#4488ff" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#4488ff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="moonGlow" cx="50%" cy="100%" r="60%">
+      <stop offset="0%" stop-color="#1a1a3e" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#0a0a1a" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Sky -->
+  <rect fill="url(#sky)" width="1920" height="1080"/>
+
+  <!-- Stars -->
+  <g fill="white" opacity="0.6">
+    <circle cx="150" cy="80" r="1.2"/><circle cx="320" cy="150" r="0.8"/>
+    <circle cx="500" cy="60" r="1"/><circle cx="680" cy="200" r="0.6"/>
+    <circle cx="820" cy="100" r="1.4"/><circle cx="1000" cy="50" r="0.9"/>
+    <circle cx="1150" cy="180" r="1.1"/><circle cx="1350" cy="90" r="0.7"/>
+    <circle cx="1500" cy="160" r="1.3"/><circle cx="1700" cy="70" r="0.8"/>
+    <circle cx="200" cy="300" r="0.6"/><circle cx="450" cy="280" r="1"/>
+    <circle cx="750" cy="320" r="0.7"/><circle cx="1100" cy="350" r="0.9"/>
+    <circle cx="1400" cy="300" r="1.1"/><circle cx="1650" cy="250" r="0.8"/>
+    <circle cx="100" cy="450" r="0.5"/><circle cx="380" cy="420" r="0.7"/>
+    <circle cx="600" cy="400" r="0.9"/><circle cx="900" cy="380" r="0.6"/>
+    <circle cx="1250" cy="430" r="0.8"/><circle cx="1550" cy="400" r="1"/>
+    <circle cx="1800" cy="350" r="0.7"/><circle cx="50" cy="200" r="0.9"/>
+    <circle cx="1870" cy="180" r="1.1"/>
+  </g>
+
+  <!-- Earth -->
+  <circle cx="1600" cy="200" r="100" fill="url(#earthGlow)"/>
+  <circle cx="1600" cy="200" r="45" fill="#1a3a6e" opacity="0.9"/>
+  <circle cx="1600" cy="200" r="45" fill="none" stroke="#3388cc" stroke-width="0.5" opacity="0.6"/>
+  <ellipse cx="1590" cy="190" rx="20" ry="12" fill="#2a5a9e" opacity="0.5"/>
+  <ellipse cx="1615" cy="210" rx="15" ry="8" fill="#2a5a9e" opacity="0.4"/>
+  <circle cx="1600" cy="200" r="48" fill="none" stroke="#66aaee" stroke-width="0.3" opacity="0.3"/>
+
+  <!-- Lunar surface -->
+  <path d="M0 750 Q200 700 400 730 Q600 760 800 720 Q1000 680 1200 710 Q1400 740 1600 700 Q1800 660 1920 690 L1920 1080 L0 1080 Z"
+        fill="#1a1a2e" opacity="0.9"/>
+  <path d="M0 780 Q300 750 500 770 Q700 790 900 760 Q1100 730 1300 755 Q1500 780 1700 750 Q1850 730 1920 740 L1920 1080 L0 1080 Z"
+        fill="#12122a"/>
+
+  <!-- Craters -->
+  <ellipse cx="300" cy="850" rx="60" ry="15" fill="#0f0f25" opacity="0.6"/>
+  <ellipse cx="800" cy="900" rx="80" ry="18" fill="#0f0f25" opacity="0.5"/>
+  <ellipse cx="1400" cy="830" rx="50" ry="12" fill="#0f0f25" opacity="0.5"/>
+  <ellipse cx="1100" cy="870" rx="35" ry="8" fill="#0f0f25" opacity="0.4"/>
+
+  <!-- Habitat dome -->
+  <g transform="translate(960, 720)">
+    <!-- Base -->
+    <rect x="-60" y="0" width="120" height="30" rx="3" fill="#1e2040" stroke="#2a2f5e" stroke-width="0.5"/>
+    <!-- Dome -->
+    <ellipse cx="0" cy="0" rx="55" ry="40" fill="#161830" stroke="#3a4070" stroke-width="0.8"/>
+    <ellipse cx="0" cy="0" rx="55" ry="40" fill="none" stroke="#00e5ff" stroke-width="0.3" opacity="0.4"/>
+    <!-- Window -->
+    <ellipse cx="0" cy="-10" rx="20" ry="14" fill="#0a1030" stroke="#00e5ff" stroke-width="0.4" opacity="0.6"/>
+    <ellipse cx="0" cy="-10" rx="12" ry="8" fill="#00e5ff" opacity="0.05"/>
+    <!-- Airlock -->
+    <rect x="50" y="-5" width="25" height="35" rx="2" fill="#1a1c3a" stroke="#2a2f5e" stroke-width="0.5"/>
+    <rect x="55" y="0" width="15" height="10" rx="1" fill="#00e5ff" opacity="0.08"/>
+  </g>
+
+  <!-- Solar panels -->
+  <g transform="translate(750, 730)">
+    <!-- Pole -->
+    <rect x="-2" y="-45" width="4" height="50" fill="#2a2f50"/>
+    <!-- Panel -->
+    <rect x="-35" y="-55" width="70" height="14" rx="1" fill="#1a2050" stroke="#3a4080" stroke-width="0.5"/>
+    <line x1="-30" y1="-55" x2="-30" y2="-41" stroke="#3a4080" stroke-width="0.3"/>
+    <line x1="-15" y1="-55" x2="-15" y2="-41" stroke="#3a4080" stroke-width="0.3"/>
+    <line x1="0" y1="-55" x2="0" y2="-41" stroke="#3a4080" stroke-width="0.3"/>
+    <line x1="15" y1="-55" x2="15" y2="-41" stroke="#3a4080" stroke-width="0.3"/>
+    <line x1="30" y1="-55" x2="30" y2="-41" stroke="#3a4080" stroke-width="0.3"/>
+    <!-- Glow -->
+    <rect x="-35" y="-55" width="70" height="14" rx="1" fill="#3b82f6" opacity="0.06"/>
+  </g>
+
+  <!-- Solar panels 2 -->
+  <g transform="translate(1180, 710)">
+    <rect x="-2" y="-40" width="4" height="45" fill="#2a2f50"/>
+    <rect x="-30" y="-50" width="60" height="12" rx="1" fill="#1a2050" stroke="#3a4080" stroke-width="0.5"/>
+    <line x1="-20" y1="-50" x2="-20" y2="-38" stroke="#3a4080" stroke-width="0.3"/>
+    <line x1="-5" y1="-50" x2="-5" y2="-38" stroke="#3a4080" stroke-width="0.3"/>
+    <line x1="10" y1="-50" x2="10" y2="-38" stroke="#3a4080" stroke-width="0.3"/>
+    <line x1="25" y1="-50" x2="25" y2="-38" stroke="#3a4080" stroke-width="0.3"/>
+    <rect x="-30" y="-50" width="60" height="12" rx="1" fill="#3b82f6" opacity="0.06"/>
+  </g>
+
+  <!-- Astronaut figure (simplified) -->
+  <g transform="translate(1060, 710)">
+    <!-- Body -->
+    <rect x="-8" y="-25" width="16" height="22" rx="5" fill="#d0d0e0" opacity="0.7"/>
+    <!-- Helmet -->
+    <circle cx="0" cy="-32" r="10" fill="#c0c0d0" opacity="0.7"/>
+    <circle cx="0" cy="-32" r="7" fill="#1a1a3e" opacity="0.8"/>
+    <circle cx="0" cy="-32" r="7" fill="none" stroke="#00e5ff" stroke-width="0.3" opacity="0.4"/>
+    <!-- Legs -->
+    <rect x="-7" y="-4" width="5" height="12" rx="2" fill="#b0b0c0" opacity="0.6"/>
+    <rect x="2" y="-4" width="5" height="12" rx="2" fill="#b0b0c0" opacity="0.6"/>
+  </g>
+
+  <!-- Ambient glow on surface -->
+  <ellipse cx="960" cy="800" rx="200" ry="60" fill="#00e5ff" opacity="0.02"/>
+</svg>

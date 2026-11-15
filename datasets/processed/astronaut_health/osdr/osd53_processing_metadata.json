@@ -1,0 +1,34 @@
+{
+  "dataset_id": "OSD-53",
+  "genelab_id": "GLDS-53",
+  "title": "Spaceflight Modulates Gene Expression in Astronauts",
+  "organism": "Homo sapiens",
+  "source_urls": [
+    "https://osdr.nasa.gov/bio/repo/data/studies/OSD-53",
+    "https://osdr.nasa.gov/geode-py/ws/repo/studies/OSD-53"
+  ],
+  "record_count": 13,
+  "gene_summary_count": 244,
+  "variables": {
+    "sample_metadata": "Public OSDR processed sample annotations",
+    "preflight_average": "Processed array signal average; source unit not supplied",
+    "postflight_average": "Processed array signal average; source unit not supplied",
+    "ratio": "Post-flight/pre-flight ratio as supplied by source",
+    "log2_ratio": "Log2 ratio as supplied by source",
+    "p_value": "Source statistical field; not a clinical measure"
+  },
+  "missing_value_policy": "Blank source fields remain blank; no imputation.",
+  "raw_data_availability": "Original raw microarray data reported unavailable by OSDR.",
+  "privacy_policy": "No individual identities are displayed; study-subject labels are removed from processed output.",
+  "transformations": [
+    "Extracted public sample annotations from OSDR processed archive.",
+    "Extracted source fold-change summary and retained source numeric fields.",
+    "Removed study-subject identifiers from the processed sample table."
+  ],
+  "source_sha256": {
+    "processed_zip": "886875c03a1d627f639e46dc94d486480394de4d4210a093983009d6ff3cb442",
+    "additional_zip": "6b9a23e1b36efc80ef56565bf79ef9588af93147dbe534383db7edd545e8b5bb",
+    "isa_zip": "978b619f3eb5477a6f9e305790360b15d3750b963c33c48ff531dcf6e7fa2a29"
+  },
+  "processed_output_readback_verified": true
+}

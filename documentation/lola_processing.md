@@ -1,0 +1,148 @@
+# LOLA LDEM_16 processing
+
+## Source product and scope
+
+This processed dataset is derived from the existing PDS `LDEM_16` product
+(`LRO-L-LOLA-4-GDR-V1.0`, PDS4 logical identifier
+`urn:nasa:pds:lro_lola_rdr:data_gridded:ldem_16`). The raw IMG, PDS3/PDS4
+labels, map-projection catalog, and instrument SIS remain unchanged in
+[`datasets/raw/lunar_environment/lola/`](../datasets/raw/lunar_environment/lola/).
+No data was downloaded for this processing task.
+
+The PDS3 label and associated `dsmap.cat` describe a 2,880-line by 5,760-sample
+simple-cylindrical, pixel-registered grid. The signed 16-bit integers are
+little-endian (`LSB_INTEGER`), with each row stored as 11,520 bytes. The map
+resolution is 16 pixels per degree (nominally 1,895.21 m/pixel). Coverage is
+global: 90°N to 90°S planetocentric latitude and 0° to 360° east longitude.
+Pixel centers run from 89.96875°N to 89.96875°S, and from 0.03125°E through
+359.96875°E.
+
+The map catalog defines the pixel-center inverse projection:
+
+```text
+longitude = CENTER_LONGITUDE
+            + (sample - SAMPLE_PROJECTION_OFFSET - 1) / MAP_RESOLUTION
+latitude  = CENTER_LATITUDE
+            - (line - LINE_PROJECTION_OFFSET - 1) / MAP_RESOLUTION
+```
+
+In the raster array, line/row zero is the northernmost pixel center and rows
+continue southward. Sample/column zero is the westernmost pixel center and
+columns continue eastward. The coordinates use the PDS body-fixed rotating
+`MEAN EARTH/POLAR AXIS OF DE421` system, planetocentric latitude, and
+east-positive longitude.
+
+## Elevation and radius conversion
+
+The label specifies `UNIT=METER`, `SCALING_FACTOR=0.5`, and `OFFSET=1,737,400`
+meters. It explicitly distinguishes:
+
+```text
+HEIGHT_m = stored_DN * SCALING_FACTOR
+PLANETARY_RADIUS_m = stored_DN * SCALING_FACTOR + OFFSET
+```
+
+`HEIGHT` is relative to the product's reference radius; the offset is added
+only for the derived planetary radius. Neither quantity is direct astronaut
+observational data. A geoid-referenced topographic height would additionally
+require an appropriate geoid radius model.
+
+The PDS label defines **no missing-value sentinel**. The processor therefore
+retains and counts every integer sample; it does not guess that any value is
+missing. It calculates summaries from the scaled `HEIGHT` values and does not
+silently remove unusual samples.
+
+## Processing and outputs
+
+Run from the repository root:
+
+```powershell
+.\backend\venv\Scripts\python.exe .\datasets\scripts\process_lola_dataset.py
+```
+
+The script validates the PDS dimensions, signed sample encoding, map
+projection, coordinate parameters, scale and offset. It opens the raw
+little-endian raster as a read-only NumPy memory map, processes 120 rows at a
+time, and writes a deterministic compressed NumPy archive. Integer samples
+are kept exactly; scaled height and radius grids use `float32`; coordinate
+axes use `float64`. The NPZ can be opened safely with `numpy.load(...,
+allow_pickle=False)`.
+
+Outputs are in
+[`datasets/processed/lunar_environment/lola/`](../datasets/processed/lunar_environment/lola/):
+
+- `ldem_16_processed.npz` — original `elevation_dn` array, derived `height_m`
+  and `planetary_radius_m` grids, pixel-center latitude and longitude axes,
+  and essential scalar metadata.
+- `lola_processing_metadata.json` — source and processed hashes, dimensions,
+  data types, units, formulas, orientation, coordinate reference, coverage,
+  observation period, and processing verification.
+- `lola_summary_statistics.json` — global and six latitude-band summaries
+  for valid stored samples and scaled height/radius.
+
+## Results
+
+All **16,588,800** integer samples were processed (2,880 × 5,760). Because the
+PDS label provides no missing or invalid sentinel, the reported valid sample
+count is the full raster count and the missing/invalid count is zero; that
+does not independently certify the physical validity of every interpolated
+terrain value.
+
+Observed stored-DN extrema are **-17,963 to 21,371**. After the documented
+0.5 m scale, `HEIGHT` ranges from **-8,981.5 m to 10,685.5 m** relative to the
+reference radius. Global mean height is **-519.2022 m**, and median height is
+**-794.0 m**.
+
+| Planetocentric latitude band | Samples | Height min (m) | Height max (m) | Mean (m) | Median (m) |
+|---|---:|---:|---:|---:|---:|
+| 60°N to 90°N | 2,764,800 | -5,937.0 | 4,920.5 | -873.8322 | -851.5 |
+| 30°N to 60°N | 2,764,800 | -8,591.0 | 6,598.5 | -1,087.0077 | -909.0 |
+| 0° to 30°N | 2,764,800 | -6,122.0 | 10,685.5 | 235.2082 | -588.5 |
+| 0° to 30°S | 2,764,800 | -6,559.0 | 9,217.5 | 462.0597 | 59.0 |
+| 30°S to 60°S | 2,764,800 | -6,564.0 | 6,905.5 | -578.4273 | -1,153.0 |
+| 60°S to 90°S | 2,764,800 | -8,981.5 | 6,928.5 | -1,273.2139 | -1,186.0 |
+
+Each band uses 480 consecutive rows according to the PDS latitude orientation;
+the first band is northernmost. Statistics and medians are derived from the
+stored signed integer samples using the PDS scale. No latitude rows or samples
+are discarded.
+
+## Validation and retained warning
+
+The processor independently reopens the NPZ and verifies the member names,
+array shapes and signed little-endian integer type. It checks selected
+locations against the raw IMG, verifies the scale and offset formulas, derives
+coordinate endpoints from the label/projection and checks their orientation,
+and compares the raw image SHA-256 before and after processing.
+
+The pre-existing raw validator result remains **PASSED_WITH_WARNINGS**. In
+particular, the PDS label declares `MINIMUM=-18150` and `MAXIMUM=21580`, while
+the observed raster extrema are `[-17963, 21371]`. Observed values remain
+within the declared bounds, but the extrema do not match. **This discrepancy
+is retained as a warning and should be confirmed with the archive before
+interpreting extreme values.** The product also has no declared missing
+sentinel, is approximately 1.9 km/pixel, has a local SHA-256 but no independent
+source checksum listed in the product directory, and may have artifacts at
+45-degree latitude-band boundaries.
+
+## Scientific limitations and possible educational use
+
+LDEM_16 provides broad global terrain context at about 1.9 km/pixel. It is not
+a high-resolution landing-safety or landing-hazard dataset and cannot resolve
+local boulders, slopes, crater rims, or habitat-footprint details. Simple
+cylindrical map spacing has substantial distance distortion near the poles.
+The elevation grid is an interpolated shape/radius product from observations
+collected during 2009–2016, not a time series or direct astronaut observation.
+
+It may support future broad-scale terrain comparisons or map-reading lessons.
+It has not been integrated into gameplay and does not provide mission-specific
+landing safety or outpost elevation without appropriate additional geodetic
+context.
+
+## References
+
+- [PDS3 LDEM_16 label](../datasets/raw/lunar_environment/lola/ldem_16.lbl)
+- [PDS4 LDEM_16 label](../datasets/raw/lunar_environment/lola/ldem_16.xml)
+- [LOLA map projection catalog](../datasets/raw/lunar_environment/lola/dsmap.cat)
+- [Existing LOLA acquisition documentation](lola_dataset.md)
+- [NASA PDS LOLA archive](https://pds-geosciences.wustl.edu/missions/lro/lola.htm)

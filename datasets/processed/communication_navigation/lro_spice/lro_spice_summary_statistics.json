@@ -1,0 +1,8 @@
+{
+  "record_count": 24,
+  "position_component_units": "km",
+  "distance_from_moon_center_km": {
+    "minimum": 1799.605408547512,
+    "maximum": 1863.1658600926085
+  }
+}

@@ -1,0 +1,142 @@
+{
+  "array_members": {
+    "elevation_dn": {
+      "description": "Original stored PDS integer samples, preserved unchanged.",
+      "dtype": "little-endian signed int16",
+      "shape": [
+        2880,
+        5760
+      ]
+    },
+    "height_m": {
+      "description": "PDS HEIGHT in meters relative to reference radius; DN * SCALING_FACTOR.",
+      "dtype": "float32",
+      "shape": [
+        2880,
+        5760
+      ]
+    },
+    "latitude_center_degrees": {
+      "description": "Planetocentric latitude at each row center, ordered north to south.",
+      "dtype": "float64",
+      "shape": [
+        2880
+      ]
+    },
+    "longitude_center_degrees": {
+      "description": "East longitude at each column center, ordered west to east.",
+      "dtype": "float64",
+      "shape": [
+        5760
+      ]
+    },
+    "metadata_json": {
+      "description": "Essential PDS units, scale/offset, orientation, and coordinate metadata.",
+      "dtype": "Unicode string",
+      "shape": []
+    },
+    "planetary_radius_m": {
+      "description": "Planetary radius in meters; DN * SCALING_FACTOR + OFFSET.",
+      "dtype": "float32",
+      "shape": [
+        2880,
+        5760
+      ]
+    }
+  },
+  "data_set_id": "LRO-L-LOLA-4-GDR-V1.0",
+  "dataset_name": "LRO LOLA Gridded Digital Elevation Model LDEM_16",
+  "elevation_conversion": {
+    "documented_missing_values": [],
+    "height_formula": "HEIGHT_m = DN * SCALING_FACTOR",
+    "missing_value_policy": "No missing sentinel is defined; no sample values were removed or reclassified.",
+    "offset_m": 1737400.0,
+    "planetary_radius_formula": "PLANETARY_RADIUS_m = DN * SCALING_FACTOR + OFFSET",
+    "scaling_factor": 0.5,
+    "stored_sample_type": "LSB_INTEGER, signed 16-bit little-endian",
+    "unit": "METER"
+  },
+  "logical_identifier": "urn:nasa:pds:lro_lola_rdr:data_gridded:ldem_16",
+  "observation_period": {
+    "start": "2009-07-13T17:33:17",
+    "stop": "2016-11-29T05:48:19"
+  },
+  "observed_dn_minimum_maximum": [
+    -17963,
+    21371
+  ],
+  "pds_declared_dn_minimum_maximum": [
+    -18150,
+    21580
+  ],
+  "processed_file": "ldem_16_processed.npz",
+  "processed_format": "Deterministic compressed NumPy .npz; arrays are readable with allow_pickle=False",
+  "processed_sha256": "E0682E4C5168B028BF17999C8AB59EEC8DF887F315145C8F3E5C8A3AE9E50562",
+  "processed_size_bytes": 106424701,
+  "processing": {
+    "chunk_rows": 120,
+    "independent_output_reopen_and_selected_sample_checks": "PASSED",
+    "processed_rows": 2880,
+    "processed_samples": 16588800
+  },
+  "processing_script": "datasets/scripts/process_lola_dataset.py",
+  "processing_script_version": "1.0.0",
+  "product_id": "LDEM_16",
+  "source_file_format": "PDS3 uncompressed fixed-size raster",
+  "source_file_preserved_unchanged": true,
+  "source_files": {
+    "dsmap.cat": {
+      "path": "D:\\NASA\\LUNAR-GUARDIANS\\datasets\\raw\\lunar_environment\\lola\\dsmap.cat",
+      "sha256": "351C8D9AD77470F3F432E5EA7F55498E22AA5701D5EF7145BEE3A2C0D3B52B76",
+      "size_bytes": 7378
+    },
+    "ldem_16.img": {
+      "path": "D:\\NASA\\LUNAR-GUARDIANS\\datasets\\raw\\lunar_environment\\lola\\ldem_16.img",
+      "sha256": "A511E40D7A3EA3275945B4DA2A1DF377133264FAB0BE94B7434B1CF8907254CB",
+      "size_bytes": 33177600
+    },
+    "ldem_16.lbl": {
+      "path": "D:\\NASA\\LUNAR-GUARDIANS\\datasets\\raw\\lunar_environment\\lola\\ldem_16.lbl",
+      "sha256": "9AEF29463CCC6ED3A3FBE0DF3ECD830A99C69E16B564F455507DEE2697096579",
+      "size_bytes": 5121
+    },
+    "ldem_16.xml": {
+      "path": "D:\\NASA\\LUNAR-GUARDIANS\\datasets\\raw\\lunar_environment\\lola\\ldem_16.xml",
+      "sha256": "011EBFF260ABB7C9A10A0F18601D7505E807B9A1B51D238B5587F5B02DE59218",
+      "size_bytes": 11941
+    }
+  },
+  "source_image_sha256_before_and_after_processing": "A511E40D7A3EA3275945B4DA2A1DF377133264FAB0BE94B7434B1CF8907254CB",
+  "spatial_reference": {
+    "column_orientation": "west to east",
+    "coordinate_system": "MEAN EARTH/POLAR AXIS OF DE421",
+    "latitude_coverage_degrees": [
+      -90.0,
+      90.0
+    ],
+    "latitude_type": "Planetocentric",
+    "line_projection_offset_pixels": 1439.5,
+    "longitude_coverage_degrees": [
+      0.0,
+      360.0
+    ],
+    "longitude_direction": "East",
+    "map_resolution_pixels_per_degree": 16.0,
+    "map_scale_m_per_pixel": 1895.21,
+    "pixel_centers": {
+      "latitude_first_northernmost_degrees": 89.96875,
+      "latitude_last_southernmost_degrees": -89.96875,
+      "longitude_first_westernmost_degrees": 0.03125,
+      "longitude_last_easternmost_degrees": 359.96875
+    },
+    "projection": "SIMPLE CYLINDRICAL",
+    "row_orientation": "north to south",
+    "sample_projection_offset_pixels": 2879.5
+  },
+  "warnings": [
+    "The PDS label defines no missing-value sentinel; no value is treated as missing based on an assumed convention.",
+    "LDEM_16 is a global 1,895.21 m/pixel grid and is suitable only for broad terrain context, not fine landing hazard assessment.",
+    "The raster checksum is recorded for local integrity tracking; an independent source checksum was not listed with this product.",
+    "Observed raster extrema [-17963, 21371] differ from the PDS label's MINIMUM/MAXIMUM [-18150, 21580], but remain within those documented bounds. Confirm this label/data extrema difference with the archive before interpreting extreme values."
+  ]
+}

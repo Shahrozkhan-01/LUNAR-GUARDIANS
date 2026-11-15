@@ -1,0 +1,73 @@
+{
+  "dataset_id": "OSD-53",
+  "genelab_id": "GLDS-53",
+  "validation_status": "PASS",
+  "validated_at_utc": "2026-11-15T04:14:41.568883+00:00",
+  "source_url": "https://osdr.nasa.gov/bio/repo/data/studies/OSD-53",
+  "api_url": "https://osdr.nasa.gov/geode-py/ws/repo/studies/OSD-53",
+  "sample_count": 13,
+  "organism": "Homo sapiens",
+  "checks": [
+    {
+      "name": "GLDS-53_microarray_E-GEOD-47126.processed.zip",
+      "exists": true,
+      "size_bytes": 10552,
+      "sha256": "886875c03a1d627f639e46dc94d486480394de4d4210a093983009d6ff3cb442"
+    },
+    {
+      "name": "GLDS-53_microarray_E-GEOD-47126.additional.zip",
+      "exists": true,
+      "size_bytes": 43345,
+      "sha256": "6b9a23e1b36efc80ef56565bf79ef9588af93147dbe534383db7edd545e8b5bb"
+    },
+    {
+      "name": "OSD-53_metadata_OSD-53-ISA.zip",
+      "exists": true,
+      "size_bytes": 23059,
+      "sha256": "978b619f3eb5477a6f9e305790360b15d3750b963c33c48ff531dcf6e7fa2a29"
+    },
+    {
+      "name": "OSD-53_study_metadata.json",
+      "exists": true,
+      "size_bytes": 46732,
+      "sha256": "ae0be7a5cc5cfaf53fa094f4b320e8d5e4a3d25cfd19af1b3ecd72de7b60b7fb"
+    },
+    {
+      "name": "OSD-53_file_metadata.json",
+      "exists": true,
+      "size_bytes": 6907,
+      "sha256": "8994a3170c3bda148f1180d4b7eaa2f7e4d3c07c0fe6c7f5ab66fe7b62c9048f"
+    }
+  ],
+  "archive_members": {
+    "GLDS-53_microarray_E-GEOD-47126.processed.zip": [
+      "GSM1148182_sample_table.txt",
+      "GSM1145441_sample_table.txt",
+      "GSM1145440_sample_table.txt",
+      "GSM1145439_sample_table.txt",
+      "GSM1145438_sample_table.txt",
+      "GSM1145437_sample_table.txt",
+      "GSM1145436_sample_table.txt",
+      "GSM1145435_sample_table.txt",
+      "GSM1145434_sample_table.txt",
+      "GSM1145433_sample_table.txt",
+      "GSM1145432_sample_table.txt",
+      "GSM1145431_sample_table.txt",
+      "GSM1145430_sample_table.txt"
+    ],
+    "GLDS-53_microarray_E-GEOD-47126.additional.zip": [
+      "GSE47126.xls",
+      "GSE47126_Fold_change_data.txt"
+    ],
+    "OSD-53_metadata_OSD-53-ISA.zip": [
+      "s_OSD-53.txt",
+      "a_OSD-53_transcription-profiling_dna-microarray_bd biosciences clontech.txt",
+      "i_investigation.txt"
+    ]
+  },
+  "warnings": [
+    "Original raw microarray data are unavailable according to the study record.",
+    "Only public processed and metadata files were downloaded.",
+    "No individual identities are exposed or inferred."
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "dataset_id": "lro-l-spice-6-v1.0",
+  "validation_status": "PASS",
+  "validated_at_utc": "2026-11-15T03:58:49.831220+00:00",
+  "source": "https://naif.jpl.nasa.gov/pub/naif/pds/data/lro-l-spice-6-v1.0/lrosp_1000/",
+  "coverage": {
+    "start_utc": "2017-09-15T00:00:00Z",
+    "stop_utc": "2017-12-15T00:00:00Z"
+  },
+  "coordinate_frame": "J2000",
+  "position_reference": "MOON",
+  "position_units": "km",
+  "checks": [
+    {
+      "file": "lrorg_2017258_2017349_v01.bsp",
+      "exists": true,
+      "size_bytes": 7673856,
+      "sha256": "89bd0a6f2c991838cc6bc6bce7df327e078be58c207d2112d16c90f3a44d5189"
+    },
+    {
+      "file": "lrorg_2017258_2017349_v01.lbl",
+      "exists": true,
+      "size_bytes": 1378,
+      "sha256": "f7e0818875e42656633430e642c08b81d5ab8d6ff508e26b952a654263d9f0ae"
+    },
+    {
+      "file": "naif0012.tls",
+      "exists": true,
+      "size_bytes": 6866,
+      "sha256": "89ca987f0a09a20515dca2d23043e39208f583337d69691149556ba01806a1a0"
+    }
+  ],
+  "warnings": [
+    "SPICE positions are computed geometry from kernels, not direct telemetry.",
+    "The archive label describes a reconstructed definitive LRO trajectory."
+  ]
+}

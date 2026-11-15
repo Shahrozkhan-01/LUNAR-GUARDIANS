@@ -1,0 +1,428 @@
+<HTML>
+<HEAD>
+<TITLE>ACE/EPAM Level 2 Data</TITLE>
+   <SCRIPT LANGUAGE="JavaScript" 
+      SRC="/ACE/ASC/post.js" >
+   </SCRIPT>
+    <link rel="stylesheet" type="text/css" href="/ACE/ASC/asc.css" />
+<!--[if IE]>
+   <style type="text/css">
+body {
+   height: 100%;
+   overflow: hidden;
+   font-size: 100%;
+   padding-right: 0em;   
+}
+div.content {
+   width: 100%;
+   height: 100%;
+   overflow: auto;
+}
+#navcontainer {
+   position: absolute;
+}
+</style>
+
+<![endif]-->
+</HEAD>
+
+<BODY text="#FFFFFF">
+
+<!-- ACE Science Center Navigation bar -->
+
+<div id="navcontainer">
+
+<ul id="navlist">
+<li id="active">
+<a href="/ACE/ASC/index.html"><B>ASC Home</B></a>
+</li><li>
+<a href="/ACE/ASC/news.html"><B>What's New?</B></a>
+</li><li>
+<a href="/ACE/ACENews_curr.html"><B>ACE Science News</B></a>
+</li><li>
+<a href="/ACE/ASC/related_sites.html"><B>Related Sites</B></a>
+</li><li>
+<a href="/ACE/meetings/"><B>Meetings</B></a>
+</li>
+</ul>
+
+<ul id="navlist">
+Data & Plots
+<li id="active">
+<a href="/ACE/ASC/level2/index.html"><B>Verified/Level2</font></B></a>
+</li><li>
+<a href="/ACE/ASC/DATA/level3/index.html" ><B>Contributed <font size=-2>(Level3)</font></B></a>
+</li><li>
+<a href="/ACE/ASC/DATA/level3/summaries.html" ><B>Summary Plots</B></a>
+</li><li>
+<a href="/ACE/ASC/browse/view_browse_data.html" ><B>Browse <font size=-2>(Not verified)</font></B></a>
+</li><li>
+<a href="/ACE/ASC/rtsw.html" ><B>Real Time</B></a>
+</li><li>
+<a href="/ACE/ASC/level1/index.htm" ><B>Level 1</B></a>
+</li><li>
+<a href="/ACE/ASC/orbit.html" ><B>ACE Att/Orbit</B></a>
+</li><li>
+<a href="/ACE/ASC/clock.html" ><B>Time Cal.</B></a>
+</li><li>
+<a href="/ACE/ASC/housekeeping/index.html" ><B>Housekeeping</B></a>
+</li><li>
+<a href="/ACE/ASC/telemetry.html" ><B>Telemetry Data Coverage</B></a>
+</li>
+</ul>
+
+
+<ul id="navlist">
+Documentation
+<li id="active">
+<a href="/ACE/ASC/datadocs.html" ><B>Data Docs</B></a>
+</li><li>
+<a href="/ACE/ASC/spacecraft.html" ><B>Mission Docs</B></a>
+</li><li>
+<a href="/ACE/ASC/instruments.html" ><B>ACE Instruments</B></a>
+</li><li>
+<a href="/ACE/ASC/reports.html" ><B>Reports/Status</B></a>
+</li><li>
+<a href="/ACE/ASC/publications.html" ><B>Publications</B></a>
+</li><li>
+<a href="/ACE/ASC/calendars_page.html" ><B>ACE Calendars</B></a>
+</li>
+</ul>
+
+<!--
+<P>&nbsp;<P>&nbsp;<P>
+<ul id="navlist">
+<li id="active">
+<a href="/ACE/ASC/DATA/web_logs/ACEReport.html"><B>Website Stats</B></a>
+</li>
+</ul>
+-->
+
+<!--
+  <a href="css.tip.1.html" class="navbar-item" id="first-navbar-item">home</a> <span class="invisible">|</span>
+-->  
+
+</div>
+
+
+
+<div class="content">
+<br>
+<IMG SRC="../images/empty.gif" WIDTH=100 HEIGHT=79 BORDER=0 ALIGN=left>
+
+<A HREF="/ACE/ASC/" TARGET="_top"><IMG SRC="/ACE/ASC/images/asc100x79.gif" align=right BORDER=0></A>
+<BR><BR>
+<H1 ALIGN=CENTER>EPAM Level 2 Data Documentation</H1>
+<BR>
+
+
+<HR>
+<BR>
+
+<CENTER>
+<TABLE CELLSPACING=0 BORDER=2 CELLPADDING=2 WIDTH=600>
+<TR> 
+<TD WIDTH=10% COLSPAN=2 ALIGN=CENTER>Sensor</TD>
+<TD WIDTH=20% COLSPAN=2 ALIGN=CENTER>Full Name</TD>
+<TD WIDTH=15% COLSPAN=2 ALIGN=CENTER>Measured Species</TD>
+<TD WIDTH=15% COLSPAN=2 ALIGN=CENTER>Measured Quantities</TD>
+<TD WIDTH=15% COLSPAN=2 ALIGN=CENTER>Energy Range (MeV/nuc.)</TD>
+<TD WIDTH=15% COLSPAN=2 ALIGN=CENTER>Measurement Technique</TD>
+</TR>
+<TR>
+<TD WIDTH=10% COLSPAN=2 ALIGN=CENTER><BR>EPAM<BR><BR></TD>
+<TD WIDTH=20% COLSPAN=2 ALIGN=CENTER>Electron, Proton & Alpha Monitor</TD>
+<TD WIDTH=15% COLSPAN=2 ALIGN=CENTER>Ions, e<SUP>-</SUP>, H, He, CNO, Fe Group</TD>
+<TD WIDTH=12% COLSPAN=2 ALIGN=CENTER>Z, M, E</TD>
+<TD WIDTH=18% COLSPAN=2 ALIGN=CENTER>0.05 - 5.0 (ions)<BR>0.04 - 0.31 (e<SUP>-</SUP>)<BR>0.2 - 93 (atomic species)</TD>
+<TD WIDTH=15% COLSPAN=2 ALIGN=CENTER>dE/dx - E</TD>
+</TR>
+</TABLE>
+</CENTER>
+<BR>
+
+<a name="epamintro"</a><H3>The EPAM Instrument on ACE</H3>
+
+<P>The Electron, Proton, and Alpha Monitor (EPAM) is composed of five
+telescope apertures of three different types. Two Low Energy Foil
+Spectrometers (LEFS) measure the flux and direction of electrons above 30 keV
+(geometry factor = 0.397 cm<SUP>2</SUP>*sr), two Low Energy Magnetic Spectrometers
+(LEMS) measure the flux and direction of ions greater than 50 keV (geometry
+factor = 0.48 cm<SUP>2</SUP>*sr), and the Composition Aperture (CA) measures the
+elemental composition of the ions (geometry factor = 0.24 cm<SUP>2</SUP>*sr). The
+telescopes use the spin of the spacecraft to sweep the full sky.  Solid-state
+detectors are used to measure the energy and composition of the incoming
+particles.
+
+<P>For more information about the  EPAM instrument,
+<a href="http://sd-www.jhuapl.edu/ACE/EPAM/">visit the EPAM Home
+Page,</a> at JHU/APL.
+
+<BR><BR>
+<HR>
+<a name="epamdata"</a><H3>EPAM Data Description</H3>
+
+<P><a href="/ACE/ASC/DATA/level2/epam/epam_release_notes">
+Release notes for EPAM level 2 data</a> - provided by the EPAM instrument team.
+All users of EPAM data should read these notes.
+
+<P> Note: 
+The ACE Science Center provides spin-averaged EPAM fluxes (intensities) at 5-minute, hourly, and daily cadences
+as standard
+<a href="/ACE/ASC/level2/lvl2DATA_EPAM.html">ACE EPAM Level 2 Data Products</a>.
+<BR><a href="/ACE/ASC/DATA/level3/epam/">A more comprehensive set of EPAM data products</a> is provided by 
+Fundamental Technologies, LLC.
+
+<P><B>Time Data</B><br>
+All Level 2 data records for all ACE instruments contain timing information
+in the same format. The format of the timing information is described
+<a href="timing_data.html">here.</a>
+
+<P><B>Ion and Electron Fluxes</B><br>
+EPAM Level 2 data are organized into yearly data files.
+The Level 2 data contains time averages of energetic charged particle fluxes over the following time periods:
+<UL>
+<LI>12 Second</LI>
+<LI>5 Minute</LI>
+<LI>hourly</LI>
+<LI>daily</LI>
+<LI>27 days (1 Bartels rotation)</LI>
+</UL>
+
+<P>A flux value of -999.9 indicates bad or missing data.
+
+<a name="unc"</a><P><B>Flux Uncertainties</B><br>
+Flux data uncertainties are derived from statistical (counting) errors only.
+The uncertainties are fractional uncertainties,
+and are given as 1/sqrt(N), where N is the number of events in the
+averaging period. For no events, an uncertainty value of -999.9 is given.
+
+<P><B>Quality Data</B><br>
+livetime - number of seconds of the averaging period during which the instrument was
+collecting data. 
+
+<P><a href="/ACE/ASC/level2/lvl2DATA_EPAM.html">Download EPAM level 2 data</a>  
+
+<P><a href="./epam_idf.html">EPAM Energy passbands and geometric factors</a>  
+
+<a name="lems30data"</a><H3>LEMS30 Data</H3>
+
+<p>The LEMS30 telescope, (Low-Energy Magnetic
+Spectrometer), measures ions. The LEMS30 sensor is oriented at 30
+degrees from the spin axis.
+
+<p>A rare-earth magnet in front of the LEMS30
+detector sweeps out any electrons with energy below about 500 
+keV. These electrons are measured in the B detector which is
+located at the back of the CA60 telescope assembly and are
+referred to as DE30 electrons. The LEMS30 detector is a 200
+micron, totally depleted, solid-state, silicon surface barrier
+detector. The geometrical factor for the LEMS30 ions is 0.428
+(cm<SUP>2</SUP>*sr). The eight channels from the LEMS30 detector are
+P1, P2, P3, P4, P5, P6, P7, P8.
+<a href="./epam_idf.html">Energy passbands and geometric factors</a>  
+
+<P><font color=yellow>Note: 
+After DOY 302, 2003, the P1-P6 channels contain fill data (-999.9).
+This is due to a sudden noise increase in the detector, which makes the output
+from these channels unreliable.</font>
+
+<a name="de30data"</a><H3>DE30 Data</H3>
+
+<p>The DE30 detector, (Deflected Electrons),
+measures electrons at 30 degrees from the spacecraft spin axis.
+Electrons entering the LEMS30 detector are swept out by a
+rare-earth magnet and are deflected into the B detector. The 4 DE
+channels are pure electron channels. The geometrical factor for
+the DE30 channels is 0.14 (cm<SUP>2</SUP>*sr). The four channels
+from the DE30 detector are DE1, DE2, DE3, DE4.
+<a href="./epam_idf.html">Energy passbands and geometric factors</a>
+
+<a name="ca60data"</a><H3>CA60 Data</H3>
+
+<p>The CA60 telescope, (Composition Aperture)
+measures ion composition. It's look-direction is oriented 60
+degrees from the spacecraft spin-axis.</p>
+
+<p>The CA telescope is capable of determining ion
+composition using a dE X E detection scheme. Although the
+principal responsibility of EPAM is to monitor electrons, protons,
+and alphas, the CA provides an unambiguous determination of ion
+composition, unlike the LEMS detectors. The CA60 telescope is
+comprised of three solid state detectors, a thin, ~5 micron
+epitaxial silicon detector referred to as the D detector, and two
+thick (200 micron) totally depleted surface barrier silicon
+detectors known as C and B. The B detector, as measures deflected
+electrons from the LEMS30 head, but also acts as the
+anti-coincidence detector for the CA.</p>
+
+<p>The CA system uses log amplifiers to extend the
+dynamic range of the detector. These amplifiers are extremely
+temperature sensitive, and therefore are thermally regulated with
+heaters to maintain calibration. The logic used in the CA depends
+on slanted discriminators to define each species group. The eight
+Ca rate channels, denoted by the symbols W1 - W8, count all
+particles in a given energy/nucleon range. Multiple species may
+therefore be associated with a single Ca rate channel. As a
+result, a species group is identified by the dominant species in
+that group. <a href="./epam_idf.html">Energy passbands and geometric factors</a>  
+
+<div align="center"><center>
+
+<table border="0">
+    <tr>
+        <td><p align="center">Channel</p>
+        </td>
+        <td><p align="center">Species<br>Group</p>
+        </td>
+        <td><p align="center">Z</p>
+        </td>
+    </tr>
+    <tr>
+        <td><p align="center">W1</p>
+        </td>
+        <td><p align="center">H</p>
+        </td>
+        <td><p align="center">1</p>
+        </td>
+    </tr>
+    <tr>
+        <td><p align="center">W2</p>
+        </td>
+        <td><p align="center">H</p>
+        </td>
+        <td><p align="center">1</p>
+        </td>
+    </tr>
+    <tr>
+        <td><p align="center">W3</p>
+        </td>
+        <td><p align="center">He</p>
+        </td>
+        <td><p align="center">2</p>
+        </td>
+    </tr>
+    <tr>
+        <td><p align="center">W4</p>
+        </td>
+        <td><p align="center">He</p>
+        </td>
+        <td><p align="center">2</p>
+        </td>
+    </tr>
+    <tr>
+        <td><p align="center">W5</p>
+        </td>
+        <td><p align="center">O</p>
+        </td>
+        <td><p align="center">6-9</p>
+        </td>
+    </tr>
+    <tr>
+        <td><p align="center">W6</p>
+        </td>
+        <td><p align="center">O</p>
+        </td>
+        <td><p align="center">6-9</p>
+        </td>
+    </tr>
+    <tr>
+        <td><p align="center">W7</p>
+        </td>
+        <td><p align="center">Fe</p>
+        </td>
+        <td><p align="center">10-28</p>
+        </td>
+    </tr>
+    <tr>
+        <td><p align="center">W8</p>
+        </td>
+        <td><p align="center">Fe</p>
+        </td>
+        <td><p align="center">10-28</p>
+        </td>
+    </tr>
+</table>
+</center></div>
+
+
+
+<P><font color=yellow>Note: ACE Level 2 EPAM data only includes channels W3 - W8
+at this time.</font>
+
+<p>The above table lists the detailed information
+for each group. Defined for each energy channel W are
+the dominant species, and the atomic number response
+were appropriate. An example of the multiplicity of species for a
+given species group is given by the O-species group. This group
+is defined by the rate channels denoted W5 and W6 and is
+dominated by oxygen; however, there is also a significant
+contribution from Carbon and Nitrogen. This group is therefore
+also identified as the CNO group. Similarly, the Fe-group is made
+up of all species with (9 &lt; Z &lt; 29), but again iron is the
+dominant species. </p>
+
+<a name="lefs60data"</a><H3>LEFS60 Data</H3>
+
+<p>The LEFS60 detector, (Low Energy Foil
+Spectrometer), measures ions and electrons with a look angle of
+60 degrees to the spin axis. An aluminized Parylene foil is used
+to absorb ions with energies below approximately 350 keV, while
+allowing electrons with energies above about 35 keV to pass
+through to the solid-state detector. The geometrical factor for
+the LEFS60 telescope is 0.397 (cm<SUP>2</SUP>*sr).
+The seven channels from the LEFS60 detector are E1', E2', E3', E4',
+FP5', FP6', FP7'. <a href="./epam_idf.html">Energy passbands and geometric factors</a>  
+
+<a name="wartd60data"</a><H3>WARTD60 Data</H3>
+
+<p>The WARTD60 is a special part of the CA60,
+(Composition Aperture) and measures ions above certain energy
+thresholds. These 4 channels measure integral flux, not
+differential flux as the other EPAM detectors.
+The four channels from the WARTD60 detector are Z2, Z2A, Z3, Z4.
+
+<a name="lems120data"</a><H3>LEMS120 Data</H3>
+
+<p>The LEMS120 detector, (Low-Energy Magnetic
+Spectrometer), measures ions at 120 degrees from the spacecraft
+spin axis. A rare-earth magnet in front of the detector sweeps
+out any electrons with energy below about 500 keV. The
+geometrical factor for the LEMS120 telescope is 0.428 (cm<SUP>2</SUP>*sr).
+The eight channels from the LEMS120 detector are
+P1', P2', P3', P4', P5', P6', P7', P8'. <a href="./epam_idf.html">Energy passbands and geometric factors</a>  
+
+<a name="lefs150data"</a><H3>LEFS150 Data</H3>
+
+<p>The LEFS150 detector, (Low Energy Foil
+Spectrometer), measures electrons with energies less than about
+350 keV and ions with a look direction of 150 degrees from the
+spin axis. An aluminized Parylene foil is used to absorb ions
+with energies below approximately 350 keV, while allowing
+electrons with energies above about 35 keV to pass through to the
+solid-state detector. The geometrical factor for the LEFS150
+telescope is 0.397 (cm<SUP>2</SUP>*sr).
+The seven channels from the LEFS150 detector are E1, E2, E3, E4,
+FP5, FP6, FP7. <a href="./epam_idf.html">Energy passbands and geometric factors</a>  
+
+<P><font color=yellow>Note: After DOY 78, 1998, the E1, E2 and E3 channels
+contain fill data (-999.9). This is due to a sudden noise increase in the
+detector, which makes the output from these channels unreliable.</font>
+
+<P><a href="/ACE/ASC/level2/lvl2DATA_EPAM.html">
+Download EPAM level 2 data</a>
+
+
+<HR>
+<ADDRESS>
+<SCRIPT LANGUAGE=JAVASCRIPT TYPE="TEXT/JAVASCRIPT">
+   post();
+</SCRIPT>
+<br>
+Last Updated: 7 November, 2007
+</ADDRESS>
+<A HREF="../index.htm" TARGET="_top">Return to ASC Home Page</A>
+
+</div>
+</BODY>
+</HTML>

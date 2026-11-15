@@ -1,0 +1,278 @@
+.nasa-weather-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border-color: rgba(0, 229, 255, 0.28);
+}
+
+.nasa-weather-refresh {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 42px;
+  padding: 9px 14px;
+  border: 1px solid rgba(0, 229, 255, 0.38);
+  border-radius: 10px;
+  background: rgba(0, 229, 255, 0.09);
+  color: var(--cyan);
+  font-weight: 700;
+}
+
+.nasa-weather-refresh:disabled {
+  opacity: 0.65;
+  cursor: wait;
+}
+
+.nasa-weather-error {
+  padding: 11px 13px;
+  border: 1px solid rgba(255, 107, 53, 0.4);
+  border-radius: 10px;
+  background: rgba(255, 107, 53, 0.08);
+  color: #fdba74;
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+.nasa-weather-status {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  border: 1px solid rgba(34, 197, 94, 0.42);
+  border-radius: 12px;
+  background: rgba(34, 197, 94, 0.1);
+  color: #86efac;
+  font-size: 0.77rem;
+  letter-spacing: 0.7px;
+}
+
+.nasa-weather-status.partial {
+  border-color: rgba(250, 204, 21, 0.42);
+  background: rgba(250, 204, 21, 0.08);
+  color: #fde047;
+}
+
+.nasa-weather-status.unavailable {
+  border-color: rgba(255, 107, 53, 0.42);
+  background: rgba(255, 107, 53, 0.09);
+  color: #fdba74;
+}
+
+.nasa-weather-stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.nasa-weather-stats > div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 12px 14px;
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  background: rgba(8, 13, 32, 0.65);
+}
+
+.nasa-weather-stats span,
+.nasa-weather-event-list time {
+  color: var(--text-muted);
+  font-size: 0.76rem;
+}
+
+.nasa-weather-stats strong {
+  color: var(--text-primary);
+  font-size: 0.88rem;
+}
+
+.nasa-weather-learning {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.nasa-weather-learning article {
+  padding: 14px;
+  border: 1px solid rgba(0, 229, 255, 0.16);
+  border-radius: 12px;
+  background: rgba(0, 229, 255, 0.04);
+}
+
+.nasa-weather-learning h3,
+.nasa-weather-events h3 {
+  margin-bottom: 6px;
+  color: var(--text-primary);
+  font-size: 0.88rem;
+}
+
+.nasa-weather-learning p,
+.nasa-weather-empty,
+.nasa-weather-event-list p {
+  color: var(--text-secondary);
+  font-size: 0.82rem;
+  line-height: 1.6;
+}
+
+.nasa-weather-events {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.nasa-weather-tabs {
+  display: flex;
+  gap: 8px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.nasa-weather-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-align: left;
+}
+
+.nasa-weather-tab.active {
+  border-bottom-color: var(--cyan);
+  color: var(--cyan);
+}
+
+.nasa-weather-tab span {
+  min-width: 22px;
+  padding: 2px 6px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text-primary);
+  font-size: 0.7rem;
+  text-align: center;
+}
+
+.nasa-weather-events-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.nasa-weather-events-heading h3 {
+  margin: 0;
+}
+
+.nasa-real-data-label {
+  color: var(--cyan);
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.nasa-weather-event-list {
+  display: grid;
+  gap: 10px;
+  padding: 0;
+  list-style: none;
+}
+
+.nasa-weather-event-list li {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 13px 15px;
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  background: rgba(8, 13, 32, 0.7);
+}
+
+.nasa-weather-event-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.nasa-weather-event-top strong {
+  color: var(--text-primary);
+  font-size: 0.88rem;
+}
+
+.nasa-weather-event-top span {
+  color: var(--cyan);
+  font-size: 0.68rem;
+  text-align: right;
+}
+
+.nasa-weather-event-metadata {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px 12px;
+}
+
+.nasa-weather-event-metadata > div {
+  min-width: 0;
+}
+
+.nasa-weather-event-metadata dt {
+  color: var(--text-muted);
+  font-size: 0.68rem;
+}
+
+.nasa-weather-event-metadata dd {
+  overflow-wrap: anywhere;
+  color: var(--text-primary);
+  font-size: 0.78rem;
+}
+
+.nasa-weather-event-list a {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--cyan);
+  font-size: 0.78rem;
+  text-decoration: underline;
+}
+
+.nasa-weather-notice {
+  padding: 12px 14px;
+  border-left: 3px solid #facc15;
+  background: rgba(250, 204, 21, 0.06);
+  color: var(--text-secondary);
+  font-size: 0.79rem;
+  line-height: 1.6;
+}
+
+.nasa-weather-notice strong {
+  color: #fde047;
+}
+
+@media (max-width: 640px) {
+  .nasa-weather-stats,
+  .nasa-weather-learning {
+    grid-template-columns: 1fr;
+  }
+
+  .nasa-weather-tabs {
+    flex-direction: column;
+    border-bottom: 0;
+  }
+
+  .nasa-weather-tab {
+    justify-content: space-between;
+    border: 1px solid var(--border-subtle);
+    border-radius: 9px;
+  }
+
+  .nasa-weather-tab.active {
+    border-color: var(--cyan);
+  }
+
+  .nasa-weather-event-metadata {
+    grid-template-columns: 1fr;
+  }
+}

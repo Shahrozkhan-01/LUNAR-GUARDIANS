@@ -1,0 +1,70 @@
+{
+  "computation_type": "Computed ephemeris, not a direct observation.",
+  "dataset_id": "Horizons target 301, observer 500@399, DE441",
+  "dataset_name": "JPL Horizons Moon geocentric range and down-leg light time",
+  "earth_moon_range_km": {
+    "maximum": "405615.89143",
+    "mean": "394951.38676375",
+    "median": "397388.936995",
+    "minimum": "377764.35156",
+    "missing_or_invalid_value_count": 0,
+    "valid_value_count": 8
+  },
+  "epoch_count": 8,
+  "future_ephemeris_epoch_count_at_retrieval": 7,
+  "future_ephemeris_epochs_utc": [
+    "2026-11-15T00:00:00Z",
+    "2026-11-16T00:00:00Z",
+    "2026-11-17T00:00:00Z",
+    "2026-11-18T00:00:00Z",
+    "2026-11-19T00:00:00Z",
+    "2026-11-20T00:00:00Z",
+    "2026-11-21T00:00:00Z"
+  ],
+  "network_or_system_delays_included": false,
+  "one_way_down_leg_light_time_minutes": {
+    "maximum": "0.02254982",
+    "mean": "0.021956935",
+    "median": "0.02209245",
+    "minimum": "0.02100144",
+    "missing_or_invalid_value_count": 0,
+    "valid_value_count": 8
+  },
+  "range_rate_km_s": {
+    "maximum": "-0.0031111",
+    "mean": "-0.0447979625",
+    "median": "-0.0501036",
+    "minimum": "-0.0715223",
+    "missing_or_invalid_value_count": 0,
+    "negative_means": "target approaching observer",
+    "positive_means": "target receding from observer",
+    "valid_value_count": 8
+  },
+  "scientific_limitations": [
+    "Horizons values are computed ephemerides; epochs after retrieval are forward calculations, not observations.",
+    "One-way down-leg light time is not the complete communication delay for every mission geometry.",
+    "Two-way vacuum light time is derived mathematically from the reported one-way value, not separately measured or separately reported by Horizons.",
+    "No network latency, routing, equipment, operations, or processing delays are included.",
+    "This dataset is not a real-time communication measurement and is not connected to gameplay."
+  ],
+  "time_coverage_utc": {
+    "end": "2026-11-21T00:00:00Z",
+    "start": "2026-11-14T00:00:00Z"
+  },
+  "two_way_vacuum_light_time_seconds_derived": {
+    "derivation": "2 * Horizons one-way down-leg light time (minutes) * 60 seconds/minute",
+    "maximum": "2.70597840",
+    "mean": "2.63483220",
+    "median": "2.65109400",
+    "minimum": "2.52017280",
+    "missing_or_invalid_value_count": 0,
+    "status": "Mathematical derivation, not a separate direct Horizons measurement.",
+    "valid_value_count": 8
+  },
+  "units": {
+    "derived_two_way_vacuum_light_time": "seconds",
+    "earth_moon_range": "km",
+    "one_way_down_leg_light_time": "minutes",
+    "range_rate": "km/s"
+  }
+}

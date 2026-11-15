@@ -1,0 +1,184 @@
+{
+  "coverage": {
+    "columns": 5760,
+    "latitude_center_range_degrees": [
+      -89.96875,
+      89.96875
+    ],
+    "latitude_degrees": [
+      -90.0,
+      90.0
+    ],
+    "longitude_center_range_degrees": [
+      0.03125,
+      359.96875
+    ],
+    "longitude_degrees_east": [
+      0.0,
+      360.0
+    ],
+    "nominal_map_scale_m_per_pixel": 1895.21,
+    "observation_period": {
+      "start": "2009-07-13T17:33:17",
+      "stop": "2016-11-29T05:48:19"
+    },
+    "pixels_per_degree": 16.0,
+    "rows": 2880
+  },
+  "dataset_name": "LRO LOLA Gridded Digital Elevation Model LDEM_16",
+  "extrema_warning": "Observed raster extrema [-17963, 21371] differ from the PDS label's MINIMUM/MAXIMUM [-18150, 21580], but remain within those documented bounds. Confirm this label/data extrema difference with the archive before interpreting extreme values.",
+  "height_m_relative_to_reference_radius_statistics": {
+    "height_m_maximum": 10685.5,
+    "height_m_mean": -519.2021854504244,
+    "height_m_median": -794.0,
+    "height_m_minimum": -8981.5,
+    "missing_or_invalid_sample_count": 0,
+    "missing_value_policy": "No missing/invalid sample sentinel is defined by the PDS label.",
+    "planetary_radius_m_maximum": 1748085.5,
+    "planetary_radius_m_mean": 1736880.7978145496,
+    "planetary_radius_m_median": 1736606.0,
+    "planetary_radius_m_minimum": 1728418.5,
+    "sample_count": 16588800,
+    "stored_dn_maximum": 21371,
+    "stored_dn_minimum": -17963
+  },
+  "latitude_band_height_statistics": {
+    "-30_to_0_degrees": {
+      "boundary_convention": "lower inclusive, upper exclusive; band ending at +90 includes its upper edge",
+      "height_m_maximum": 9217.5,
+      "height_m_mean": 462.05973759403935,
+      "height_m_median": 59.0,
+      "height_m_minimum": -6559.0,
+      "latitude_bounds_degrees": [
+        -30.0,
+        0.0
+      ],
+      "missing_or_invalid_sample_count": 0,
+      "missing_value_policy": "No missing/invalid sample sentinel is defined by the PDS label.",
+      "planetary_radius_m_maximum": 1746617.5,
+      "planetary_radius_m_mean": 1737862.059737594,
+      "planetary_radius_m_median": 1737459.0,
+      "planetary_radius_m_minimum": 1730841.0,
+      "sample_count": 2764800,
+      "stored_dn_maximum": 18435,
+      "stored_dn_minimum": -13118
+    },
+    "-60_to_-30_degrees": {
+      "boundary_convention": "lower inclusive, upper exclusive; band ending at +90 includes its upper edge",
+      "height_m_maximum": 6598.5,
+      "height_m_mean": -1087.0076511863426,
+      "height_m_median": -909.0,
+      "height_m_minimum": -8591.0,
+      "latitude_bounds_degrees": [
+        -60.0,
+        -30.0
+      ],
+      "missing_or_invalid_sample_count": 0,
+      "missing_value_policy": "No missing/invalid sample sentinel is defined by the PDS label.",
+      "planetary_radius_m_maximum": 1743998.5,
+      "planetary_radius_m_mean": 1736312.9923488137,
+      "planetary_radius_m_median": 1736491.0,
+      "planetary_radius_m_minimum": 1728809.0,
+      "sample_count": 2764800,
+      "stored_dn_maximum": 13197,
+      "stored_dn_minimum": -17182
+    },
+    "-90_to_-60_degrees": {
+      "boundary_convention": "lower inclusive, upper exclusive; band ending at +90 includes its upper edge",
+      "height_m_maximum": 6928.5,
+      "height_m_mean": -1273.21390625,
+      "height_m_median": -1186.0,
+      "height_m_minimum": -8981.5,
+      "latitude_bounds_degrees": [
+        -90.0,
+        -60.0
+      ],
+      "missing_or_invalid_sample_count": 0,
+      "missing_value_policy": "No missing/invalid sample sentinel is defined by the PDS label.",
+      "planetary_radius_m_maximum": 1744328.5,
+      "planetary_radius_m_mean": 1736126.78609375,
+      "planetary_radius_m_median": 1736214.0,
+      "planetary_radius_m_minimum": 1728418.5,
+      "sample_count": 2764800,
+      "stored_dn_maximum": 13857,
+      "stored_dn_minimum": -17963
+    },
+    "0_to_30_degrees": {
+      "boundary_convention": "lower inclusive, upper exclusive; band ending at +90 includes its upper edge",
+      "height_m_maximum": 10685.5,
+      "height_m_mean": 235.20816134982638,
+      "height_m_median": -588.5,
+      "height_m_minimum": -6122.0,
+      "latitude_bounds_degrees": [
+        0.0,
+        30.0
+      ],
+      "missing_or_invalid_sample_count": 0,
+      "missing_value_policy": "No missing/invalid sample sentinel is defined by the PDS label.",
+      "planetary_radius_m_maximum": 1748085.5,
+      "planetary_radius_m_mean": 1737635.2081613499,
+      "planetary_radius_m_median": 1736811.5,
+      "planetary_radius_m_minimum": 1731278.0,
+      "sample_count": 2764800,
+      "stored_dn_maximum": 21371,
+      "stored_dn_minimum": -12244
+    },
+    "30_to_60_degrees": {
+      "boundary_convention": "lower inclusive, upper exclusive; band ending at +90 includes its upper edge",
+      "height_m_maximum": 6905.5,
+      "height_m_mean": -578.4272690610533,
+      "height_m_median": -1153.0,
+      "height_m_minimum": -6564.0,
+      "latitude_bounds_degrees": [
+        30.0,
+        60.0
+      ],
+      "missing_or_invalid_sample_count": 0,
+      "missing_value_policy": "No missing/invalid sample sentinel is defined by the PDS label.",
+      "planetary_radius_m_maximum": 1744305.5,
+      "planetary_radius_m_mean": 1736821.572730939,
+      "planetary_radius_m_median": 1736247.0,
+      "planetary_radius_m_minimum": 1730836.0,
+      "sample_count": 2764800,
+      "stored_dn_maximum": 13811,
+      "stored_dn_minimum": -13128
+    },
+    "60_to_90_degrees": {
+      "boundary_convention": "lower inclusive, upper exclusive; band ending at +90 includes its upper edge",
+      "height_m_maximum": 4920.5,
+      "height_m_mean": -873.8321851490163,
+      "height_m_median": -851.5,
+      "height_m_minimum": -5937.0,
+      "latitude_bounds_degrees": [
+        60.0,
+        90.0
+      ],
+      "missing_or_invalid_sample_count": 0,
+      "missing_value_policy": "No missing/invalid sample sentinel is defined by the PDS label.",
+      "planetary_radius_m_maximum": 1742320.5,
+      "planetary_radius_m_mean": 1736526.167814851,
+      "planetary_radius_m_median": 1736548.5,
+      "planetary_radius_m_minimum": 1731463.0,
+      "sample_count": 2764800,
+      "stored_dn_maximum": 9841,
+      "stored_dn_minimum": -11874
+    }
+  },
+  "missing_or_invalid_sample_count": 0,
+  "processed_file": "ldem_16_processed.npz",
+  "sample_count": 16588800,
+  "sample_validity_note": "The PDS label defines no missing-value sentinel or other per-sample invalid flag. All integer pixels are retained; this count does not assert independent physical validation of every interpolated terrain value.",
+  "stored_dn_statistics": {
+    "maximum": 21371,
+    "minimum": -17963,
+    "pds_label_maximum": 21580,
+    "pds_label_minimum": -18150
+  },
+  "valid_sample_count": 16588800,
+  "warnings": [
+    "The PDS label defines no missing-value sentinel; no value is treated as missing based on an assumed convention.",
+    "LDEM_16 is a global 1,895.21 m/pixel grid and is suitable only for broad terrain context, not fine landing hazard assessment.",
+    "The raster checksum is recorded for local integrity tracking; an independent source checksum was not listed with this product.",
+    "Observed raster extrema [-17963, 21371] differ from the PDS label's MINIMUM/MAXIMUM [-18150, 21580], but remain within those documented bounds. Confirm this label/data extrema difference with the archive before interpreting extreme values."
+  ]
+}

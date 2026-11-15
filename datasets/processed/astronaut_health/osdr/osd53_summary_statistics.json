@@ -1,0 +1,9 @@
+{
+  "sample_count": 13,
+  "gene_summary_count": 244,
+  "preflight_sample_count": 7,
+  "postflight_sample_count": 6,
+  "organism": "Homo sapiens",
+  "historical_human_research": true,
+  "clinical_interpretation": false
+}

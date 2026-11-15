@@ -1,0 +1,287 @@
+{
+  "checked_at_utc": "2026-11-14T16:54:19.342257+00:00",
+  "checks": {
+    "all_records_are_ascii": true,
+    "clat_coordinates_follow_documented_grid": true,
+    "clon_coordinates_follow_documented_grid": true,
+    "column_count_matches_format": true,
+    "coordinate_grid_level_counts_match": true,
+    "coordinates_within_documented_bounds": true,
+    "data_rows_match_pds_label": true,
+    "file_size_matches_pds_label": true,
+    "ltim_coordinates_follow_documented_grid": true,
+    "no_unexpected_trailing_bytes": true,
+    "table_header_matches_pds_format": true
+  },
+  "column_definitions": [
+    {
+      "invalid_constant": "-9998",
+      "name": "clon",
+      "start_byte": 1,
+      "unit": "degree",
+      "unknown_constant": "-9999",
+      "width_bytes": 7
+    },
+    {
+      "invalid_constant": "-9998",
+      "name": "clat",
+      "start_byte": 10,
+      "unit": "degree",
+      "unknown_constant": "-9999",
+      "width_bytes": 6
+    },
+    {
+      "invalid_constant": "-9998",
+      "name": "ltim",
+      "start_byte": 18,
+      "unit": "hour",
+      "unknown_constant": "-9999",
+      "width_bytes": 6
+    },
+    {
+      "invalid_constant": "-9998",
+      "name": "t3",
+      "start_byte": 26,
+      "unit": "K",
+      "unknown_constant": "-9999",
+      "width_bytes": 9
+    },
+    {
+      "invalid_constant": "-9998",
+      "name": "t4",
+      "start_byte": 37,
+      "unit": "K",
+      "unknown_constant": "-9999",
+      "width_bytes": 9
+    },
+    {
+      "invalid_constant": "-9998",
+      "name": "t5",
+      "start_byte": 48,
+      "unit": "K",
+      "unknown_constant": "-9999",
+      "width_bytes": 9
+    },
+    {
+      "invalid_constant": "-9998",
+      "name": "t6",
+      "start_byte": 59,
+      "unit": "K",
+      "unknown_constant": "-9999",
+      "width_bytes": 9
+    },
+    {
+      "invalid_constant": "-9998",
+      "name": "t7",
+      "start_byte": 70,
+      "unit": "K",
+      "unknown_constant": "-9999",
+      "width_bytes": 9
+    },
+    {
+      "invalid_constant": "-9998",
+      "name": "t8",
+      "start_byte": 81,
+      "unit": "K",
+      "unknown_constant": "-9999",
+      "width_bytes": 9
+    },
+    {
+      "invalid_constant": "-9998",
+      "name": "t9",
+      "start_byte": 92,
+      "unit": "K",
+      "unknown_constant": "-9999",
+      "width_bytes": 9
+    },
+    {
+      "invalid_constant": "-9998",
+      "name": "tbol",
+      "start_byte": 103,
+      "unit": "K",
+      "unknown_constant": "-9999",
+      "width_bytes": 9
+    }
+  ],
+  "columns": {
+    "clat": {
+      "invalid_sentinel_count": 0,
+      "maximum": -70.25,
+      "minimum": -79.75,
+      "negative_temperature_count": 0,
+      "non_finite_count": 0,
+      "off_grid_count": 0,
+      "out_of_documented_range_count": 0,
+      "unit": "degree",
+      "unknown_or_missing_count": 0,
+      "valid_count": 1382400
+    },
+    "clon": {
+      "invalid_sentinel_count": 0,
+      "maximum": 179.75,
+      "minimum": -179.75,
+      "negative_temperature_count": 0,
+      "non_finite_count": 0,
+      "off_grid_count": 0,
+      "out_of_documented_range_count": 0,
+      "unit": "degree",
+      "unknown_or_missing_count": 0,
+      "valid_count": 1382400
+    },
+    "ltim": {
+      "invalid_sentinel_count": 0,
+      "maximum": 23.88,
+      "minimum": 0.12,
+      "negative_temperature_count": 0,
+      "non_finite_count": 0,
+      "off_grid_count": 0,
+      "out_of_documented_range_count": 0,
+      "unit": "hour",
+      "unknown_or_missing_count": 0,
+      "valid_count": 1382400
+    },
+    "t3": {
+      "invalid_sentinel_count": 0,
+      "maximum": 354.1131,
+      "minimum": -185.3031,
+      "negative_temperature_count": 398247,
+      "non_finite_count": 0,
+      "off_grid_count": 0,
+      "out_of_documented_range_count": 0,
+      "unit": "K",
+      "unknown_or_missing_count": 339557,
+      "valid_count": 1042843
+    },
+    "t4": {
+      "invalid_sentinel_count": 0,
+      "maximum": 354.4487,
+      "minimum": -187.4221,
+      "negative_temperature_count": 422772,
+      "non_finite_count": 0,
+      "off_grid_count": 0,
+      "out_of_documented_range_count": 0,
+      "unit": "K",
+      "unknown_or_missing_count": 341153,
+      "valid_count": 1041247
+    },
+    "t5": {
+      "invalid_sentinel_count": 0,
+      "maximum": 341.3992,
+      "minimum": -181.3647,
+      "negative_temperature_count": 258233,
+      "non_finite_count": 0,
+      "off_grid_count": 0,
+      "out_of_documented_range_count": 0,
+      "unit": "K",
+      "unknown_or_missing_count": 341752,
+      "valid_count": 1040648
+    },
+    "t6": {
+      "invalid_sentinel_count": 0,
+      "maximum": 338.1008,
+      "minimum": -96.6507,
+      "negative_temperature_count": 15775,
+      "non_finite_count": 0,
+      "off_grid_count": 0,
+      "out_of_documented_range_count": 0,
+      "unit": "K",
+      "unknown_or_missing_count": 343832,
+      "valid_count": 1038568
+    },
+    "t7": {
+      "invalid_sentinel_count": 0,
+      "maximum": 344.8546,
+      "minimum": -66.0242,
+      "negative_temperature_count": 800,
+      "non_finite_count": 0,
+      "off_grid_count": 0,
+      "out_of_documented_range_count": 0,
+      "unit": "K",
+      "unknown_or_missing_count": 343586,
+      "valid_count": 1038814
+    },
+    "t8": {
+      "invalid_sentinel_count": 0,
+      "maximum": 346.9067,
+      "minimum": -46.518,
+      "negative_temperature_count": 4,
+      "non_finite_count": 0,
+      "off_grid_count": 0,
+      "out_of_documented_range_count": 0,
+      "unit": "K",
+      "unknown_or_missing_count": 340345,
+      "valid_count": 1042055
+    },
+    "t9": {
+      "invalid_sentinel_count": 0,
+      "maximum": 439.0,
+      "minimum": 36.4347,
+      "negative_temperature_count": 0,
+      "non_finite_count": 0,
+      "off_grid_count": 0,
+      "out_of_documented_range_count": 0,
+      "unit": "K",
+      "unknown_or_missing_count": 338842,
+      "valid_count": 1043558
+    },
+    "tbol": {
+      "invalid_sentinel_count": 0,
+      "maximum": 348.8926,
+      "minimum": 36.4099,
+      "negative_temperature_count": 0,
+      "non_finite_count": 0,
+      "off_grid_count": 0,
+      "out_of_documented_range_count": 0,
+      "unit": "K",
+      "unknown_or_missing_count": 338842,
+      "valid_count": 1043558
+    }
+  },
+  "coordinate_grid_levels": {
+    "clat": {
+      "expected": 20,
+      "observed": 20
+    },
+    "clon": {
+      "expected": 720,
+      "observed": 720
+    },
+    "ltim": {
+      "expected": 96,
+      "observed": 96
+    }
+  },
+  "data_set_id": "LRO-L-DLRE-5-GCP-V1.0",
+  "dataset_name": "LRO Diviner Global Cumulative Average Product",
+  "documented_invalid_value": -9998,
+  "documented_missing_unknown_value": -9999,
+  "errors": [],
+  "expected_data_rows": 1382400,
+  "file": "D:\\NASA\\LUNAR-GUARDIANS\\datasets\\raw\\lunar_environment\\diviner\\global_cumul_avg_cyl_80s70s_002.tab",
+  "file_exists": true,
+  "file_format": "PDS3 fixed-length ASCII table (PDS format definition)",
+  "file_records_including_header": 1382401,
+  "file_size_bytes": 156211313,
+  "geographic_coverage": {
+    "easternmost_longitude_degrees": 180.0,
+    "maximum_latitude_degrees": -70.0,
+    "minimum_latitude_degrees": -80.0,
+    "westernmost_longitude_degrees": -180.0
+  },
+  "observation_period": {
+    "start": "2009-07-05T16:50:26.195",
+    "stop": "2015-04-01T00:00:00.000"
+  },
+  "product_id": "GLOBAL_CUMUL_AVG_CYL_80S70S_002.TAB",
+  "record_bytes": 113,
+  "rows_read": 1382400,
+  "table_columns": 11,
+  "table_offset_bytes": 113,
+  "temperature_range_policy": "The PDS GCP label does not specify hard minimum/maximum bounds for temperature columns. The documented -9999/-9998 sentinels and numeric finiteness are checked; no arbitrary temperature limits are imposed. Negative brightness values are documented.",
+  "unexpected_trailing_bytes": 0,
+  "validation_status": "PASSED",
+  "warnings": [
+    "Negative brightness-temperature values are retained and counted; the PDS label attributes them to negative radiance below a channel's sensitivity, so they are not treated as invalid.",
+    "The PDS GCP label provides no hard minimum/maximum range for brightness temperature. No unsupported physical threshold was invented."
+  ]
+}

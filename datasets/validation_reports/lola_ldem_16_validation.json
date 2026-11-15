@@ -1,0 +1,119 @@
+{
+  "checked_at_utc": "2026-11-14T18:15:57.933186+00:00",
+  "dataset_name": "LRO LOLA Gridded Digital Elevation Model LDEM_16",
+  "data_set_id": "LRO-L-LOLA-4-GDR-V1.0",
+  "product_id": "LDEM_16",
+  "logical_identifier": "urn:nasa:pds:lro_lola_rdr:data_gridded:ldem_16",
+  "official_source_url": "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/data/lola_gdr/cylindrical/img/ldem_16.img",
+  "raw_directory": "D:\\NASA\\LUNAR-GUARDIANS\\datasets\\raw\\lunar_environment\\lola",
+  "files": {
+    "ldem_16.img": {
+      "size_bytes": 33177600,
+      "sha256": "A511E40D7A3EA3275945B4DA2A1DF377133264FAB0BE94B7434B1CF8907254CB"
+    },
+    "ldem_16.lbl": {
+      "size_bytes": 5121,
+      "sha256": "9AEF29463CCC6ED3A3FBE0DF3ECD830A99C69E16B564F455507DEE2697096579"
+    },
+    "ldem_16.xml": {
+      "size_bytes": 11941,
+      "sha256": "011EBFF260ABB7C9A10A0F18601D7505E807B9A1B51D238B5587F5B02DE59218"
+    },
+    "dsmap.cat": {
+      "size_bytes": 7378,
+      "sha256": "351C8D9AD77470F3F432E5EA7F55498E22AA5701D5EF7145BEE3A2C0D3B52B76"
+    },
+    "rdrsis.pdf": {
+      "size_bytes": 802914,
+      "sha256": "8AF858238433541F775AADA18FC3CD947D5842BD15E44835BFB7587576D8FBF5"
+    }
+  },
+  "checks": {
+    "ldem_16.img_exists": true,
+    "ldem_16.img_size_matches_pds_source": true,
+    "ldem_16.lbl_exists": true,
+    "ldem_16.lbl_size_matches_pds_source": true,
+    "ldem_16.xml_exists": true,
+    "ldem_16.xml_size_matches_pds_source": true,
+    "dsmap.cat_exists": true,
+    "dsmap.cat_size_matches_pds_source": true,
+    "rdrsis.pdf_exists": true,
+    "rdrsis.pdf_size_matches_pds_source": true,
+    "rdrsis_is_pdf": true,
+    "label_product_id_matches": true,
+    "label_data_set_id_matches": true,
+    "label_file_records_matches": true,
+    "label_record_bytes_matches": true,
+    "label_lines_matches": true,
+    "label_line_samples_matches": true,
+    "label_sample_type_matches": true,
+    "label_sample_bits_matches": true,
+    "label_unit_matches": true,
+    "image_size_matches_pds_dimensions": true,
+    "image_size_matches_source_listing": true,
+    "sample_count_matches_pds_dimensions": true,
+    "observed_sample_range_within_documented_range": true,
+    "xml_identifier_matches_pds_label": true,
+    "xml_title_identifies_product": true,
+    "xml_observation_dates_match_pds_label": true,
+    "xml_dimensions_match_pds3_label": true,
+    "xml_sample_type_matches_pds3_label": true,
+    "xml_unit_matches_pds3_label": true,
+    "xml_scaling_and_offset_match_pds3_label": true,
+    "xml_declared_range_matches_pds3_label": true,
+    "label_geographic_bounds_are_valid": true,
+    "grid_dimensions_match_bounds_and_resolution": true,
+    "map_projection_reference_is_present": true,
+    "xml_latitude_reference_is_planetocentric": true
+  },
+  "errors": [],
+  "warnings": [
+    "The PDS label defines no missing-value sentinel; no value is treated as missing based on an assumed convention.",
+    "LDEM_16 is a global 1,895.21 m/pixel grid and is suitable only for broad terrain context, not fine landing hazard assessment.",
+    "The raster checksum is recorded for local integrity tracking; an independent source checksum was not listed with this product.",
+    "Observed raster extrema [-17963, 21371] differ from the PDS label's MINIMUM/MAXIMUM [-18150, 21580], but remain within those documented bounds. Confirm this label/data extrema difference with the archive before interpreting extreme values."
+  ],
+  "raster": {
+    "rows": 2880,
+    "columns": 5760,
+    "sample_count": 16588800,
+    "sample_type": "signed 16-bit little-endian integer",
+    "stored_sample_minimum": -17963,
+    "stored_sample_maximum": 21371,
+    "pds_label_minimum_maximum": [
+      -18150,
+      21580
+    ],
+    "observed_range_within_pds_label_bounds": true,
+    "height_unit": "METER",
+    "height_scaling_factor": 0.5,
+    "reference_radius_offset_m": 1737400.0,
+    "scaled_height_range_m": [
+      -8981.5,
+      10685.5
+    ],
+    "documented_missing_values": [],
+    "missing_value_policy": "The PDS3 product label defines no missing-value sentinel."
+  },
+  "metadata": {
+    "title": "LRO LOLA gridded science product: LDEM_16",
+    "observation_period": {
+      "start": "2009-07-13T17:33:17",
+      "stop": "2016-11-29T05:48:19"
+    },
+    "coverage": {
+      "minimum_latitude_degrees": -90.0,
+      "maximum_latitude_degrees": 90.0,
+      "westernmost_longitude_degrees": 0.0,
+      "easternmost_longitude_degrees": 360.0
+    },
+    "map_projection": "SIMPLE CYLINDRICAL",
+    "coordinate_system": "MEAN EARTH/POLAR AXIS OF DE421",
+    "latitude_type": "Planetocentric",
+    "longitude_direction": "EAST",
+    "map_resolution_pixels_per_degree": 16.0,
+    "map_scale_m_per_pixel": 1895.21,
+    "geographic_datum_reference": "LOLA product uses reference radius 1,737,400 m; topography relative to geoid requires a geoid model."
+  },
+  "validation_status": "PASSED_WITH_WARNINGS"
+}

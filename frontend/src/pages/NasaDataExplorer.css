@@ -1,0 +1,715 @@
+.nasa-explorer-page {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  padding: 116px 5% 72px;
+}
+
+.nasa-explorer-container {
+  width: min(1320px, 100%);
+  margin: 0 auto;
+}
+
+.nasa-explorer-hero {
+  margin-bottom: 48px;
+  padding: 30px 34px;
+  border: 1px solid rgba(0, 229, 255, 0.19);
+  border-radius: 22px;
+  background:
+    radial-gradient(ellipse at 86% 0%, rgba(59, 130, 246, 0.13), transparent 46%),
+    linear-gradient(145deg, rgba(13, 20, 48, 0.88), rgba(7, 11, 28, 0.88));
+}
+
+.nasa-explorer-kicker,
+.nasa-explorer-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--cyan);
+  font-family: var(--font-display);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+}
+
+.nasa-explorer-hero h1 {
+  margin: 12px 0 9px;
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  line-height: 1.2;
+  letter-spacing: 1px;
+}
+
+.nasa-explorer-hero > p {
+  max-width: 760px;
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+.nasa-explorer-legend {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 9px;
+  margin-top: 21px;
+}
+
+.nasa-data-tag {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  min-height: 25px;
+  padding: 4px 9px;
+  border: 1px solid rgba(69, 217, 243, 0.3);
+  border-radius: 999px;
+  background: rgba(0, 229, 255, 0.08);
+  color: #8beafa;
+  font-family: var(--font-display);
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  white-space: nowrap;
+}
+
+.nasa-data-tag.computed {
+  border-color: rgba(167, 139, 250, 0.4);
+  background: rgba(139, 92, 246, 0.11);
+  color: #c4b5fd;
+}
+
+.nasa-data-tag.derived {
+  border-color: rgba(255, 180, 84, 0.42);
+  background: rgba(255, 180, 84, 0.1);
+  color: #ffd08b;
+}
+
+.nasa-data-tag.simulated {
+  border-color: rgba(255, 107, 53, 0.38);
+  background: rgba(255, 107, 53, 0.09);
+  color: #ffb08d;
+}
+
+.nasa-explorer-legend-note {
+  color: var(--text-muted);
+  font-size: 0.76rem;
+}
+
+.nasa-explorer-section-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 19px;
+}
+
+.nasa-explorer-section-heading h2 {
+  margin-top: 4px;
+  font-family: var(--font-display);
+  font-size: clamp(1.35rem, 3vw, 1.9rem);
+  line-height: 1.25;
+}
+
+.nasa-explorer-count {
+  color: var(--text-muted);
+  font-size: 0.82rem;
+}
+
+.nasa-explorer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.nasa-dataset-card,
+.nasa-explorer-panel {
+  min-width: 0;
+  border: 1px solid var(--border-subtle);
+  border-radius: 17px;
+  background: linear-gradient(155deg, rgba(13, 20, 48, 0.84), rgba(8, 12, 30, 0.92));
+}
+
+.nasa-dataset-card {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  transition: border-color var(--transition-fast), background var(--transition-fast);
+}
+
+.nasa-dataset-card.selected {
+  border-color: rgba(0, 229, 255, 0.45);
+  background: linear-gradient(155deg, rgba(13, 28, 55, 0.93), rgba(8, 14, 33, 0.96));
+}
+
+.nasa-dataset-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.nasa-dataset-icon {
+  display: grid;
+  width: 40px;
+  height: 40px;
+  place-items: center;
+  border: 1px solid rgba(0, 229, 255, 0.22);
+  border-radius: 12px;
+  background: rgba(0, 229, 255, 0.08);
+  color: var(--cyan);
+}
+
+.nasa-availability {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #86efac;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.nasa-availability.unavailable {
+  color: #fdba74;
+}
+
+.nasa-availability i {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.nasa-dataset-category {
+  margin-bottom: 5px;
+  color: var(--cyan);
+  font-family: var(--font-display);
+  font-size: 0.64rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.nasa-dataset-card h3 {
+  font-size: 1.06rem;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
+.nasa-dataset-source {
+  min-height: 38px;
+  margin: 7px 0 15px;
+  color: var(--text-muted);
+  font-size: 0.78rem;
+}
+
+.nasa-dataset-card-info {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.nasa-dataset-card-info div,
+.nasa-explorer-detail-facts div {
+  min-width: 0;
+}
+
+.nasa-dataset-card-info dt,
+.nasa-explorer-detail-facts dt {
+  color: var(--text-muted);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.55px;
+  text-transform: uppercase;
+}
+
+.nasa-dataset-card-info dd {
+  display: -webkit-box;
+  overflow: hidden;
+  color: var(--text-secondary);
+  font-size: 0.76rem;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.nasa-explorer-card-button,
+.nasa-explorer-button {
+  display: inline-flex;
+  min-height: 39px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 13px;
+  border: 1px solid rgba(0, 229, 255, 0.3);
+  border-radius: 10px;
+  background: rgba(0, 229, 255, 0.07);
+  color: #8beafa;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.nasa-explorer-card-button {
+  width: 100%;
+  margin-top: auto;
+}
+
+.nasa-explorer-card-button:hover,
+.nasa-explorer-button:hover {
+  background: rgba(0, 229, 255, 0.14);
+}
+
+.nasa-explorer-details {
+  scroll-margin-top: 96px;
+  margin-top: 54px;
+}
+
+.nasa-explorer-detail-heading {
+  align-items: center;
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.nasa-explorer-detail-heading h2 {
+  max-width: 840px;
+  overflow-wrap: anywhere;
+}
+
+.nasa-explorer-detail-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+  gap: 17px;
+  margin: 18px 0;
+}
+
+.nasa-explorer-panel {
+  padding: 19px;
+}
+
+.nasa-explorer-description > p {
+  margin: 9px 0 17px;
+  color: var(--text-secondary);
+  line-height: 1.65;
+}
+
+.nasa-explorer-detail-facts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.nasa-explorer-detail-facts dd {
+  margin-top: 4px;
+  color: var(--text-secondary);
+  font-size: 0.82rem;
+  overflow-wrap: anywhere;
+}
+
+.nasa-explorer-detail-facts > div:last-child {
+  grid-column: 1 / -1;
+}
+
+.nasa-explorer-source-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin: 5px 10px 0 6px;
+  color: var(--cyan);
+  font-size: 0.78rem;
+}
+
+.nasa-explorer-limitations {
+  border-color: rgba(255, 180, 84, 0.18);
+}
+
+.nasa-explorer-limitations ul {
+  display: grid;
+  gap: 10px;
+  margin: 12px 0 15px;
+  padding-left: 18px;
+  list-style: disc;
+  color: var(--text-secondary);
+  font-size: 0.82rem;
+}
+
+.nasa-explorer-limitations li::marker {
+  color: #ffb454;
+}
+
+.nasa-explorer-derived-note {
+  margin-top: 12px;
+  color: var(--text-secondary);
+  font-size: 0.78rem;
+  line-height: 1.6;
+}
+
+.nasa-explorer-derived-note .nasa-data-tag {
+  vertical-align: middle;
+}
+
+.nasa-explorer-metric {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 13px;
+  margin: 17px 0;
+  padding: 16px 19px;
+  border: 1px solid rgba(255, 180, 84, 0.25);
+  border-radius: 14px;
+  background: rgba(255, 180, 84, 0.055);
+}
+
+.nasa-explorer-metric strong {
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+}
+
+.nasa-explorer-metric small {
+  color: var(--text-muted);
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.nasa-explorer-processing {
+  margin: 17px 0;
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  border-radius: 13px;
+  background: rgba(8, 13, 32, 0.62);
+}
+
+.nasa-explorer-processing summary {
+  padding: 14px 17px;
+  color: var(--text-secondary);
+  cursor: pointer;
+  font-size: 0.87rem;
+  font-weight: 700;
+}
+
+.nasa-explorer-processing-content {
+  display: grid;
+  gap: 12px;
+  padding: 0 17px 17px;
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  overflow-wrap: anywhere;
+}
+
+.nasa-explorer-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.nasa-explorer-tags span {
+  padding: 5px 8px;
+  border: 1px solid var(--border-subtle);
+  border-radius: 7px;
+  background: rgba(255, 255, 255, 0.025);
+  color: var(--text-secondary);
+  font-size: 0.7rem;
+  overflow-wrap: anywhere;
+}
+
+.nasa-explorer-warning {
+  color: #ffd08b;
+}
+
+.nasa-explorer-panel-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.nasa-explorer-panel-heading h3 {
+  margin: 4px 0;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+}
+
+.nasa-explorer-summary {
+  margin-top: 17px;
+}
+
+.nasa-explorer-summary-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(155px, 1fr));
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.nasa-explorer-summary-cards > div {
+  display: grid;
+  gap: 6px;
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid var(--border-subtle);
+  border-radius: 10px;
+  background: rgba(8, 13, 32, 0.45);
+}
+
+.nasa-explorer-summary-cards span {
+  color: var(--text-muted);
+  font-size: 0.7rem;
+}
+
+.nasa-explorer-summary-cards strong {
+  color: var(--text-primary);
+  font-size: 0.88rem;
+  overflow-wrap: anywhere;
+}
+
+.nasa-explorer-panel-heading p,
+.nasa-explorer-chart-range {
+  color: var(--text-muted);
+  font-size: 0.75rem;
+}
+
+.nasa-explorer-select {
+  display: grid;
+  gap: 5px;
+  color: var(--text-muted);
+  font-size: 0.7rem;
+}
+
+.nasa-explorer-select select {
+  max-width: min(360px, 75vw);
+  min-height: 38px;
+  padding: 7px 30px 7px 10px;
+  border: 1px solid var(--border-subtle);
+  border-radius: 9px;
+  background: #0b1026;
+  color: var(--text-primary);
+}
+
+.nasa-explorer-chart-range {
+  margin-top: 7px;
+}
+
+.nasa-explorer-chart {
+  width: 100%;
+  height: 300px;
+  margin-top: 13px;
+}
+
+.nasa-explorer-chart-empty,
+.nasa-explorer-state {
+  display: flex;
+  min-height: 110px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: var(--text-muted);
+  text-align: center;
+  font-size: 0.86rem;
+}
+
+.nasa-explorer-state {
+  min-height: 190px;
+  border: 1px solid var(--border-subtle);
+  border-radius: 16px;
+  background: rgba(13, 20, 48, 0.55);
+}
+
+.nasa-explorer-inline-state {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin: 16px 0;
+  color: var(--text-muted);
+  font-size: 0.84rem;
+}
+
+.nasa-explorer-spin {
+  color: var(--cyan);
+  animation: nasa-explorer-spin 1.2s linear infinite;
+}
+
+@keyframes nasa-explorer-spin {
+  to { transform: rotate(360deg); }
+}
+
+.nasa-explorer-table-wrap {
+  width: 100%;
+  margin-top: 15px;
+  overflow-x: auto;
+  border: 1px solid var(--border-subtle);
+  border-radius: 11px;
+}
+
+.nasa-explorer-table {
+  width: 100%;
+  min-width: 660px;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.nasa-explorer-table th,
+.nasa-explorer-table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid rgba(148, 185, 255, 0.09);
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+  white-space: nowrap;
+}
+
+.nasa-explorer-table th {
+  background: rgba(0, 229, 255, 0.05);
+  color: #a7bfdc;
+  font-size: 0.67rem;
+  letter-spacing: 0.45px;
+  text-transform: uppercase;
+}
+
+.nasa-explorer-table tr:last-child td {
+  border-bottom: 0;
+}
+
+.nasa-explorer-validity {
+  display: inline-flex;
+  padding: 3px 7px;
+  border-radius: 999px;
+  font-size: 0.66rem;
+}
+
+.nasa-explorer-validity.valid {
+  background: rgba(34, 197, 94, 0.1);
+  color: #86efac;
+}
+
+.nasa-explorer-validity.missing {
+  background: rgba(255, 180, 84, 0.1);
+  color: #ffd08b;
+}
+
+.nasa-explorer-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 13px;
+  color: var(--text-muted);
+  font-size: 0.76rem;
+}
+
+.nasa-explorer-pagination > div {
+  display: flex;
+  gap: 8px;
+}
+
+.nasa-explorer-pagination button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 35px;
+  padding: 6px 10px;
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  color: var(--text-secondary);
+  font-size: 0.74rem;
+}
+
+.nasa-explorer-pagination button:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.nasa-explorer-alert {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  margin: 15px 0;
+  padding: 13px 15px;
+  border: 1px solid rgba(255, 107, 53, 0.37);
+  border-radius: 12px;
+  background: rgba(255, 107, 53, 0.08);
+  color: #fdba74;
+  font-size: 0.84rem;
+}
+
+.nasa-explorer-alert p {
+  margin-top: 3px;
+  color: var(--text-secondary);
+  font-size: 0.78rem;
+}
+
+.nasa-explorer-alert .nasa-explorer-button {
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+.nasa-explorer-footer-note {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-top: 24px;
+  color: var(--text-muted);
+  font-size: 0.76rem;
+}
+
+@media (max-width: 1050px) {
+  .nasa-explorer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .nasa-explorer-page {
+    padding: 98px 20px 54px;
+  }
+
+  .nasa-explorer-hero {
+    margin-bottom: 36px;
+    padding: 23px 20px;
+  }
+
+  .nasa-explorer-grid,
+  .nasa-explorer-detail-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nasa-explorer-detail-facts {
+    grid-template-columns: 1fr;
+  }
+
+  .nasa-explorer-detail-facts > div:last-child {
+    grid-column: auto;
+  }
+
+  .nasa-explorer-detail-heading {
+    align-items: start;
+    flex-direction: column;
+  }
+
+  .nasa-explorer-chart {
+    height: 255px;
+  }
+}
+
+@media (max-width: 460px) {
+  .nasa-explorer-page {
+    padding-right: 14px;
+    padding-left: 14px;
+  }
+
+  .nasa-explorer-section-heading {
+    align-items: start;
+    flex-direction: column;
+  }
+
+  .nasa-explorer-card-button,
+  .nasa-explorer-button {
+    min-height: 42px;
+  }
+
+  .nasa-explorer-pagination {
+    align-items: start;
+    flex-direction: column;
+  }
+}

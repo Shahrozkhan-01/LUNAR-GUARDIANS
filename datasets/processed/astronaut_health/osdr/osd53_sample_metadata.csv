@@ -1,0 +1,14 @@
+sample_id,organism,material_type,spaceflight,time
+GSM1145430,Homo sapiens,Whole Blood,Baseline Control,Launch minus 10
+GSM1145431,Homo sapiens,Whole Blood,Space Flight,Landing plus 0
+GSM1145432,Homo sapiens,Whole Blood,Baseline Control,Launch minus 10
+GSM1145433,Homo sapiens,Whole Blood,Space Flight,Landing plus 0
+GSM1145434,Homo sapiens,Whole Blood,Baseline Control,Launch minus 10
+GSM1145435,Homo sapiens,Whole Blood,Space Flight,Landing plus 0
+GSM1145436,Homo sapiens,Whole Blood,Baseline Control,Launch minus 10
+GSM1145437,Homo sapiens,Whole Blood,Space Flight,Landing plus 0
+GSM1145438,Homo sapiens,Whole Blood,Baseline Control,Launch minus 10
+GSM1145439,Homo sapiens,Whole Blood,Space Flight,Landing plus 0
+GSM1145440,Homo sapiens,Whole Blood,Baseline Control,Launch minus 10
+GSM1145441,Homo sapiens,Whole Blood,Space Flight,Landing plus 0
+GSM1148182,Homo sapiens,Whole Blood,Baseline Control,0

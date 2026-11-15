@@ -1,0 +1,1431 @@
+{
+  "checked_at_utc": "2026-11-14T18:22:30.801852+00:00",
+  "dataset_name": "ACE EPAM AC_H1_EPM 5-minute Level 2 subset",
+  "dataset_id": "AC_H1_EPM",
+  "logical_source": "AC_H1S_EPM",
+  "official_source_url": "https://cdaweb.gsfc.nasa.gov/WS/cdasr/1/dataviews/sp_phys/datasets/AC_H1_EPM/",
+  "requested_interval_utc": {
+    "start": "2020-01-01T00:00:00.000Z",
+    "end": "2020-01-02T00:00:00.000Z"
+  },
+  "raw_directory": "D:\\NASA\\LUNAR-GUARDIANS\\datasets\\raw\\space_weather\\ace_epam",
+  "files": {
+    "ac_h1s_epm_20200101000000_20200102000000_allvars.cdf": {
+      "size_bytes": 209959,
+      "sha256": "4352691CC7ABDC1478A31354C22347D129500F6AD473845A79C538DB0B0CA9F2"
+    },
+    "cdaweb_full_request_metadata.xml": {
+      "size_bytes": 7002,
+      "sha256": "4571BDEE5A2C2C0423C1B529ED5DF0F5DD93B68594346FB40BBEF37D2041B8AA"
+    },
+    "cdaweb_ac_h1_epm_variables.xml": {
+      "size_bytes": 21224,
+      "sha256": "2B747FC3284BF1510E26CE203953E08D7D4A23E93CB5F66D20C34C8DE47E4E24"
+    },
+    "epam_l2desc.html": {
+      "size_bytes": 14426,
+      "sha256": "1ADF37497C674D82591ACFEC19E726018149FAA07D3789C32A0F1A4662F87B08"
+    }
+  },
+  "checks": {
+    "ac_h1s_epm_20200101000000_20200102000000_allvars.cdf_exists": true,
+    "cdaweb_full_request_metadata.xml_exists": true,
+    "cdaweb_ac_h1_epm_variables.xml_exists": true,
+    "epam_l2desc.html_exists": true,
+    "request_metadata_file_size_matches": true,
+    "request_metadata_format_is_cdf": true,
+    "request_metadata_interval_matches": true,
+    "official_variable_metadata_is_nonempty": true,
+    "cdf_has_expected_epoch_variable": true,
+    "cdf_has_documented_measurement_variables": true,
+    "cdf_variables_match_official_list": true,
+    "cdf_logical_source_matches": true,
+    "cdf_data_type_matches": true,
+    "epoch_has_no_fill_or_nonfinite_records": true,
+    "epoch_is_strictly_increasing": true,
+    "epoch_is_within_requested_interval": true,
+    "P1_record_count_matches_epoch": true,
+    "P2_record_count_matches_epoch": true,
+    "P3_record_count_matches_epoch": true,
+    "P4_record_count_matches_epoch": true,
+    "P5_record_count_matches_epoch": true,
+    "P6_record_count_matches_epoch": true,
+    "P7_record_count_matches_epoch": true,
+    "P8_record_count_matches_epoch": true,
+    "unc_P1_record_count_matches_epoch": true,
+    "unc_P2_record_count_matches_epoch": true,
+    "unc_P3_record_count_matches_epoch": true,
+    "unc_P4_record_count_matches_epoch": true,
+    "unc_P5_record_count_matches_epoch": true,
+    "unc_P6_record_count_matches_epoch": true,
+    "unc_P7_record_count_matches_epoch": true,
+    "unc_P8_record_count_matches_epoch": true,
+    "DE1_record_count_matches_epoch": true,
+    "DE2_record_count_matches_epoch": true,
+    "DE3_record_count_matches_epoch": true,
+    "DE4_record_count_matches_epoch": true,
+    "unc_DE1_record_count_matches_epoch": true,
+    "unc_DE2_record_count_matches_epoch": true,
+    "unc_DE3_record_count_matches_epoch": true,
+    "unc_DE4_record_count_matches_epoch": true,
+    "W3_record_count_matches_epoch": true,
+    "W4_record_count_matches_epoch": true,
+    "W5_record_count_matches_epoch": true,
+    "W6_record_count_matches_epoch": true,
+    "W7_record_count_matches_epoch": true,
+    "W8_record_count_matches_epoch": true,
+    "unc_W3_record_count_matches_epoch": true,
+    "unc_W4_record_count_matches_epoch": true,
+    "unc_W5_record_count_matches_epoch": true,
+    "unc_W6_record_count_matches_epoch": true,
+    "unc_W7_record_count_matches_epoch": true,
+    "unc_W8_record_count_matches_epoch": true,
+    "E1p_record_count_matches_epoch": true,
+    "E2p_record_count_matches_epoch": true,
+    "E3p_record_count_matches_epoch": true,
+    "E4p_record_count_matches_epoch": true,
+    "FP5p_record_count_matches_epoch": true,
+    "FP6p_record_count_matches_epoch": true,
+    "FP7p_record_count_matches_epoch": true,
+    "unc_E1p_record_count_matches_epoch": true,
+    "unc_E2p_record_count_matches_epoch": true,
+    "unc_E3p_record_count_matches_epoch": true,
+    "unc_E4p_record_count_matches_epoch": true,
+    "unc_FP5p_record_count_matches_epoch": true,
+    "unc_FP6p_record_count_matches_epoch": true,
+    "unc_FP7p_record_count_matches_epoch": true,
+    "Z2_record_count_matches_epoch": true,
+    "Z2A_record_count_matches_epoch": true,
+    "Z3_record_count_matches_epoch": true,
+    "Z4_record_count_matches_epoch": true,
+    "unc_Z2_record_count_matches_epoch": true,
+    "unc_Z2A_record_count_matches_epoch": true,
+    "unc_Z3_record_count_matches_epoch": true,
+    "unc_Z4_record_count_matches_epoch": true,
+    "P1p_record_count_matches_epoch": true,
+    "P2p_record_count_matches_epoch": true,
+    "P3p_record_count_matches_epoch": true,
+    "P4p_record_count_matches_epoch": true,
+    "P5p_record_count_matches_epoch": true,
+    "P6p_record_count_matches_epoch": true,
+    "P7p_record_count_matches_epoch": true,
+    "P8p_record_count_matches_epoch": true,
+    "unc_P1p_record_count_matches_epoch": true,
+    "unc_P2p_record_count_matches_epoch": true,
+    "unc_P3p_record_count_matches_epoch": true,
+    "unc_P4p_record_count_matches_epoch": true,
+    "unc_P5p_record_count_matches_epoch": true,
+    "unc_P6p_record_count_matches_epoch": true,
+    "unc_P7p_record_count_matches_epoch": true,
+    "unc_P8p_record_count_matches_epoch": true,
+    "E1_record_count_matches_epoch": true,
+    "E2_record_count_matches_epoch": true,
+    "E3_record_count_matches_epoch": true,
+    "E4_record_count_matches_epoch": true,
+    "FP5_record_count_matches_epoch": true,
+    "FP6_record_count_matches_epoch": true,
+    "FP7_record_count_matches_epoch": true,
+    "unc_E1_record_count_matches_epoch": true,
+    "unc_E2_record_count_matches_epoch": true,
+    "unc_E3_record_count_matches_epoch": true,
+    "unc_E4_record_count_matches_epoch": true,
+    "unc_FP5_record_count_matches_epoch": true,
+    "unc_FP6_record_count_matches_epoch": true,
+    "unc_FP7_record_count_matches_epoch": true
+  },
+  "errors": [],
+  "warnings": [
+    "Epoch intervals are not uniformly 5 minutes: {'300': 216, '360': 60} (seconds: interval count). Original timestamps are retained unchanged.",
+    "CDAWeb response metadata contains 89 dimension-reformation warnings. The CDF was readable and every data variable was checked for record alignment.",
+    "These variables contain only documented CDF fill/non-finite values in this interval: P1, P2, P3, P4, P5, P6, unc_P1, unc_P2, unc_P3, unc_P4, unc_P5, unc_P6, unc_W5, unc_W7, unc_W8, E1, E2, E3, unc_E1, unc_E2, unc_E3.",
+    "These variables contain values outside their CDF VALIDMIN/VALIDMAX metadata: {'Z2': 19, 'Z2A': 269, 'Z3': 247, 'Z4': 273}. Values were not changed; consult the EPAM product documentation before treating these attributes as physical rejection criteria."
+  ],
+  "cdf": {
+    "format": "NASA Common Data Format",
+    "cdf_version": "3.9.0",
+    "logical_source": "AC_H1S_EPM",
+    "data_type": "H1>5-minute Level 2 data",
+    "time_resolution": "5 minute",
+    "generation_date": "20200706",
+    "source_parent_files": [
+      "ac_h1_epm_00000000_v01",
+      "ac_h1_epm_20200101_v05",
+      "ac_h1_epm_20200102_v05"
+    ],
+    "record_count": 277,
+    "time_coverage_utc": {
+      "start": "2020-01-01T00:00:00.000Z",
+      "end": "2020-01-02T00:00:00.000Z"
+    },
+    "cadence_seconds_and_interval_counts": {
+      "300": 216,
+      "360": 60
+    },
+    "measurement_and_uncertainty_variable_count": 88,
+    "all_missing_variables": [
+      "P1",
+      "P2",
+      "P3",
+      "P4",
+      "P5",
+      "P6",
+      "unc_P1",
+      "unc_P2",
+      "unc_P3",
+      "unc_P4",
+      "unc_P5",
+      "unc_P6",
+      "unc_W5",
+      "unc_W7",
+      "unc_W8",
+      "E1",
+      "E2",
+      "E3",
+      "unc_E1",
+      "unc_E2",
+      "unc_E3"
+    ],
+    "out_of_cdf_bounds_variables": {
+      "Z2": 19,
+      "Z2A": 269,
+      "Z3": 247,
+      "Z4": 273
+    },
+    "variables": {
+      "P1": {
+        "shape": [
+          277
+        ],
+        "records_with_values": 0,
+        "missing_or_nonfinite_values": 277,
+        "fill_values": -9.999999848243207e+30,
+        "units": "1/(cm**2-s-sr-MeV)",
+        "valid_min": 0.0,
+        "valid_max": 10000000.0,
+        "values_below_valid_min": 0,
+        "values_above_valid_max": 0,
+        "description": "P1 LEMS30 (Low Energy Magnetic Spectrometer; 0.047-0.065 MeV Ions), Sector Avg"
+      },
+      "P2": {
+        "shape": [
+          277
+        ],
+        "records_with_values": 0,
+        "missing_or_nonfinite_values": 277,
+        "fill_values": -9.999999848243207e+30,
+        "units": "1/(cm**2-s-sr-MeV)",
+        "valid_min": 0.0,
+        "valid_max": 10000000.0,
+        "values_below_valid_min": 0,
+        "values_above_valid_max": 0,
+        "description": "P2 LEMS30 (Low Energy Magnetic Spectrometer; 0.065-0.112 MeV Ions), Sector Avg"
+      },
+      "P3": {
+        "shape": [
+          277
+        ],
+        "records_with_values": 0,
+        "missing_or_nonfinite_values": 277,
+        "fill_values": -9.999999848243207e+30,
+        "units": "1/(cm**2-s-sr-MeV)",
+        "valid_min": 0.0,
+        "valid_max": 10000000.0,
+        "values_below_valid_min": 0,
+        "values_above_valid_max": 0,
+        "description": "P3 LEMS30 (Low Energy Magnetic Spectrometer; 0.112-0.187 MeV Ions), Sector Avg"
+      },
+      "P4": {
+        "shape": [
+          277
+        ],
+        "records_with_values": 0,
+        "missing_or_nonfinite_values": 277,
+        "fill_values": -9.999999848243207e+30,
+        "units": "1/(cm**2-s-sr-MeV)",
+        "valid_min": 0.0,
+        "valid_max": 10000000.0,
+        "values_below_valid_min": 0,
+        "values_above_valid_max": 0,
+        "description": "P4 LEMS30 (Low Energy Magnetic Spectrometer; 0.187-0.310 MeV Ions), Sector Avg"
+      },
+      "P5": {
+        "shape": [
+          277
+        ],
+        "records_with_values": 0,
+        "missing_or_nonfinite_values": 277,
+        "fill_values": -9.999999848243207e+30,
+        "units": "1/(cm**2-s-sr-MeV)",
+        "valid_min": 0.0,
+        "valid_max": 10000000.0,
+        "values_below_valid_min": 0,
+        "values_above_valid_max": 0,
+        "description": "P5 LEMS30 (Low Energy Magnetic Spectrometer; 0.310-0.580 MeV Ions), Sector Avg"
+      },
+      "P6": {
+        "shape": [
+          277
+        ],
+        "records_with_values": 0,
+        "missing_or_nonfinite_values": 277,
+        "fill_values": -9.999999848243207e+30,
+        "units": "1/(cm**2-s-sr-MeV)",
+        "valid_min": 0.0,
+        "valid_max": 10000000.0,
+        "values_below_valid_min": 0,
+        "values_above_valid_max": 0,
+        "description": "P6 LEMS30 (Low Energy Magnetic Spectrometer; 0.580-1.06 MeV Ions), Sector Avg"
+      },
+      "P7": {
+        "shape": [
+          277
+        ],
+        "records_with_values": 276,
+        "missing_or_nonfinite_values": 1,
+        "fill_values": -9.999999848243207e+30,
+        "units": "1/(cm**2-s-sr-MeV)",
+        "valid_min": 0.0,
+        "valid_max": 10000000.0,
+        "values_below_valid_min": 0,
+        "values_above_valid_max": 0,
+        "description": "P7 LEMS30 (Low Energy Magnetic Spectrometer; 1.06-1.91 MeV Ions), Sector Avg"
+      },
+      "P8": {
+        "shape": [
+          277
+        ],
+        "records_with_values": 276,
+        "missing_or_nonfinite_values": 1,
+        "fill_values": -9.999999848243207e+30,
+        "units": "1/(cm**2-s-sr-MeV)",
+        "valid_min": 0.0,
+        "valid_max": 10000000.0,
+        "values_below_valid_min": 0,
+        "values_above_valid_max": 0,
+        "description": "P8 LEMS30 (Low Energy Magnetic Spectrometer; 1.91-4.75 MeV Ions), Sector Avg"
+      },
+      "unc_P1": {
+        "shape": [
+          277
+        ],
+        "records_with_values": 0,
+        "missing_or_nonfinite_values": 277,
+        "fill_values": -9.999999848243207e+30,
+        "units": "[fraction]",
+        "valid_min": 9.999999747378752e-06,
+        "valid_max": 1.0,
+        "values_below_valid_min": 0,
+        "values_above_valid_max": 0,
+        "description": "P1 LEMS30 (Low Energy Magnetic Spectrometer; 0.047-0.065 MeV Ions), Uncertainty"
+      },
+      "unc_P2": {
+        "shape": [
+          277
+        ],
+        "records_with_values": 0,
+        "missing_or_nonfinite_values": 277,
+        "fill_values": -9.999999848243207e+30,
+        "units": "[fraction]",
+        "valid_min": 9.999999747378752e-06,
+        "valid_max": 1.0,
+        "values_below_valid_min": 0,
+        "values_above_valid_max": 0,
+        "description": "P2 LEMS30 (Low Energy Magnetic Spectrometer; 0.065-0.112 MeV Ions), Uncertainty"
+      },
+      "unc_P3": {
+        "shape": [
+          277
+        ],
+        "records_with_values": 0,
+        "missing_or_nonfinite_values": 277,
+        "fill_values": -9.999999848243207e+30,
+        "units": "[fraction]",
+        "valid_min": 9.999999747378752e-06,
+        "valid_max": 1.0,
+        "values_below_valid_min": 0,
+        "values_above_valid_max": 0,
+        "description": "P3 LEMS30 (Low Energy Magnetic Spectrometer; 0.112-0.187 MeV Ions), Uncertainty"
+      },
+      "unc_P4": {
+        "shape": [
+          277
+        ],
+        "records_with_values": 0,
+        "missing_or_nonfinite_values": 277,
+        "fill_values": -9.999999848243207e+30,
+        "units": "[fraction]",
+        "valid_min": 9.999999747378752e-06,
+        "valid_max": 1.0,
+        "values_below_valid_min": 0,
+        "values_above_valid_max": 0,
+        "description": "P4 LEMS30 (Low Energy Magnetic Spectrometer; 0.187-0.310 MeV Ions), Uncertainty"
+      },
+      "unc_P5": {
+        "shape": [
+          277
+        ],
+        "records_with_values": 0,
+        "missing_or_nonfinite_values": 277,
+        "fill_values": -9.999999848243207e+30,
+        "units": "[fraction]",
+        "valid_min": 9.999999747378752e-06,
+        "valid_max": 1.0,
+        "values_below_valid_min": 0,
+        "values_above_valid_max": 0,
+        "description": "P5 LEMS30 (Low Energy Magnetic Spectrometer; 0.310-0.580 MeV Ions), Uncertainty"
+      },
+      "unc_P6": {
+        "shape": [
+          277
+        ],
+        "records_with_values": 0,
+        "missing_or_nonfinite_values": 277,
+        "fill_values": -9.999999848243207e+30,
+        "units": "[fraction]",
+        "valid_min": 9.999999747378752e-06,
+        "valid_max": 1.0,
+        "values_below_valid_min": 0,
+        "values_above_valid_max": 0,
+        "description": "P6 LEMS30 (Low Energy Magnetic Spectrometer; 0.580-1.06 MeV Ions), Uncertainty"
+      },
+      "unc_P7": {
+        "shape": [
+          277
+        ],
+        "records_with_values": 276,
+        "missing_or_nonfinite_values": 1,
+        "fill_values": -9.999999848243207e+30,
+        "units": "[fraction]",
+        "valid_min": 9.999999747378752e-06,
+        "valid_max": 1.0,
+        "values_below_valid_min": 0,
+        "values_above_valid_max": 0,
+        "description": "P7 LEMS30 (Low Energy Magnetic Spectrometer; 1.06-1.91 MeV Ions), Uncertainty"
+      },
+      "unc_P8": {
+        "shape": [
+          277
+        ],
+        "records_with_values": 276,
+        "missing_or_nonfinite_values": 1,
+        "fill_values": -9.999999848243207e+30,
+        "units": "[fraction]",
+        "valid_min": 9.999999747378752e-06,
+        "valid_max": 1.0,
+        "values_below_valid_min": 0,
+        "values_above_valid_max": 0,
+        "description": "P8 LEMS30 (Low Energy Magnetic Spectrometer; 1.91-4.75 MeV Ions), Uncertainty"
+      },
+      "DE1": {
+        "shape": [
+          277
+        ],
+        "records_with_values": 276,
+        "missing_or_nonfinite_values": 1,
+        "fill_values": -9.999999848243207e+30,
+        "units": "1/(cm**2-s-sr-MeV)",
+        "valid_min": 0.0,
+        "valid_max": 100000000.0,
+        "values_below_valid_min": 0,
+        "values_above_valid_max": 0,
+        "description": "DE1 DE (Deflected Electrons; 0.038-0.053 MeV Electrons), Sector Avg"
+      },
+      "DE2": {
+        "shape": [
+          277
+        ],
+        "records_with_values": 276,
+        "missing_or_nonfinite_values": 1,
+        "fill_values": -9.999999848243207e+30,
+        "units": "1/(cm**2-s-sr-MeV)",
+        "valid_min": 0.0,
+        "valid_max": 100000000.0,
+        "values_below_valid_min": 0,
+        "values_above_valid_max": 0,
+        "description": "DE2 DE (Deflected Electrons; 0.053-0.103 MeV Electrons), Sector Avg"
+      },
+      "DE3": {
+        "shape": [
+          277
+        ],
+        "records_with_values": 276,
+        "missing_or_nonfinite_values": 1,
+        "fill_values": -9.999999848243207e+30,
+        "units": "1/(cm**2-s-sr-MeV)",
+        "valid_min": 0.0,
+        "valid_max": 100000000.0,
+        "values_below_valid_min": 0,
+        "values_above_valid_max": 0,
+        "description": "DE3 DE (Deflected Electrons; 0.103-0.175 MeV Electrons), Sector Avg"
+      },
+      "DE4": {
+        "shape": [
+          277
+        ],
+        "records_with_values": 276,
+        "missing_or_nonfinite_values": 1,
+        "fill_values": -9.999999848243207e+30,
+        "units": "1/(cm**2-s-sr-MeV)",
+        "valid_min": 0.0,
+        "valid_max": 100000000.0,
+        "values_below_valid_min": 0,
+        "values_above_valid_max": 0,
+        "description": "DE4 DE (Deflected Electrons; 0.175-0.315 MeV Electrons), Sector Avg"
+      },
+      "unc_DE1": {
+        "shape": [
+          277
+        ],
+        "records_with_values": 276,
+        "missing_or_nonfinite_values": 1,
+        "fill_values": -9.999999848243207e+30,
+        "units": "[fraction]",
+        "valid_min": 9.999999747378752e-06,
+        "valid_max": 1.0,
+        "values_below_valid_min": 0,
+        "values_above_valid_max": 0,
+        "description": "DE1 DE (Deflected Electrons; 0.038-0.053 MeV Electrons), Uncertainty"
+      },
+      "unc_DE2": {
+        "shape": [
+          277
+        ],
+        "records_with_values": 276,
+        "missing_or_nonfinite_values": 1,
+        "fill_values": -9.999999848243207e+30,
+        "units": "[fraction]",
+        "valid_min": 9.999999747378752e-06,
+        "valid_max": 1.0,
+        "values_below_valid_min": 0,
+        "values_above_valid_max": 0,
+        "description": "DE2 DE (Deflected Electrons; 0.053-0.103 MeV Electrons), Uncertainty"
+      },
+      "unc_DE3": {
+        "shape": [
+          277
+        ],
+        "records_with_values": 276,
+        "missing_or_nonfinite_values": 1,
+        "fill_values": -9.999999848243207e+30,
+        "units": "[fraction]",
+        "valid_min": 9.999999747378752e-06,
+        "valid_max": 1.0,
+        "values_below_valid_min": 0,
+        "values_above_valid_max": 0,
+        "description": "DE3 DE (Deflected Electrons; 0.103-0.175 MeV Electrons), Uncertainty"
+      },
+      "unc_DE4": {
+        "shape": [
+          277
+        ],
+        "records_with_values": 276,
+        "missing_or_nonfinite_values": 1,
+        "fill_values": -9.999999848243207e+30,
+        "units": "[fraction]",
+        "valid_min": 9.999999747378752e-06,
+        "valid_max": 1.0,
+        "values_below_valid_min": 0,
+        "values_above_valid_max": 0,
+        "description": "DE4 DE (Deflected Electrons; 0.175-0.315 MeV Electrons), Uncertainty"
+      },
+      "W3": {
+        "shape": [
+          277
+        ],
+        "records_with_values": 276,
+        "missing_or_nonfinite_values": 1,
+        "fill_values": -9.999999848243207e+30,
+        "units": "1/(cm**2-s-sr-MeV/nuc.)",
+        "valid_min": 0.0,
+        "valid_max": 100000.0,
+        "values_below_valid_min": 0,
+        "values_above_valid_max": 0,
+        "description": "W3 CA60 (Composition Aperture; 0.389-1.28 MeV/nuc. He), Sector Avg"
+      },
+      "W4": {
+        "shape": [
+          277
+        ],
+        "records_with_values": 276,
+        "missing_or_nonfinite_values": 1,
+        "fill_values": -9.999999848243207e+30,
+        "units": "1/(cm**2-s-sr-MeV/nuc.)",
+        "valid_min": 0.0,
+        "valid_max": 100000.0,
+        "values_below_valid_min": 0,
+        "values_above_valid_max": 0,
+        "description": "W4 CA60 (Composition Aperture; 1.28-6.98 MeV/nuc. He), Sector Avg"
+      },
+      "W5": {
+        "shape": [
+          277
+        ],
+        "records_with_values": 276,
+        "missing_or_nonfinite_values": 1,
+        "fill_values": -9.999999848243207e+30,
+        "units": "1/(cm**2-s-sr-MeV/nuc.)",
+        "valid_min": 0.0,
+        "valid_max": 100000.0,
+        "values_below_valid_min": 0,
+        "values_above_valid_max": 0,
+        "description": "W5 CA60 (Composition Aperture; 0.465-1.71 MeV/nuc. CNO), Sector Avg"
+      },
+      "W6": {
+        "shape": [
+          277
+        ],
+        "records_with_values": 276,
+        "missing_or_nonfinite_values": 1,
+        "fill_values": -9.999999848243207e+30,
+        "units": "1/(cm**2-s-sr-MeV/nuc.)",
+        "valid_min": 0.0,
+        "valid_max": 100000.0,
+        "values_below_valid_min": 0,
+        "values_above_valid_max": 0,
+        "description": "W6 CA60 (Composition Aperture; 1.71-19.1 MeV/nuc. CNO), Sector Avg"
+      },
+      "W7": {
+        "shape": [
+          277
+        ],
+        "records_with_values": 276,
+        "missing_or_nonfinite_values": 1,
+        "fill_values": -9.999999848243207e+30,
+        "units": "1/(cm**2-s-sr-MeV/nuc.)",
+        "valid_min": 0.0,
+        "valid_max": 100000.0,
+        "values_below_valid_min": 0,
+        "values_above_valid_max": 0,
+        "description": "W7 CA60 (Composition Aperture; 0.239-0.840 MeV/nuc. Fe (9<Z<29)), Sector Avg"
+      },
+      "W8": {
+        "shape": [
+          277
+        ],
+        "records_with_values": 276,
+        "missing_or_nonfinite_values": 1,
+        "fill_values": -9.999999848243207e+30,
+        "units": "1/(cm**2-s-sr-MeV/nuc.)",
+        "valid_min": 0.0,
+        "valid_max": 100000.0,
+        "values_below_valid_min": 0,
+        "values_above_valid_max": 0,
+        "description": "W8 CA60 (Composition Aperture; 0.840-92.7 MeV/nuc. Fe (9<Z<29)), Sector Avg"
+      },
+      "unc_W3": {
+        "shape": [
+          277
+        ],
+        "records_with_values": 54,
+        "missing_or_nonfinite_values": 223,
+        "fill_values": -9.999999848243207e+30,
+        "units": "[fraction]",
+        "valid_min": 9.999999747378752e-06,
+        "valid_max": 10.0,
+        "values_below_valid_min": 0,
+        "values_above_valid_max": 0,
+        "description": "W3 CA60 (Composition Aperture; 0.389-1.28 MeV/nuc. He), Uncertainty"
+      },
+      "unc_W4": {
+        "shape": [
+          277
+        ],
+        "records_with_values": 34,
+        "missing_or_nonfinite_values": 243,
+        "fill_values": -9.999999848243207e+30,
+        "units": "[fraction]",
+        "valid_min": 9.999999747378752e-06,
+        "valid_max": 10.0,
+        "values_below_valid_min": 0,
+        "values_above_valid_max": 0,
+        "description": "W4 CA60 (Composition Aperture; 1.28-6.98 MeV/nuc. He), Uncertainty"
+      },
+      "unc_W5": {
+        "shape": [
+          277
+        ],
+        "records_with_values": 0,
+        "missing_or_nonfinite_values": 277,
+        "fill_values": -9.999999848243207e+30,
+        "units": "[fraction]",
+        "valid_min": 9.999999747378752e-06,
+        "valid_max": 10.0,
+        "values_below_valid_min": 0,
+        "values_above_valid_max": 0,
+        "description": "W5 CA60 (Composition Aperture; 0.465-1.71 MeV/nuc. CNO), Uncertainty"
+      },
+      "unc_W6": {
+        "shape": [
+          277
+        ],
+        "records_with_values": 1,
+        "missing_or_nonfinite_values": 276,
+        "fill_values": -9.999999848243207e+30,
+        "units": "[fraction]",
+        "valid_min": 9.999999747378752e-06,
+        "valid_max": 10.0,
+        "values_below_valid_min": 0,
+        "values_above_valid_max": 0,
+        "description": "W6 CA60 (Composition Aperture; 1.71-19.1 MeV/nuc. CNO), Uncertainty"
+      },
+      "unc_W7": {
+        "shape": [
+          277
+        ],
+        "records_with_values": 0,
+        "missing_or_nonfinite_values": 277,
+        "fill_values": -9.999999848243207e+30,
+        "units": "[fraction]",
+        "valid_min": 9.999999747378752e-06,
+        "valid_max": 10.0,
+        "values_below_valid_min": 0,
+        "values_above_valid_max": 0,
+        "description": "W7 CA60 (Composition Aperture; 0.239-0.840 MeV/nuc. Fe (9<Z<29)), Uncertainty"
+      },
+      "unc_W8": {
+        "shape": [
+          277
+        ],
+        "records_with_values": 0,
+        "missing_or_nonfinite_values": 277,
+        "fill_values": -9.999999848243207e+30,
+        "units": "[fraction]",
+        "valid_min": 9.999999747378752e-06,
+        "valid_max": 10.0,
+        "values_below_valid_min": 0,
+        "values_above_valid_max": 0,
+        "description": "W8 CA60 (Composition Aperture; 0.840-92.7 MeV/nuc. Fe (9<Z<29)), Uncertainty"
+      },
+      "E1p": {
+        "shape": [
+          277
+        ],
+        "records_with_values": 276,
+        "missing_or_nonfinite_values": 1,
+        "fill_values": -9.999999848243207e+30,
+        "units": "1/(cm**2-s-sr-MeV)",
+        "valid_min": 0.0,
+        "valid_max": 10000000.0,
+        "values_below_valid_min": 0,
+        "values_above_valid_max": 0,
+        "description": "E1p LEFS60 (Low Energy Foil Spectrometer; 0.045-0.062 MeV Electrons (+Ions) ), Sector Avg"
+      },
+      "E2p": {
+        "shape": [
+          277
+        ],
+        "records_with_values": 276,
+        "missing_or_nonfinite_values": 1,
+        "fill_values": -9.999999848243207e+30,
+        "units": "1/(cm**2-s-sr-MeV)",
+        "valid_min": 0.0,
+        "valid_max": 10000000.0,
+        "values_below_valid_min": 0,
+        "values_above_valid_max": 0,
+        "description": "E2p LEFS60 (Low Energy Foil Spectrometer; 0.062-0.103 MeV Electrons (+Ions) ), Sector Avg"
+      },
+      "E3p": {
+        "shape": [
+          277
+        ],
+        "records_with_values": 276,
+        "missing_or_nonfinite_values": 1,
+        "fill_values": -9.999999848243207e+30,
+        "units": "1/(cm**2-s-sr-MeV)",
+        "valid_min": 0.0,
+        "valid_max": 10000000.0,
+        "values_below_valid_min": 0,
+        "values_above_valid_max": 0,
+        "description": "E3p LEFS60 (Low Energy Foil Spectrometer; 0.103-0.175 MeV Electrons (+Ions) ), Sector Avg"
+      },
+      "E4p": {
+        "shape": [
+          277
+        ],
+        "records_with_values": 276,
+        "missing_or_nonfinite_values": 1,
+        "fill_values": -9.999999848243207e+30,
+        "units": "1/(cm**2-s-sr-MeV)",
+        "valid_min": 0.0,
+        "valid_max": 10000000.0,
+        "values_below_valid_min": 0,
+        "values_above_valid_max": 0,
+        "description": "E4p LEFS60 (Low Energy Foil Spectrometer; 0.175-0.312 MeV Electrons (+Ions) ), Sector Avg"
+      },
+      "FP5p": {
+        "shape": [
+          277
+        ],
+        "records_with_values": 276,
+        "missing_or_nonfinite_values": 1,
+        "fill_values": -9.999999848243207e+30,
+        "units": "1/(cm**2-s-sr-MeV)",
+        "valid_min": 0.0,
+        "valid_max": 1000000.0,
+        "values_below_valid_min": 0,
+        "values_above_valid_max": 0,
+        "description": "FP5p LEFS60 (Low Energy Foil Spectrometer; 0.546-0.761 MeV Ions), Sector Avg"
+      },
+      "FP6p": {
+        "shape": [
+          277
+        ],
+        "records_with_values": 276,
+        "missing_or_nonfinite_values": 1,
+        "fill_values": -9.999999848243207e+30,
+        "units": "1/(cm**2-s-sr-MeV)",
+        "valid_min": 0.0,
+        "valid_max": 1000000.0,
+        "values_below_valid_min": 0,
+        "values_above_valid_max": 0,
+        "description": "FP6p LEFS60 (Low Energy Foil Spectrometer; 0.761-1.22 MeV Ions), Sector Avg"
+      },
+      "FP7p": {
+        "shape": [
+          277
+        ],
+        "records_with_values": 276,
+        "missing_or_nonfinite_values": 1,
+        "fill_values": -9.999999848243207e+30,
+        "units": "1/(cm**2-s-sr-MeV)",
+        "valid_min": 0.0,
+        "valid_max": 1000000.0,
+        "values_below_valid_min": 0,
+        "values_above_valid_max": 0,
+        "description": "FP7p LEFS60 (Low Energy Foil Spectrometer; 1.22-4.97 MeV Ions), Sector Avg"
+      },
+      "unc_E1p": {
+        "shape": [
+          277
+        ],
+        "records_with_values": 276,
+        "missing_or_nonfinite_values": 1,
+        "fill_values": -9.999999848243207e+30,
+        "units": "[fraction]",
+        "valid_min": 9.999999747378752e-06,
+        "valid_max": 1.0,
+        "values_below_valid_min": 0,
+        "values_above_valid_max": 0,
+        "description": "E1p LEFS60 (Low Energy Foil Spectrometer; 0.045-0.062 MeV Electrons (+Ions) ), Uncertainty"
+      },
+      "unc_E2p": {
+        "shape": [
+          277
+        ],
+        "records_with_values": 276,
+        "missing_or_nonfinite_values": 1,
+        "fill_values": -9.999999848243207e+30,
+        "units": "[fraction]",
+        "valid_min": 9.999999747378752e-06,
+        "valid_max": 1.0,
+        "values_below_valid_min": 0,
+        "values_above_valid_max": 0,
+        "description": "E2p LEFS60 (Low Energy Foil Spectrometer; 0.062-0.103 MeV Electrons (+Ions) ), Uncertainty"
+      },
+      "unc_E3p": {
+        "shape": [
+          277
+        ],
+        "records_with_values": 276,
+        "missing_or_nonfinite_values": 1,
+        "fill_values": -9.999999848243207e+30,
+        "units": "[fraction]",
+        "valid_min": 9.999999747378752e-06,
+        "valid_max": 1.0,
+        "values_below_valid_min": 0,
+        "values_above_valid_max": 0,
+        "description": "E3p LEFS60 (Low Energy Foil Spectrometer; 0.103-0.175 MeV Electrons (+Ions) ), Uncertainty"
+      },
+      "unc_E4p": {
+        "shape": [
+          277
+        ],
+        "records_with_values": 276,
+        "missing_or_nonfinite_values": 1,
+        "fill_values": -9.999999848243207e+30,
+        "units": "[fraction]",
+        "valid_min": 9.999999747378752e-06,
+        "valid_max": 1.0,
+        "values_below_valid_min": 0,
+        "values_above_valid_max": 0,
+        "description": "E4p LEFS60 (Low Energy Foil Spectrometer; 0.175-0.312 MeV Electrons (+Ions) ), Uncertainty"
+      },
+      "unc_FP5p": {
+        "shape": [
+          277
+        ],
+        "records_with_values": 276,
+        "missing_or_nonfinite_values": 1,
+        "fill_values": -9.999999848243207e+30,
+        "units": "[fraction]",
+        "valid_min": 9.999999747378752e-06,
+        "valid_max": 1.0,
+        "values_below_valid_min": 0,
+        "values_above_valid_max": 0,
+        "description": "FP5p LEFS60 (Low Energy Foil Spectrometer; 0.546-0.761 MeV Ions), Uncertainty"
+      },
+      "unc_FP6p": {
+        "shape": [
+          277
+        ],
+        "records_with_values": 276,
+        "missing_or_nonfinite_values": 1,
+        "fill_values": -9.999999848243207e+30,
+        "units": "[fraction]",
+        "valid_min": 9.999999747378752e-06,
+        "valid_max": 1.0,
+        "values_below_valid_min": 0,
+        "values_above_valid_max": 0,
+        "description": "FP6p LEFS60 (Low Energy Foil Spectrometer; 0.761-1.22 MeV Ions), Uncertainty"
+      },
+      "unc_FP7p": {
+        "shape": [
+          277
+        ],
+        "records_with_values": 276,
+        "missing_or_nonfinite_values": 1,
+        "fill_values": -9.999999848243207e+30,
+        "units": "[fraction]",
+        "valid_min": 9.999999747378752e-06,
+        "valid_max": 1.0,
+        "values_below_valid_min": 0,
+        "values_above_valid_max": 0,
+        "description": "FP7p LEFS60 (Low Energy Foil Spectrometer; 1.22-4.97 MeV Ions), Uncertainty"
+      },
+      "Z2": {
+        "shape": [
+          277
+        ],
+        "records_with_values": 276,
+        "missing_or_nonfinite_values": 1,
+        "fill_values": -9.999999848243207e+30,
+        "units": "1/(cm**2-s-sr)",
+        "valid_min": 9.999999747378752e-06,
+        "valid_max": 100000.0,
+        "values_below_valid_min": 19,
+        "values_above_valid_max": 0,
+        "description": "Z2 WARTD, (Z>1, E>0.7 MeV Ions), Sector Avg"
+      },
+      "Z2A": {
+        "shape": [
+          277
+        ],
+        "records_with_values": 276,
+        "missing_or_nonfinite_values": 1,
+        "fill_values": -9.999999848243207e+30,
+        "units": "1/(cm**2-s-sr)",
+        "valid_min": 9.999999747378752e-06,
+        "valid_max": 100000.0,
+        "values_below_valid_min": 269,
+        "values_above_valid_max": 0,
+        "description": "Z2A WARTD, (Z>7, E>7.5 MeV Ions), Sector Avg"
+      },
+      "Z3": {
+        "shape": [
+          277
+        ],
+        "records_with_values": 276,
+        "missing_or_nonfinite_values": 1,
+        "fill_values": -9.999999848243207e+30,
+        "units": "1/(cm**2-s-sr)",
+        "valid_min": 9.999999747378752e-06,
+        "valid_max": 100000.0,
+        "values_below_valid_min": 247,
+        "values_above_valid_max": 0,
+        "description": "Z3 WARTD, (Z>5, E>2.5 MeV Ions), Sector Avg"
+      },
+      "Z4": {
+        "shape": [
+          277
+        ],
+        "records_with_values": 276,
+        "missing_or_nonfinite_values": 1,
+        "fill_values": -9.999999848243207e+30,
+        "units": "1/(cm**2-s-sr)",
+        "valid_min": 9.999999747378752e-06,
+        "valid_max": 100000.0,
+        "values_below_valid_min": 273,
+        "values_above_valid_max": 0,
+        "description": "Z4 WARTD, (Z>10, E>9.0 MeV Ions), Sector Avg"
+      },
+      "unc_Z2": {
+        "shape": [
+          277
+        ],
+        "records_with_values": 257,
+        "missing_or_nonfinite_values": 20,
+        "fill_values": -9.999999848243207e+30,
+        "units": "[fraction]",
+        "valid_min": 9.999999747378752e-06,
+        "valid_max": 100000.0,
+        "values_below_valid_min": 0,
+        "values_above_valid_max": 0,
+        "description": "Z2 WARTD, (Z>1, E>0.7 MeV Ions), Uncertainty"
+      },
+      "unc_Z2A": {
+        "shape": [
+          277
+        ],
+        "records_with_values": 7,
+        "missing_or_nonfinite_values": 270,
+        "fill_values": -9.999999848243207e+30,
+        "units": "[fraction]",
+        "valid_min": 9.999999747378752e-06,
+        "valid_max": 100000.0,
+        "values_below_valid_min": 0,
+        "values_above_valid_max": 0,
+        "description": "Z2A WARTD, (Z>7, E>7.5 MeV Ions), Uncertainty"
+      },
+      "unc_Z3": {
+        "shape": [
+          277
+        ],
+        "records_with_values": 29,
+        "missing_or_nonfinite_values": 248,
+        "fill_values": -9.999999848243207e+30,
+        "units": "[fraction]",
+        "valid_min": 9.999999747378752e-06,
+        "valid_max": 100000.0,
+        "values_below_valid_min": 0,
+        "values_above_valid_max": 0,
+        "description": "Z3 WARTD, (Z>5, E>2.5 MeV Ions), Uncertainty"
+      },
+      "unc_Z4": {
+        "shape": [
+          277
+        ],
+        "records_with_values": 3,
+        "missing_or_nonfinite_values": 274,
+        "fill_values": -9.999999848243207e+30,
+        "units": "[fraction]",
+        "valid_min": 9.999999747378752e-06,
+        "valid_max": 100000.0,
+        "values_below_valid_min": 0,
+        "values_above_valid_max": 0,
+        "description": "Z4 WARTD, (Z>10, E>9.0 MeV Ions), Uncertainty"
+      },
+      "P1p": {
+        "shape": [
+          277
+        ],
+        "records_with_values": 276,
+        "missing_or_nonfinite_values": 1,
+        "fill_values": -9.999999848243207e+30,
+        "units": "1/(cm**2-s-sr-MeV)",
+        "valid_min": 0.0,
+        "valid_max": 10000000.0,
+        "values_below_valid_min": 0,
+        "values_above_valid_max": 0,
+        "description": "P1p LEMS120 (Low Energy Magnetic Spectrometer; 0.047-0.066 MeV Ions), Sector Avg"
+      },
+      "P2p": {
+        "shape": [
+          277
+        ],
+        "records_with_values": 276,
+        "missing_or_nonfinite_values": 1,
+        "fill_values": -9.999999848243207e+30,
+        "units": "1/(cm**2-s-sr-MeV)",
+        "valid_min": 0.0,
+        "valid_max": 10000000.0,
+        "values_below_valid_min": 0,
+        "values_above_valid_max": 0,
+        "description": "P2p LEMS120 (Low Energy Magnetic Spectrometer; 0.066-0.114 MeV Ions), Sector Avg"
+      },
+      "P3p": {
+        "shape": [
+          277
+        ],
+        "records_with_values": 276,
+        "missing_or_nonfinite_values": 1,
+        "fill_values": -9.999999848243207e+30,
+        "units": "1/(cm**2-s-sr-MeV)",
+        "valid_min": 0.0,
+        "valid_max": 10000000.0,
+        "values_below_valid_min": 0,
+        "values_above_valid_max": 0,
+        "description": "P3p LEMS120 (Low Energy Magnetic Spectrometer; 0.114-0.190 MeV Ions), Sector Avg"
+      },
+      "P4p": {
+        "shape": [
+          277
+        ],
+        "records_with_values": 276,
+        "missing_or_nonfinite_values": 1,
+        "fill_values": -9.999999848243207e+30,
+        "units": "1/(cm**2-s-sr-MeV)",
+        "valid_min": 0.0,
+        "valid_max": 10000000.0,
+        "values_below_valid_min": 0,
+        "values_above_valid_max": 0,
+        "description": "P4p LEMS120 (Low Energy Magnetic Spectrometer; 0.190-0.310 MeV Ions), Sector Avg"
+      },
+      "P5p": {
+        "shape": [
+          277
+        ],
+        "records_with_values": 276,
+        "missing_or_nonfinite_values": 1,
+        "fill_values": -9.999999848243207e+30,
+        "units": "1/(cm**2-s-sr-MeV)",
+        "valid_min": 0.0,
+        "valid_max": 10000000.0,
+        "values_below_valid_min": 0,
+        "values_above_valid_max": 0,
+        "description": "P5p LEMS120 (Low Energy Magnetic Spectrometer; 0.310-0.580 MeV Ions), Sector Avg"
+      },
+      "P6p": {
+        "shape": [
+          277
+        ],
+        "records_with_values": 276,
+        "missing_or_nonfinite_values": 1,
+        "fill_values": -9.999999848243207e+30,
+        "units": "1/(cm**2-s-sr-MeV)",
+        "valid_min": 0.0,
+        "valid_max": 10000000.0,
+        "values_below_valid_min": 0,
+        "values_above_valid_max": 0,
+        "description": "P6p LEMS120 (Low Energy Magnetic Spectrometer; 0.580-1.05 MeV Ions), Sector Avg"
+      },
+      "P7p": {
+        "shape": [
+          277
+        ],
+        "records_with_values": 276,
+        "missing_or_nonfinite_values": 1,
+        "fill_values": -9.999999848243207e+30,
+        "units": "1/(cm**2-s-sr-MeV)",
+        "valid_min": 0.0,
+        "valid_max": 10000000.0,
+        "values_below_valid_min": 0,
+        "values_above_valid_max": 0,
+        "description": "P7p LEMS120 (Low Energy Magnetic Spectrometer; 1.05-1.89 MeV Ions), Sector Avg"
+      },
+      "P8p": {
+        "shape": [
+          277
+        ],
+        "records_with_values": 276,
+        "missing_or_nonfinite_values": 1,
+        "fill_values": -9.999999848243207e+30,
+        "units": "1/(cm**2-s-sr-MeV)",
+        "valid_min": 0.0,
+        "valid_max": 10000000.0,
+        "values_below_valid_min": 0,
+        "values_above_valid_max": 0,
+        "description": "P8p LEMS120 (Low Energy Magnetic Spectrometer; 1.89-4.75 MeV Ions), Sector Avg"
+      },
+      "unc_P1p": {
+        "shape": [
+          277
+        ],
+        "records_with_values": 276,
+        "missing_or_nonfinite_values": 1,
+        "fill_values": -9.999999848243207e+30,
+        "units": "[fraction]",
+        "valid_min": 9.999999747378752e-06,
+        "valid_max": 1.0,
+        "values_below_valid_min": 0,
+        "values_above_valid_max": 0,
+        "description": "P1p LEMS120 (Low Energy Magnetic Spectrometer; 0.047-0.066 MeV Ions), Uncertainty"
+      },
+      "unc_P2p": {
+        "shape": [
+          277
+        ],
+        "records_with_values": 276,
+        "missing_or_nonfinite_values": 1,
+        "fill_values": -9.999999848243207e+30,
+        "units": "[fraction]",
+        "valid_min": 9.999999747378752e-06,
+        "valid_max": 1.0,
+        "values_below_valid_min": 0,
+        "values_above_valid_max": 0,
+        "description": "P2p LEMS120 (Low Energy Magnetic Spectrometer; 0.066-0.114 MeV Ions), Uncertainty"
+      },
+      "unc_P3p": {
+        "shape": [
+          277
+        ],
+        "records_with_values": 276,
+        "missing_or_nonfinite_values": 1,
+        "fill_values": -9.999999848243207e+30,
+        "units": "[fraction]",
+        "valid_min": 9.999999747378752e-06,
+        "valid_max": 1.0,
+        "values_below_valid_min": 0,
+        "values_above_valid_max": 0,
+        "description": "P3p LEMS120 (Low Energy Magnetic Spectrometer; 0.114-0.190 MeV Ions), Uncertainty"
+      },
+      "unc_P4p": {
+        "shape": [
+          277
+        ],
+        "records_with_values": 276,
+        "missing_or_nonfinite_values": 1,
+        "fill_values": -9.999999848243207e+30,
+        "units": "[fraction]",
+        "valid_min": 9.999999747378752e-06,
+        "valid_max": 1.0,
+        "values_below_valid_min": 0,
+        "values_above_valid_max": 0,
+        "description": "P4p LEMS120 (Low Energy Magnetic Spectrometer; 0.190-0.310 MeV Ions), Uncertainty"
+      },
+      "unc_P5p": {
+        "shape": [
+          277
+        ],
+        "records_with_values": 276,
+        "missing_or_nonfinite_values": 1,
+        "fill_values": -9.999999848243207e+30,
+        "units": "[fraction]",
+        "valid_min": 9.999999747378752e-06,
+        "valid_max": 1.0,
+        "values_below_valid_min": 0,
+        "values_above_valid_max": 0,
+        "description": "P5p LEMS120 (Low Energy Magnetic Spectrometer; 0.310-0.580 MeV Ions), Uncertainty"
+      },
+      "unc_P6p": {
+        "shape": [
+          277
+        ],
+        "records_with_values": 276,
+        "missing_or_nonfinite_values": 1,
+        "fill_values": -9.999999848243207e+30,
+        "units": "[fraction]",
+        "valid_min": 9.999999747378752e-06,
+        "valid_max": 1.0,
+        "values_below_valid_min": 0,
+        "values_above_valid_max": 0,
+        "description": "P6p LEMS120 (Low Energy Magnetic Spectrometer; 0.580-1.05 MeV Ions), Uncertainty"
+      },
+      "unc_P7p": {
+        "shape": [
+          277
+        ],
+        "records_with_values": 276,
+        "missing_or_nonfinite_values": 1,
+        "fill_values": -9.999999848243207e+30,
+        "units": "[fraction]",
+        "valid_min": 9.999999747378752e-06,
+        "valid_max": 1.0,
+        "values_below_valid_min": 0,
+        "values_above_valid_max": 0,
+        "description": "P7p LEMS120 (Low Energy Magnetic Spectrometer; 1.05-1.89 MeV Ions), Uncertainty"
+      },
+      "unc_P8p": {
+        "shape": [
+          277
+        ],
+        "records_with_values": 276,
+        "missing_or_nonfinite_values": 1,
+        "fill_values": -9.999999848243207e+30,
+        "units": "[fraction]",
+        "valid_min": 9.999999747378752e-06,
+        "valid_max": 1.0,
+        "values_below_valid_min": 0,
+        "values_above_valid_max": 0,
+        "description": "P8p LEMS120 (Low Energy Magnetic Spectrometer; 1.89-4.75 MeV Ions), Uncertainty"
+      },
+      "E1": {
+        "shape": [
+          277
+        ],
+        "records_with_values": 0,
+        "missing_or_nonfinite_values": 277,
+        "fill_values": -9.999999848243207e+30,
+        "units": "1/(cm**2-s-sr-MeV)",
+        "valid_min": 0.0,
+        "valid_max": 10000000.0,
+        "values_below_valid_min": 0,
+        "values_above_valid_max": 0,
+        "description": "E1 LEFS150 (Low Energy Foil Spectrometer; 0.045-0.062 MeV Electrons (+Ions) ), Sector Avg"
+      },
+      "E2": {
+        "shape": [
+          277
+        ],
+        "records_with_values": 0,
+        "missing_or_nonfinite_values": 277,
+        "fill_values": -9.999999848243207e+30,
+        "units": "1/(cm**2-s-sr-MeV)",
+        "valid_min": 0.0,
+        "valid_max": 10000000.0,
+        "values_below_valid_min": 0,
+        "values_above_valid_max": 0,
+        "description": "E2 LEFS150 (Low Energy Foil Spectrometer; 0.062-0.102 MeV Electrons (+Ions) ), Sector Avg"
+      },
+      "E3": {
+        "shape": [
+          277
+        ],
+        "records_with_values": 0,
+        "missing_or_nonfinite_values": 277,
+        "fill_values": -9.999999848243207e+30,
+        "units": "1/(cm**2-s-sr-MeV)",
+        "valid_min": 0.0,
+        "valid_max": 10000000.0,
+        "values_below_valid_min": 0,
+        "values_above_valid_max": 0,
+        "description": "E3 LEFS150 (Low Energy Foil Spectrometer; 0.102-0.175 MeV Electrons (+Ions) ), Sector Avg"
+      },
+      "E4": {
+        "shape": [
+          277
+        ],
+        "records_with_values": 276,
+        "missing_or_nonfinite_values": 1,
+        "fill_values": -9.999999848243207e+30,
+        "units": "1/(cm**2-s-sr-MeV)",
+        "valid_min": 0.0,
+        "valid_max": 10000000.0,
+        "values_below_valid_min": 0,
+        "values_above_valid_max": 0,
+        "description": "E4 LEFS150 (Low Energy Foil Spectrometer; 0.175-0.312 MeV Electrons (+Ions) ), Sector Avg"
+      },
+      "FP5": {
+        "shape": [
+          277
+        ],
+        "records_with_values": 276,
+        "missing_or_nonfinite_values": 1,
+        "fill_values": -9.999999848243207e+30,
+        "units": "1/(cm**2-s-sr-MeV)",
+        "valid_min": 0.0,
+        "valid_max": 1000000.0,
+        "values_below_valid_min": 0,
+        "values_above_valid_max": 0,
+        "description": "FP5  LEFS150 (Low Energy Foil Spectrometer; 0.540-0.765 MeV Ions), Sector Avg"
+      },
+      "FP6": {
+        "shape": [
+          277
+        ],
+        "records_with_values": 276,
+        "missing_or_nonfinite_values": 1,
+        "fill_values": -9.999999848243207e+30,
+        "units": "1/(cm**2-s-sr-MeV)",
+        "valid_min": 0.0,
+        "valid_max": 1000000.0,
+        "values_below_valid_min": 0,
+        "values_above_valid_max": 0,
+        "description": "FP6 LEFS150 (Low Energy Foil Spectrometer; 0.765-1.22 MeV Ions), Sector Avg"
+      },
+      "FP7": {
+        "shape": [
+          277
+        ],
+        "records_with_values": 276,
+        "missing_or_nonfinite_values": 1,
+        "fill_values": -9.999999848243207e+30,
+        "units": "1/(cm**2-s-sr-MeV)",
+        "valid_min": 0.0,
+        "valid_max": 1000000.0,
+        "values_below_valid_min": 0,
+        "values_above_valid_max": 0,
+        "description": "FP7 LEFS150 (Low Energy Foil Spectrometer; 1.22-4.94 MeV Ions), Sector Avg"
+      },
+      "unc_E1": {
+        "shape": [
+          277
+        ],
+        "records_with_values": 0,
+        "missing_or_nonfinite_values": 277,
+        "fill_values": -9.999999848243207e+30,
+        "units": "[fraction]",
+        "valid_min": 9.999999747378752e-06,
+        "valid_max": 1.0,
+        "values_below_valid_min": 0,
+        "values_above_valid_max": 0,
+        "description": "E1 LEFS150 (Low Energy Foil Spectrometer; 0.045-0.062 MeV Electrons (+Ions) ), Uncertainty"
+      },
+      "unc_E2": {
+        "shape": [
+          277
+        ],
+        "records_with_values": 0,
+        "missing_or_nonfinite_values": 277,
+        "fill_values": -9.999999848243207e+30,
+        "units": "[fraction]",
+        "valid_min": 9.999999747378752e-06,
+        "valid_max": 1.0,
+        "values_below_valid_min": 0,
+        "values_above_valid_max": 0,
+        "description": "E2 LEFS150 (Low Energy Foil Spectrometer; 0.062-0.102 MeV Electrons (+Ions) ), Uncertainty"
+      },
+      "unc_E3": {
+        "shape": [
+          277
+        ],
+        "records_with_values": 0,
+        "missing_or_nonfinite_values": 277,
+        "fill_values": -9.999999848243207e+30,
+        "units": "[fraction]",
+        "valid_min": 9.999999747378752e-06,
+        "valid_max": 1.0,
+        "values_below_valid_min": 0,
+        "values_above_valid_max": 0,
+        "description": "E3 LEFS150 (Low Energy Foil Spectrometer; 0.102-0.175 MeV Electrons (+Ions) ), Uncertainty"
+      },
+      "unc_E4": {
+        "shape": [
+          277
+        ],
+        "records_with_values": 276,
+        "missing_or_nonfinite_values": 1,
+        "fill_values": -9.999999848243207e+30,
+        "units": "[fraction]",
+        "valid_min": 9.999999747378752e-06,
+        "valid_max": 1.0,
+        "values_below_valid_min": 0,
+        "values_above_valid_max": 0,
+        "description": "E4 LEFS150 (Low Energy Foil Spectrometer; 0.175-0.312 MeV Electrons (+Ions) ), Uncertainty"
+      },
+      "unc_FP5": {
+        "shape": [
+          277
+        ],
+        "records_with_values": 276,
+        "missing_or_nonfinite_values": 1,
+        "fill_values": -9.999999848243207e+30,
+        "units": "[fraction]",
+        "valid_min": 9.999999747378752e-06,
+        "valid_max": 1.0,
+        "values_below_valid_min": 0,
+        "values_above_valid_max": 0,
+        "description": "FP5 LEFS150 (Low Energy Foil Spectrometer; 0.540-0.765 MeV Ions), Uncertainty"
+      },
+      "unc_FP6": {
+        "shape": [
+          277
+        ],
+        "records_with_values": 276,
+        "missing_or_nonfinite_values": 1,
+        "fill_values": -9.999999848243207e+30,
+        "units": "[fraction]",
+        "valid_min": 9.999999747378752e-06,
+        "valid_max": 1.0,
+        "values_below_valid_min": 0,
+        "values_above_valid_max": 0,
+        "description": "FP6 LEFS150 (Low Energy Foil Spectrometer; 0.765-1.22 MeV Ions), Uncertainty"
+      },
+      "unc_FP7": {
+        "shape": [
+          277
+        ],
+        "records_with_values": 276,
+        "missing_or_nonfinite_values": 1,
+        "fill_values": -9.999999848243207e+30,
+        "units": "[fraction]",
+        "valid_min": 9.999999747378752e-06,
+        "valid_max": 1.0,
+        "values_below_valid_min": 0,
+        "values_above_valid_max": 0,
+        "description": "FP7 LEFS150 (Low Energy Foil Spectrometer; 1.22-4.94 MeV Ions), Uncertainty"
+      }
+    }
+  },
+  "cdaweb_response_warning_count": 89,
+  "status": "PASSED_WITH_WARNINGS"
+}

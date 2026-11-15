@@ -1,0 +1,240 @@
+{
+  "dataset_id": "omni_hourly",
+  "product": "OMNI2_2020.DAT hourly means",
+  "source_url": "https://spdf.gsfc.nasa.gov/pub/data/omni/low_res_omni/omni2_2020.dat",
+  "documentation_url": "https://omniweb.gsfc.nasa.gov/html/ow_data.html",
+  "source_format": "ASCII fixed-width OMNI2 record, parsed by whitespace into 53 official fields",
+  "selection": {
+    "start_utc_inclusive": "2020-01-01T00:00:00Z",
+    "end_utc_exclusive": "2020-02-01T00:00:00Z"
+  },
+  "variables": {
+    "year": {
+      "type": "int",
+      "units": "See official omni2.text"
+    },
+    "day_of_year": {
+      "type": "int",
+      "units": "See official omni2.text"
+    },
+    "hour": {
+      "type": "int",
+      "units": "See official omni2.text"
+    },
+    "bartels_rotation": {
+      "type": "int",
+      "units": "See official omni2.text"
+    },
+    "imf_spacecraft_id": {
+      "type": "int",
+      "units": "See official omni2.text"
+    },
+    "plasma_spacecraft_id": {
+      "type": "int",
+      "units": "See official omni2.text"
+    },
+    "imf_points": {
+      "type": "int",
+      "units": "See official omni2.text"
+    },
+    "plasma_points": {
+      "type": "int",
+      "units": "See official omni2.text"
+    },
+    "imf_magnitude_nt": {
+      "type": "float",
+      "units": "nT"
+    },
+    "field_vector_magnitude_nt": {
+      "type": "float",
+      "units": "nT"
+    },
+    "field_vector_latitude_deg": {
+      "type": "float",
+      "units": "See official omni2.text"
+    },
+    "field_vector_longitude_deg": {
+      "type": "float",
+      "units": "See official omni2.text"
+    },
+    "bx_gse_nt": {
+      "type": "float",
+      "units": "nT"
+    },
+    "by_gse_nt": {
+      "type": "float",
+      "units": "nT"
+    },
+    "bz_gse_nt": {
+      "type": "float",
+      "units": "nT"
+    },
+    "by_gsm_nt": {
+      "type": "float",
+      "units": "nT"
+    },
+    "bz_gsm_nt": {
+      "type": "float",
+      "units": "nT"
+    },
+    "sigma_b_magnitude_nt": {
+      "type": "float",
+      "units": "See official omni2.text"
+    },
+    "sigma_b_vector_nt": {
+      "type": "float",
+      "units": "See official omni2.text"
+    },
+    "sigma_bx_nt": {
+      "type": "float",
+      "units": "See official omni2.text"
+    },
+    "sigma_by_nt": {
+      "type": "float",
+      "units": "See official omni2.text"
+    },
+    "sigma_bz_nt": {
+      "type": "float",
+      "units": "See official omni2.text"
+    },
+    "proton_temperature_k": {
+      "type": "float",
+      "units": "K"
+    },
+    "proton_density_cm3": {
+      "type": "float",
+      "units": "cm^-3"
+    },
+    "solar_wind_speed_km_s": {
+      "type": "float",
+      "units": "km/s"
+    },
+    "flow_longitude_deg": {
+      "type": "float",
+      "units": "See official omni2.text"
+    },
+    "flow_latitude_deg": {
+      "type": "float",
+      "units": "See official omni2.text"
+    },
+    "alpha_proton_ratio": {
+      "type": "float",
+      "units": "See official omni2.text"
+    },
+    "flow_pressure_npa": {
+      "type": "float",
+      "units": "nPa"
+    },
+    "sigma_temperature_k": {
+      "type": "float",
+      "units": "See official omni2.text"
+    },
+    "sigma_density_cm3": {
+      "type": "float",
+      "units": "See official omni2.text"
+    },
+    "sigma_speed_km_s": {
+      "type": "float",
+      "units": "See official omni2.text"
+    },
+    "sigma_flow_longitude_deg": {
+      "type": "float",
+      "units": "See official omni2.text"
+    },
+    "sigma_flow_latitude_deg": {
+      "type": "float",
+      "units": "See official omni2.text"
+    },
+    "sigma_alpha_proton_ratio": {
+      "type": "float",
+      "units": "See official omni2.text"
+    },
+    "electric_field_mv_m": {
+      "type": "float",
+      "units": "mV/m"
+    },
+    "plasma_beta": {
+      "type": "float",
+      "units": "dimensionless"
+    },
+    "alfven_mach_number": {
+      "type": "float",
+      "units": "dimensionless"
+    },
+    "kp_index": {
+      "type": "int",
+      "units": "See official omni2.text"
+    },
+    "sunspot_number": {
+      "type": "int",
+      "units": "See official omni2.text"
+    },
+    "dst_index_nt": {
+      "type": "int",
+      "units": "See official omni2.text"
+    },
+    "ae_index_nt": {
+      "type": "int",
+      "units": "See official omni2.text"
+    },
+    "proton_flux_gt_1_mev": {
+      "type": "float",
+      "units": "See official omni2.text"
+    },
+    "proton_flux_gt_2_mev": {
+      "type": "float",
+      "units": "See official omni2.text"
+    },
+    "proton_flux_gt_4_mev": {
+      "type": "float",
+      "units": "See official omni2.text"
+    },
+    "proton_flux_gt_10_mev": {
+      "type": "float",
+      "units": "See official omni2.text"
+    },
+    "proton_flux_gt_30_mev": {
+      "type": "float",
+      "units": "See official omni2.text"
+    },
+    "proton_flux_gt_60_mev": {
+      "type": "float",
+      "units": "See official omni2.text"
+    },
+    "proton_flux_flag": {
+      "type": "int",
+      "units": "See official omni2.text"
+    },
+    "ap_index_nt": {
+      "type": "int",
+      "units": "See official omni2.text"
+    },
+    "f107_index_sfu": {
+      "type": "float",
+      "units": "See official omni2.text"
+    },
+    "pcn_index": {
+      "type": "float",
+      "units": "See official omni2.text"
+    },
+    "al_index_nt": {
+      "type": "int",
+      "units": "See official omni2.text"
+    },
+    "au_index_nt": {
+      "type": "int",
+      "units": "See official omni2.text"
+    },
+    "magnetosonic_mach_number": {
+      "type": "float",
+      "units": "dimensionless"
+    }
+  },
+  "processed_output": "omni_hourly_20200101_20200201.csv",
+  "source_sha256": "11c2de98f1fd1ebe0156ca36c439fd4063d28c95e3706ec8752e7f59eea41700",
+  "processed_csv_sha256": "ae1faed86474e894b643ac7a1c634c5f41882221c782a91b0bf2cdf9b0bf014a",
+  "limitations": [
+    "OMNI is a merged, time-shifted near-Earth dataset, not a lunar-surface measurement.",
+    "No field is an astronaut radiation dose measurement and no dose conversion is performed."
+  ]
+}

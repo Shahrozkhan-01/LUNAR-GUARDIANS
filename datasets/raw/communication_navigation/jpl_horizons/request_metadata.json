@@ -1,0 +1,29 @@
+{
+  "source": "https://ssd.jpl.nasa.gov/api/horizons.api",
+  "request_url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=json&COMMAND=301&OBJ_DATA=YES&MAKE_EPHEM=YES&EPHEM_TYPE=OBSERVER&CENTER=500%40399&START_TIME=2026-11-14&STOP_TIME=2026-11-21&STEP_SIZE=1d&TIME_TYPE=UT&TIME_ZONE=%2B00%3A00&QUANTITIES=20%2C21&RANGE_UNITS=KM&TIME_DIGITS=SECONDS",
+  "request_parameters": {
+    "format": "json",
+    "COMMAND": "301",
+    "OBJ_DATA": "YES",
+    "MAKE_EPHEM": "YES",
+    "EPHEM_TYPE": "OBSERVER",
+    "CENTER": "500@399",
+    "START_TIME": "2026-11-14",
+    "STOP_TIME": "2026-11-21",
+    "STEP_SIZE": "1d",
+    "TIME_TYPE": "UT",
+    "TIME_ZONE": "+00:00",
+    "QUANTITIES": "20,21",
+    "RANGE_UNITS": "KM",
+    "TIME_DIGITS": "SECONDS"
+  },
+  "retrieved_at_utc": "2026-11-14T17:42:47.393595+00:00",
+  "http_status": 200,
+  "response_file": "horizons_response.json",
+  "response_size_bytes": 7729,
+  "response_sha256": "C90CAAC120D90F227373BF8927ACA1F55DD667E66800F42F006A8703B215C958",
+  "documentation": {
+    "horizons_api_documentation.html": "https://ssd-api.jpl.nasa.gov/doc/horizons.html",
+    "horizons_manual.html": "https://ssd.jpl.nasa.gov/horizons/manual.html"
+  }
+}

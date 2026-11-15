@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1H00.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="https://pds.nasa.gov/pds4/mission/lro/v1/PDS4_LRO_1H00_1020.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="https://pds.nasa.gov/pds4/proc/v1/PDS4_PROC_1H00_1210.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+
+<Product_Observational xmlns="http://pds.nasa.gov/pds4/pds/v1" 
+    xmlns:lro="http://pds.nasa.gov/pds4/mission/lro/v1" 
+    xmlns:proc="http://pds.nasa.gov/pds4/proc/v1" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1  https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1H00.xsd
+    http://pds.nasa.gov/pds4/mission/lro/v1 https://pds.nasa.gov/pds4/mission/lro/v1/PDS4_LRO_1H00_1020.xsd
+    http://pds.nasa.gov/pds4/proc/v1        https://pds.nasa.gov/pds4/proc/v1/PDS4_PROC_1H00_1210.xsd">
+  <Identification_Area>
+    <logical_identifier>urn:nasa:pds:lro_lend:data_science_derived:lend_rdr_dlx_20200101</logical_identifier>
+    <version_id>1.0</version_id>
+    <title>LRO LEND extended science product: lend_rdr_dlx_20200101</title>
+    <information_model_version>1.17.0.0</information_model_version>
+    <product_class>Product_Observational</product_class>
+    <Modification_History>
+      <Modification_Detail>
+        <modification_date>2023-05-12</modification_date>
+        <version_id>1.0</version_id>
+        <description>Migration to PDS4</description>
+      </Modification_Detail>
+    </Modification_History>
+  </Identification_Area>
+  <Observation_Area>
+    <Time_Coordinates>
+      <start_date_time>2020-01-01T00:00:00Z</start_date_time>
+      <stop_date_time>2020-01-01T23:59:59Z</stop_date_time>
+    </Time_Coordinates>
+    <Investigation_Area>
+      <name>Lunar Reconnaissance Orbiter</name>
+      <type>Mission</type>
+      <Internal_Reference>
+        <lid_reference>urn:nasa:pds:context:investigation:mission.lunar_reconnaissance_orbiter</lid_reference>
+        <reference_type>data_to_investigation</reference_type>
+      </Internal_Reference>
+    </Investigation_Area>
+    <Observing_System>
+      <name>LEND</name>
+      <Observing_System_Component>
+        <name>Lunar Reconnaissance Orbiter</name>
+        <type>Host</type>
+        <Internal_Reference>
+          <lid_reference>urn:nasa:pds:context:instrument_host:spacecraft.lro</lid_reference>
+          <reference_type>is_instrument_host</reference_type>
+        </Internal_Reference>
+      </Observing_System_Component>
+      <Observing_System_Component>
+        <name>Lunar Exploration Neutron Detector for LRO</name>
+        <type>Instrument</type>
+        <Internal_Reference>
+          <lid_reference>urn:nasa:pds:context:instrument:lro.lend</lid_reference>
+          <reference_type>is_instrument</reference_type>
+        </Internal_Reference>
+      </Observing_System_Component>
+    </Observing_System>
+    <Target_Identification>
+      <name>Moon</name>
+      <type>Satellite</type>
+      <Internal_Reference>
+        <lid_reference>urn:nasa:pds:context:target:satellite.earth.moon</lid_reference>
+        <reference_type>data_to_target</reference_type>
+      </Internal_Reference>
+    </Target_Identification>
+    <Mission_Area>
+      <lro:LRO_Parameters>
+        <lro:product_type>LEND_RDR_DLX</lro:product_type>
+        <lro:product_version_id>1.0</lro:product_version_id>
+        <lro:mission_phase_name>FOURTH EXTENDED SCIENCE MISSION</lro:mission_phase_name>
+        <lro:spacecraft_clock_start_count>599529600</lro:spacecraft_clock_start_count>
+        <lro:spacecraft_clock_stop_count>599615999</lro:spacecraft_clock_stop_count>
+      </lro:LRO_Parameters>
+    </Mission_Area>
+    <Discipline_Area>
+      <proc:Processing_Information>
+        <Local_Internal_Reference>
+          <local_identifier_reference>dlx_data_table</local_identifier_reference>
+          <local_reference_type>processing_information_to_data_object</local_reference_type>
+        </Local_Internal_Reference>
+        <proc:Process>
+          <proc:Software>
+            <proc:Software_Program>
+              <proc:name>GEN_LEND_RDR</proc:name>
+              <proc:program_version>1.0.0</proc:program_version>
+            </proc:Software_Program>
+          </proc:Software>
+        </proc:Process>
+      </proc:Processing_Information>
+    </Discipline_Area>
+  </Observation_Area>
+  <File_Area_Observational>
+    <File>
+      <file_name>lend_rdr_dlx_20200101.dat</file_name>
+      <local_identifier>dlx_data_table</local_identifier>
+      <creation_date_time>2020-08-26T17:25:46</creation_date_time>
+    </File>
+    <Table_Binary>
+      <offset unit="byte">0</offset>
+      <records>85308</records>
+      <description>This table contains a calculated sum of neutron counts for 
+            the four CSETN detectors and uncertainties for neutron
+            counting data for each of the nine neutron sensors
+            aboard the Lunar Reconnaissance Orbiter (LRO) Lunar
+            Exploration Neutron Detector (LEND). Detailed descriptions for the parameters
+            defined below are contained in the LRO_LEND_RDR_SIS document.</description>
+      <Record_Binary>
+        <fields>12</fields>
+        <groups>0</groups>
+        <record_length unit="byte">71</record_length>
+        <Field_Binary>
+          <name>LRO_TIME</name>
+          <field_number>1</field_number>
+          <field_location unit="byte">1</field_location>
+          <data_type>UnsignedMSB8</data_type>
+          <field_length unit="byte">8</field_length>
+          <description>5 upper bytes of LRO time.</description>
+        </Field_Binary>
+        <Field_Binary>
+          <name>UTC</name>
+          <field_number>2</field_number>
+          <field_location unit="byte">9</field_location>
+          <data_type>ASCII_String</data_type>
+          <field_length unit="byte">23</field_length>
+          <description>UTC time at the middle of the collection interval,
+                stored as yyyy-mm-ddThh:mm:ss.sss.</description>
+        </Field_Binary>
+        <Field_Binary>
+          <name>CSETN_SUM_COUNTS</name>
+          <field_number>3</field_number>
+          <field_location unit="byte">32</field_location>
+          <data_type>IEEE754MSBSingle</data_type>
+          <field_length unit="byte">4</field_length>
+          <unit>counts</unit>
+          <description>Calculated sum of corrected counts in 4 CSETN detectors.
+                A negative in this column indicates it should not be used.</description>
+        </Field_Binary>
+        <Field_Binary>
+          <name>CSETN_SUM_SIGMA</name>
+          <field_number>4</field_number>
+          <field_location unit="byte">36</field_location>
+          <data_type>IEEE754MSBSingle</data_type>
+          <field_length unit="byte">4</field_length>
+          <unit>counts</unit>
+          <description>Sigma value of calculated sum of corrected counts in 4 
+                CSETN detectors. A negative in this column indicates it should not be 
+                used.</description>
+        </Field_Binary>
+        <Field_Binary>
+          <name>CSETN1_SIGMA</name>
+          <field_number>5</field_number>
+          <field_location unit="byte">40</field_location>
+          <data_type>IEEE754MSBSingle</data_type>
+          <field_length unit="byte">4</field_length>
+          <unit>counts</unit>
+          <description>Sigma value of corrected counts in CSETN1 detector.
+                A negative in this column indicates it should not be used.</description>
+        </Field_Binary>
+        <Field_Binary>
+          <name>CSETN2_SIGMA</name>
+          <field_number>6</field_number>
+          <field_location unit="byte">44</field_location>
+          <data_type>IEEE754MSBSingle</data_type>
+          <field_length unit="byte">4</field_length>
+          <unit>counts</unit>
+          <description>Sigma value of corrected counts in CSETN2 detector.
+                A negative in this column indicates it should not be used.</description>
+        </Field_Binary>
+        <Field_Binary>
+          <name>CSETN3_SIGMA</name>
+          <field_number>7</field_number>
+          <field_location unit="byte">48</field_location>
+          <data_type>IEEE754MSBSingle</data_type>
+          <field_length unit="byte">4</field_length>
+          <unit>counts</unit>
+          <description>Sigma value of corrected counts in CSETN3 detector.
+                A negative in this column indicates it should not be used.</description>
+        </Field_Binary>
+        <Field_Binary>
+          <name>CSETN4_SIGMA</name>
+          <field_number>8</field_number>
+          <field_location unit="byte">52</field_location>
+          <data_type>IEEE754MSBSingle</data_type>
+          <field_length unit="byte">4</field_length>
+          <unit>counts</unit>
+          <description>Sigma value of corrected counts in CSETN4 detector.
+                A negative in this column indicates it should not be used.</description>
+        </Field_Binary>
+        <Field_Binary>
+          <name>SETN_SIGMA</name>
+          <field_number>9</field_number>
+          <field_location unit="byte">56</field_location>
+          <data_type>IEEE754MSBSingle</data_type>
+          <field_length unit="byte">4</field_length>
+          <unit>counts</unit>
+          <description>Sigma value of corrected counts in SETN detector.
+                A negative in this column indicates it should not be used.</description>
+        </Field_Binary>
+        <Field_Binary>
+          <name>STN1_SIGMA</name>
+          <field_number>10</field_number>
+          <field_location unit="byte">60</field_location>
+          <data_type>IEEE754MSBSingle</data_type>
+          <field_length unit="byte">4</field_length>
+          <unit>counts</unit>
+          <description>Sigma value of corrected counts in STN1 detector.
+                A negative in this column indicates it should not be used.</description>
+        </Field_Binary>
+        <Field_Binary>
+          <name>STN2_SIGMA</name>
+          <field_number>11</field_number>
+          <field_location unit="byte">64</field_location>
+          <data_type>IEEE754MSBSingle</data_type>
+          <field_length unit="byte">4</field_length>
+          <unit>counts</unit>
+          <description>Sigma value of corrected counts in STN2 detector.
+                A negative in this column indicates it should not be used.</description>
+        </Field_Binary>
+        <Field_Binary>
+          <name>STN3_SIGMA</name>
+          <field_number>12</field_number>
+          <field_location unit="byte">68</field_location>
+          <data_type>IEEE754MSBSingle</data_type>
+          <field_length unit="byte">4</field_length>
+          <unit>counts</unit>
+          <description>Sigma value of corrected counts in STN3 detector.
+                A negative in this column indicates it should not be used.</description>
+        </Field_Binary>
+      </Record_Binary>
+    </Table_Binary>
+  </File_Area_Observational>
+  <File_Area_Observational_Supplemental>
+    <File>
+      <file_name>lend_rdr_dlx_20200101.lbl</file_name>
+    </File>
+    <Stream_Text>
+      <offset unit="byte">0</offset>
+      <parsing_standard_id>PDS3</parsing_standard_id>
+      <description>PDS3 label</description>
+      <record_delimiter>Carriage-Return Line-Feed</record_delimiter>
+    </Stream_Text>
+  </File_Area_Observational_Supplemental>
+</Product_Observational>

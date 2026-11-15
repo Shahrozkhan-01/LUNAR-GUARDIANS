@@ -1,0 +1,12 @@
+{
+  "product": "OMNI2_2020.DAT hourly means",
+  "source_url": "https://spdf.gsfc.nasa.gov/pub/data/omni/low_res_omni/omni2_2020.dat",
+  "documentation_url": "https://omniweb.gsfc.nasa.gov/html/ow_data.html",
+  "retrieved_at": "2026-11-15T02:37:46+05:00",
+  "source_file": "omni2_2020.dat",
+  "source_size_bytes": 2881152,
+  "sha256": "11c2de98f1fd1ebe0156ca36c439fd4063d28c95e3706ec8752e7f59eea41700",
+  "selection": "The original annual source is preserved unchanged. Processing selects 2020-01-01T00:00:00Z inclusive through 2020-02-01T00:00:00Z exclusive.",
+  "access": "Public NASA SPDF archive; no API key required.",
+  "notes": "OMNI2 is a merged, time-shifted near-Earth dataset. The official omni2.text format description is preserved beside this file."
+}

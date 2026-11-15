@@ -1,0 +1,126 @@
+{
+  "checked_at_utc": "2026-11-14T18:34:29.568167+00:00",
+  "dataset_name": "JPL Horizons Moon geocentric range and down-leg light time",
+  "dataset_id": "Horizons target 301, observer 500@399, DE441",
+  "source_urls": {
+    "api": "https://ssd.jpl.nasa.gov/api/horizons.api",
+    "api_documentation": "https://ssd-api.jpl.nasa.gov/doc/horizons.html",
+    "horizons_manual": "https://ssd.jpl.nasa.gov/horizons/manual.html"
+  },
+  "raw_directory": "D:\\NASA\\LUNAR-GUARDIANS\\datasets\\raw\\communication_navigation\\jpl_horizons",
+  "files": {
+    "horizons_response.json": {
+      "size_bytes": 7729,
+      "sha256": "C90CAAC120D90F227373BF8927ACA1F55DD667E66800F42F006A8703B215C958"
+    },
+    "request_metadata.json": {
+      "size_bytes": 1215,
+      "sha256": "D1A0B4FBFC9709DE46C9BAC6DFD1B7233B8849768E25D891235FCAE55A5526B8"
+    },
+    "horizons_api_documentation.html": {
+      "size_bytes": 112553,
+      "sha256": "6CA45D9C222D6E5C425AE3E0A3C44225CF8B6D30C4A14892B0F1157B0AB4CFE4"
+    },
+    "horizons_manual.html": {
+      "size_bytes": 229979,
+      "sha256": "BE45B0137B37068C48760BBAF306F52A72C10239C175BA91119A30EB30612A81"
+    }
+  },
+  "checks": {
+    "horizons_response.json_exists": true,
+    "horizons_response.json_nonempty": true,
+    "request_metadata.json_exists": true,
+    "request_metadata.json_nonempty": true,
+    "horizons_api_documentation.html_exists": true,
+    "horizons_api_documentation.html_nonempty": true,
+    "horizons_manual.html_exists": true,
+    "horizons_manual.html_nonempty": true,
+    "request_parameters_match_expected": true,
+    "request_url_matches_parameters": true,
+    "request_source_is_official_endpoint": true,
+    "retrieval_timestamp_is_utc": true,
+    "http_status_successful": true,
+    "response_file_matches_metadata_name": true,
+    "response_size_matches_metadata": true,
+    "response_sha256_matches_metadata": true,
+    "response_is_valid_json": true,
+    "api_error_absent": true,
+    "api_signature_identifies_horizons": true,
+    "official_api_doc_describes_quantities_and_range_units": true,
+    "manual_documents_geocenter_code_500": true,
+    "manual_documents_range_units": true,
+    "manual_documents_down_leg_light_time_minutes": true,
+    "target_is_moon_301": true,
+    "center_is_earth_399": true,
+    "center_site_is_geocentric": true,
+    "ephemeris_source_is_de441": true,
+    "response_time_range_matches_request": true,
+    "response_has_expected_quantity_columns": true,
+    "ephemeris_table_markers_present": true,
+    "daily_sample_count_matches_requested_interval": true,
+    "first_and_last_samples_match_requested_dates": true,
+    "timestamps_are_strictly_ordered": true,
+    "sampling_is_daily_utc": true,
+    "distance_and_light_time_are_finite_and_positive": true,
+    "range_rate_is_finite": true
+  },
+  "errors": [],
+  "warnings": [
+    "7 requested epoch(s) are after retrieval time; these are forward ephemeris calculations, not observations."
+  ],
+  "request_parameters": {
+    "format": "json",
+    "COMMAND": "301",
+    "OBJ_DATA": "YES",
+    "MAKE_EPHEM": "YES",
+    "EPHEM_TYPE": "OBSERVER",
+    "CENTER": "500@399",
+    "START_TIME": "2026-11-14",
+    "STOP_TIME": "2026-11-21",
+    "STEP_SIZE": "1d",
+    "TIME_TYPE": "UT",
+    "TIME_ZONE": "+00:00",
+    "QUANTITIES": "20,21",
+    "RANGE_UNITS": "KM",
+    "TIME_DIGITS": "SECONDS"
+  },
+  "time_coverage_utc": {
+    "start": "2026-11-14",
+    "end": "2026-11-21",
+    "sample_count": 8
+  },
+  "temporal_interpretation": "7 requested epoch(s) are after retrieval time; these are forward ephemeris calculations, not observations.",
+  "variables": {
+    "delta": {
+      "meaning": "Target apparent range",
+      "units": "km"
+    },
+    "deldot": {
+      "meaning": "Target range rate; positive means receding",
+      "units": "km/s"
+    },
+    "1-way_down_LT": {
+      "meaning": "Target one-way down-leg light time as seen by observer",
+      "units": "minutes"
+    },
+    "timestamp": {
+      "meaning": "Ephemeris epoch",
+      "units": "UTC"
+    }
+  },
+  "sample_values": {
+    "first": {
+      "timestamp_utc": "2026-11-14T00:00:00+00:00",
+      "delta_km": 405615.89143,
+      "deldot_km_s": -0.0031111,
+      "one_way_down_light_time_minutes": 0.02254982
+    },
+    "last": {
+      "timestamp_utc": "2026-11-21T00:00:00+00:00",
+      "delta_km": 377764.35156,
+      "deldot_km_s": -0.0715223,
+      "one_way_down_light_time_minutes": 0.02100144
+    }
+  },
+  "status": "PASSED_WITH_WARNINGS"
+}

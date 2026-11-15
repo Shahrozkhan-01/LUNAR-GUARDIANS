@@ -1,0 +1,19 @@
+{
+  "release_policy": "Large NASA products are distributed as GitHub Release assets because GitHub rejects individual files of 100 MB or more.",
+  "release_tag": "datasets-v1",
+  "assets": [
+    {
+      "path": "datasets/raw/lunar_environment/diviner/global_cumul_avg_cyl_80s70s_002.tab",
+      "purpose": "Original NASA PDS Diviner source product",
+      "size_bytes": 156211313,
+      "sha256": "c6c9b3a84e1e9972237b07fd8dd1c0f44899ab8ffe9a403a7528ef7cd38b1cda"
+    },
+    {
+      "path": "datasets/processed/lunar_environment/lola/ldem_16_processed.npz",
+      "purpose": "Processed NASA PDS LOLA LDEM_16 product",
+      "size_bytes": 106424701,
+      "sha256": "e0682e4c5168b028bf17999c8ab59eec8df887f315145c8f3e5c8a3ae9e50562"
+    }
+  ],
+  "instructions": "Upload each listed file to the datasets-v1 GitHub Release, then publish the release before deploying the backend. The remaining small processed products are committed with the source tree."
+}

@@ -1,0 +1,97 @@
+{
+  "dataset_name": "JPL Horizons Moon geocentric range and down-leg light time",
+  "ephemeris_source": "DE441",
+  "http_status": 200,
+  "numeric_precision_policy": "Original Horizons numeric strings are written directly to CSV without float conversion. The derived two-way value is calculated from Decimal arithmetic.",
+  "observer": {
+    "body": "Earth",
+    "body_id": 399,
+    "center_code": "500@399",
+    "reference_center": "Earth geocenter",
+    "site": "GEOCENTRIC"
+  },
+  "processed_csv_file": "jpl_horizons_moon_earth_geocenter_20261114_20261121.csv",
+  "processed_csv_reopened_and_verified": true,
+  "processed_csv_sha256": "7B4893B2AC35CFBD84D9A7AE928564E74C09701B7E0416BBF9E6F79ECA2C7899",
+  "processed_csv_size_bytes": 692,
+  "processing_script": "datasets/scripts/process_jpl_horizons.py",
+  "processing_script_version": "1.0.0",
+  "request_parameters": {
+    "CENTER": "500@399",
+    "COMMAND": "301",
+    "EPHEM_TYPE": "OBSERVER",
+    "MAKE_EPHEM": "YES",
+    "OBJ_DATA": "YES",
+    "QUANTITIES": "20,21",
+    "RANGE_UNITS": "KM",
+    "START_TIME": "2026-11-14",
+    "STEP_SIZE": "1d",
+    "STOP_TIME": "2026-11-21",
+    "TIME_DIGITS": "SECONDS",
+    "TIME_TYPE": "UT",
+    "TIME_ZONE": "+00:00",
+    "format": "json"
+  },
+  "request_url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=json&COMMAND=301&OBJ_DATA=YES&MAKE_EPHEM=YES&EPHEM_TYPE=OBSERVER&CENTER=500%40399&START_TIME=2026-11-14&STOP_TIME=2026-11-21&STEP_SIZE=1d&TIME_TYPE=UT&TIME_ZONE=%2B00%3A00&QUANTITIES=20%2C21&RANGE_UNITS=KM&TIME_DIGITS=SECONDS",
+  "retrieved_at_utc": "2026-11-14T17:42:47.393595+00:00",
+  "source": "NASA/JPL Horizons API",
+  "source_files_sha256": {
+    "horizons_api_documentation.html": "6CA45D9C222D6E5C425AE3E0A3C44225CF8B6D30C4A14892B0F1157B0AB4CFE4",
+    "horizons_manual.html": "BE45B0137B37068C48760BBAF306F52A72C10239C175BA91119A30EB30612A81",
+    "horizons_response.json": "C90CAAC120D90F227373BF8927ACA1F55DD667E66800F42F006A8703B215C958",
+    "request_metadata.json": "D1A0B4FBFC9709DE46C9BAC6DFD1B7233B8849768E25D891235FCAE55A5526B8"
+  },
+  "source_files_sha256_unchanged": true,
+  "source_response_file": "horizons_response.json",
+  "source_response_sha256": "C90CAAC120D90F227373BF8927ACA1F55DD667E66800F42F006A8703B215C958",
+  "source_response_size_bytes": 7729,
+  "source_urls": {
+    "api": "https://ssd.jpl.nasa.gov/api/horizons.api",
+    "api_documentation": "https://ssd-api.jpl.nasa.gov/doc/horizons.html",
+    "horizons_manual": "https://ssd.jpl.nasa.gov/horizons/manual.html"
+  },
+  "source_validation_status": "PASSED_WITH_WARNINGS",
+  "source_validation_warnings_preserved": [
+    "7 requested epoch(s) are after retrieval time; these are forward ephemeris calculations, not observations."
+  ],
+  "target": {
+    "naif_id": 301,
+    "name": "Moon"
+  },
+  "time": {
+    "epoch_count": 8,
+    "request_time_type": "UT",
+    "request_time_zone": "+00:00",
+    "response_epochs_timezone": "UTC",
+    "response_table_header": "Date__(UT)__HR:MN:SS                delta      deldot  1-way_down_LT",
+    "start_utc": "2026-11-14T00:00:00Z",
+    "step": "1 day",
+    "stop_utc": "2026-11-21T00:00:00Z"
+  },
+  "variables": {
+    "earth_moon_range_km": {
+      "meaning": "Target apparent range, light-time aberrated, relative to observer.",
+      "preservation": "Original Horizons decimal token preserved in CSV.",
+      "source_label": "delta",
+      "units": "km"
+    },
+    "one_way_down_leg_light_time_minutes": {
+      "meaning": "One-way down-leg light time from target center to observer.",
+      "preservation": "Original Horizons decimal token preserved in CSV.",
+      "source_label": "1-way_down_LT",
+      "units": "minutes"
+    },
+    "range_rate_km_s": {
+      "meaning": "Range rate; positive means receding, negative means approaching.",
+      "preservation": "Original Horizons decimal token preserved in CSV.",
+      "source_label": "deldot",
+      "units": "km/s"
+    },
+    "two_way_vacuum_light_time_seconds_derived": {
+      "derivation": "2 * one_way_down_leg_light_time_minutes * 60",
+      "is_direct_horizons_measurement": false,
+      "meaning": "Twice the Horizons one-way down-leg light time, converted from minutes to seconds.",
+      "units": "seconds"
+    }
+  }
+}

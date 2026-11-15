@@ -1,0 +1,113 @@
+﻿{
+    "files":  [
+                  {
+                      "ChecksumAlgorithm":  "",
+                      "ETag":  "",
+                      "StorageClass":  "",
+                      "displayName":  "Study Metadata Files",
+                      "files":  [
+                                    {
+                                        "ChecksumAlgorithm":  "",
+                                        "ETag":  "",
+                                        "StorageClass":  "",
+                                        "bytes_size":  23059,
+                                        "directory":  false,
+                                        "files":  [
+
+                                                  ],
+                                        "id":  "66ec6a35aedb25cd5fc5c6fe",
+                                        "key":  "osd-data/OSD-53/metadata/OSD-53_metadata_OSD-53-ISA.zip",
+                                        "restricted":  false,
+                                        "restrictedAccess":  false,
+                                        "size":  "22.52 KB",
+                                        "sortingCategory":  "Study Metadata Files",
+                                        "status":  "active",
+                                        "subcategory":  null,
+                                        "updated":  "Fri, 20 Sep 2024 02:15:17 GMT",
+                                        "version":  1,
+                                        "visible":  true
+                                    }
+                                ],
+                      "key":  "osd-data/OSD-53/metadata/",
+                      "restricted":  false,
+                      "restrictedAccess":  false,
+                      "size":  0,
+                      "updated":  "",
+                      "version":  0,
+                      "visible":  true
+                  },
+                  {
+                      "ChecksumAlgorithm":  "",
+                      "ETag":  "",
+                      "StorageClass":  "",
+                      "displayName":  "Microarray Data Files",
+                      "files":  [
+                                    {
+                                        "ChecksumAlgorithm":  "",
+                                        "ETag":  "",
+                                        "StorageClass":  "",
+                                        "displayName":  "Normalized data",
+                                        "files":  [
+                                                      {
+                                                          "ChecksumAlgorithm":  "",
+                                                          "ETag":  "",
+                                                          "StorageClass":  "",
+                                                          "bytes_size":  43345,
+                                                          "directory":  false,
+                                                          "files":  [
+
+                                                                    ],
+                                                          "id":  "604b9d94cc48fe4c35b38c96",
+                                                          "key":  "genelab-data/GLDS-53/microarray/GLDS-53_microarray_E-GEOD-47126.additional.zip",
+                                                          "restricted":  false,
+                                                          "restrictedAccess":  false,
+                                                          "size":  "42.33 KB",
+                                                          "sortingCategory":  "Microarray Data Files",
+                                                          "status":  "active",
+                                                          "subcategory":  "Normalized data",
+                                                          "updated":  "Sat, 13 Mar 2021 00:57:56 GMT",
+                                                          "version":  1,
+                                                          "visible":  true
+                                                      },
+                                                      {
+                                                          "ChecksumAlgorithm":  "",
+                                                          "ETag":  "",
+                                                          "StorageClass":  "",
+                                                          "bytes_size":  10552,
+                                                          "directory":  false,
+                                                          "files":  [
+
+                                                                    ],
+                                                          "id":  "604b9d94cc48fe4c35b38c98",
+                                                          "key":  "genelab-data/GLDS-53/microarray/GLDS-53_microarray_E-GEOD-47126.processed.zip",
+                                                          "restricted":  false,
+                                                          "restrictedAccess":  false,
+                                                          "size":  "10.3 KB",
+                                                          "sortingCategory":  "Microarray Data Files",
+                                                          "status":  "active",
+                                                          "subcategory":  "Normalized data",
+                                                          "updated":  "Sat, 13 Mar 2021 00:57:56 GMT",
+                                                          "version":  1,
+                                                          "visible":  true
+                                                      }
+                                                  ],
+                                        "key":  "genelab-data/GLDS-53/microarray/Normalized data/",
+                                        "restricted":  false,
+                                        "restrictedAccess":  false,
+                                        "size":  0,
+                                        "sortingCategory":  "Microarray Data Files",
+                                        "updated":  "",
+                                        "version":  0,
+                                        "visible":  true
+                                    }
+                                ],
+                      "key":  "genelab-data/GLDS-53/microarray/",
+                      "restricted":  false,
+                      "restrictedAccess":  false,
+                      "size":  0,
+                      "updated":  "",
+                      "version":  0,
+                      "visible":  true
+                  }
+              ]
+}

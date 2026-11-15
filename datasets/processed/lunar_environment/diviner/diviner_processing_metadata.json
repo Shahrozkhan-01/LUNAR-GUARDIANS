@@ -1,0 +1,155 @@
+{
+  "columns": [
+    {
+      "description": "Center longitude of tile (degrees)",
+      "logical_output_type": "nullable float64",
+      "output_name": "center_longitude_deg",
+      "source_data_type": "ASCII_REAL",
+      "source_name": "clon",
+      "start_byte_1_based": 1,
+      "unit": "degree",
+      "width_bytes": 7
+    },
+    {
+      "description": "Center latitude of tile (degrees)",
+      "logical_output_type": "nullable float64",
+      "output_name": "center_latitude_deg",
+      "source_data_type": "ASCII_REAL",
+      "source_name": "clat",
+      "start_byte_1_based": 10,
+      "unit": "degree",
+      "width_bytes": 6
+    },
+    {
+      "description": "Local time (hours)",
+      "logical_output_type": "nullable float64",
+      "output_name": "local_time_hour",
+      "source_data_type": "ASCII_REAL",
+      "source_name": "ltim",
+      "start_byte_1_based": 18,
+      "unit": "hour",
+      "width_bytes": 6
+    },
+    {
+      "description": "T3 average calibrated brightness temperature (K)",
+      "logical_output_type": "nullable float64",
+      "output_name": "brightness_temperature_channel_3_k",
+      "source_data_type": "ASCII_REAL",
+      "source_name": "t3",
+      "start_byte_1_based": 26,
+      "unit": "K",
+      "width_bytes": 9
+    },
+    {
+      "description": "T4 average calibrated brightness temperature (K)",
+      "logical_output_type": "nullable float64",
+      "output_name": "brightness_temperature_channel_4_k",
+      "source_data_type": "ASCII_REAL",
+      "source_name": "t4",
+      "start_byte_1_based": 37,
+      "unit": "K",
+      "width_bytes": 9
+    },
+    {
+      "description": "T5 average calibrated brightness temperature (K)",
+      "logical_output_type": "nullable float64",
+      "output_name": "brightness_temperature_channel_5_k",
+      "source_data_type": "ASCII_REAL",
+      "source_name": "t5",
+      "start_byte_1_based": 48,
+      "unit": "K",
+      "width_bytes": 9
+    },
+    {
+      "description": "T6 average calibrated brightness temperature (K)",
+      "logical_output_type": "nullable float64",
+      "output_name": "brightness_temperature_channel_6_k",
+      "source_data_type": "ASCII_REAL",
+      "source_name": "t6",
+      "start_byte_1_based": 59,
+      "unit": "K",
+      "width_bytes": 9
+    },
+    {
+      "description": "T7 average calibrated brightness temperature (K)",
+      "logical_output_type": "nullable float64",
+      "output_name": "brightness_temperature_channel_7_k",
+      "source_data_type": "ASCII_REAL",
+      "source_name": "t7",
+      "start_byte_1_based": 70,
+      "unit": "K",
+      "width_bytes": 9
+    },
+    {
+      "description": "T8 average calibrated brightness temperature (K)",
+      "logical_output_type": "nullable float64",
+      "output_name": "brightness_temperature_channel_8_k",
+      "source_data_type": "ASCII_REAL",
+      "source_name": "t8",
+      "start_byte_1_based": 81,
+      "unit": "K",
+      "width_bytes": 9
+    },
+    {
+      "description": "T9 average calibrated brightness temperature (K)",
+      "logical_output_type": "nullable float64",
+      "output_name": "brightness_temperature_channel_9_k",
+      "source_data_type": "ASCII_REAL",
+      "source_name": "t9",
+      "start_byte_1_based": 92,
+      "unit": "K",
+      "width_bytes": 9
+    },
+    {
+      "description": "Bolometric average calibrated brightness temperature (K)",
+      "logical_output_type": "nullable float64",
+      "output_name": "brightness_temperature_bolometric_k",
+      "source_data_type": "ASCII_REAL",
+      "source_name": "tbol",
+      "start_byte_1_based": 103,
+      "unit": "K",
+      "width_bytes": 9
+    }
+  ],
+  "data_set_id": "LRO-L-DLRE-5-GCP-V1.0",
+  "dataset_name": "LRO Diviner Global Cumulative Average Product",
+  "missing_value_policy": {
+    "invalid_constant": -9998.0,
+    "note": "Sentinels are replaced with empty fields; valid source values are preserved verbatim.",
+    "output_representation": "empty CSV field",
+    "unknown_constant": -9999.0
+  },
+  "observation_period": {
+    "start": "2009-07-05T16:50:26.195",
+    "stop": "2015-04-01T00:00:00.000"
+  },
+  "output_file": "global_cumul_avg_cyl_80s70s_002.csv.gz",
+  "output_format": "UTF-8 CSV compressed with gzip; deterministic gzip timestamp",
+  "output_size_bytes": 39285835,
+  "processed_at_utc": "2026-11-14T18:00:43.424306+00:00",
+  "processed_output_readback_verified": true,
+  "processed_output_rows_read_back": 1382400,
+  "processed_row_count": 1382400,
+  "processing_script": "datasets/scripts/process_diviner_dataset.py",
+  "processing_script_version": "1.0.0",
+  "product_id": "GLOBAL_CUMUL_AVG_CYL_80S70S_002.TAB",
+  "raw_integrity_verified_unchanged": true,
+  "source_file": "global_cumul_avg_cyl_80s70s_002.tab",
+  "source_format": "PDS3 fixed-length ASCII table",
+  "source_record_bytes": 113,
+  "source_row_count": 1382400,
+  "source_sha256": "C6C9B3A84E1E9972237B07FD8DD1C0F44899AB8FFE9A403A7528EF7CD38B1CDA",
+  "source_size_bytes": 156211313,
+  "spatial_reference": {
+    "latitude_coverage_degrees": [
+      -80.0,
+      -70.0
+    ],
+    "latitude_type": "planetocentric",
+    "longitude_coverage_degrees": [
+      -180.0,
+      180.0
+    ],
+    "longitude_direction": "positive east"
+  }
+}

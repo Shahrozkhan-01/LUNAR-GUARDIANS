@@ -1,0 +1,80 @@
+/* ===== CREW STATUS CARD ===== */
+
+.crew-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+  border-radius: 14px;
+  background: linear-gradient(160deg, rgba(14, 22, 54, 0.82) 0%, rgba(8, 12, 30, 0.92) 100%);
+  border: 1px solid var(--border-subtle);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.crew-card:hover {
+  border-color: var(--crew-accent, var(--cyan));
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
+}
+
+.crew-avatar-wrap {
+  width: 54px;
+  height: 54px;
+  border-radius: 14px;
+  background: radial-gradient(circle at 50% 35%, rgba(0, 229, 255, 0.14), rgba(6, 10, 26, 0.9));
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.crew-avatar-svg {
+  width: 46px;
+  height: 46px;
+}
+
+.crew-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.crew-number {
+  font-family: var(--font-display);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+  color: var(--crew-accent, var(--cyan));
+  text-transform: uppercase;
+}
+
+.crew-role {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.crew-condition {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.78rem;
+  color: #4ade80;
+}
+
+.crew-condition.warning {
+  color: #facc15;
+}
+
+.crew-condition.critical {
+  color: #f87171;
+}
+
+.crew-condition-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+  box-shadow: 0 0 8px currentColor;
+}

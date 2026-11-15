@@ -51,29 +51,31 @@ Water is used for drinking, growing food, and cooling equipment. It can be harve
 Solar panels generate limited electricity. Players distribute power between life support, communications, food production, and radiation shielding. Night periods on the Moon reduce solar generation.
 
 ### ☢️ Radiation Protection
-The Moon has no magnetic field. When solar storms hit (pulled from real NASA DONKI data), players must redirect power to shielding or shelter the crew — at the cost of other systems.
+Radiation indicators and shelter effects are fictional game units. Recent NASA DONKI records are displayed as real observations; a dated SEP report can introduce an educational shelter choice, but it does not calculate lunar astronaut dose or exposure.
 
 ### 🌱 Food Production
 A greenhouse module grows food using water, light, and power. Players manage crop cycles and decide when to harvest versus conserve resources.
 
 ### 🌩️ Space Weather Events
-Using the **NASA DONKI API** (Space Weather Database Of Notifications, Knowledge, Information), real or representative solar events are translated into in-game emergencies. Children learn that NASA actually monitors these events 24/7.
+The backend retrieves recent solar energetic particle (SEP) and solar flare records from the **NASA DONKI API** (Space Weather Database Of Notifications, Knowledge, Information). A timed SEP observation may create a clearly labeled educational shelter decision. The real NASA observation is kept separate from fictional game-unit consequences; DONKI event records are not lunar radiation-dose measurements.
 
 ### 🏅 Mission Survival
 The game is played over a series of mission days. The crew survives if all systems stay above critical levels. Players receive a mission score and a mission debrief explaining the science behind events.
 
 ---
 
-## 5. NASA Data Integration (Planned)
+## 5. NASA Data Integration
 
 | NASA Dataset / API | How It Will Be Used |
 |--------------------|---------------------|
-| [DONKI API](https://kauai.ccmc.gsfc.nasa.gov/DONKI/) | Real solar flare and CME events trigger in-game storms |
+| [DONKI SEP and FLR APIs](https://api.nasa.gov/) | Recent solar energetic particle and solar flare observations are displayed; timed SEP records can support a separate simulated shelter scenario |
 | [NASA Open Data Portal](https://data.nasa.gov/) | Reference data for lunar environment parameters |
 | [NASA APOD API](https://api.nasa.gov/) | Background imagery and educational picture of the day |
 | Artemis Mission Data | Contextual references for lunar base design |
 
 > **Note:** No NASA data will be fabricated. All data shown will come from real NASA APIs or be clearly labeled as game simulation values.
+
+See [NASA data sources](./nasa_data_sources.md) for the endpoints, classifications, failure handling, cache policy, and data/gameplay distinction.
 
 ---
 
